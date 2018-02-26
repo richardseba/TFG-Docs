@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.7)  26 FEB 2018 09:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.7)  26 FEB 2018 13:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -344,20 +344,17 @@ Now handling font encoding U ...
 (c:/texlive/2016/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2016/04/23 3.9r The Babel package
 
-(c:/texlive/2016/texmf-dist/tex/generic/babel-catalan/catalan.ldf
-Language: catalan 2005/03/29 v2.2p Catalan support from the babel system
+(c:/texlive/2016/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/01/24 v3.3q English support from the babel system
 
 (c:/texlive/2016/texmf-dist/tex/generic/babel/babel.def
 File: babel.def 2016/04/23 3.9r Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
 )
-Package babel Info: Making " an active character on input line 91.
-Warning: You are using encoding OT1 instead of T1.
-Some word breaks will not be found.
-\leftllkern=\dimen104
-\rightllkern=\dimen105
-\raiselldim=\dimen106
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
 ))
 (c:/texlive/2016/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
@@ -368,21 +365,21 @@ Package multicol Warning: May not work with the twocolumn option on input line
 134.
 
 \mult@box=\box26
-\multicol@leftmargin=\dimen107
+\multicol@leftmargin=\dimen104
 \c@unbalance=\count89
 \c@collectmore=\count90
 \doublecol@number=\count91
 \multicoltolerance=\count92
 \multicolpretolerance=\count93
-\full@width=\dimen108
-\page@free=\dimen109
-\premulticols=\dimen110
-\postmulticols=\dimen111
+\full@width=\dimen105
+\page@free=\dimen106
+\premulticols=\dimen107
+\postmulticols=\dimen108
 \multicolsep=\skip43
 \multicolbaselineskip=\skip44
 \partial@page=\box27
 \last@line=\box28
-\maxbalancingoverflow=\dimen112
+\maxbalancingoverflow=\dimen109
 \mult@rightbox=\box29
 \mult@grightbox=\box30
 \mult@gfirstbox=\box31
@@ -406,9 +403,9 @@ Package multicol Warning: May not work with the twocolumn option on input line
 \@tempa=\box49
 \c@columnbadness=\count94
 \c@finalcolumnbadness=\count95
-\last@try=\dimen113
-\multicolovershoot=\dimen114
-\multicolundershoot=\dimen115
+\last@try=\dimen110
+\multicolovershoot=\dimen111
+\multicolundershoot=\dimen112
 \mult@nat@firstbox=\box50
 \colbreak@box=\box51
 \mc@col@check@num=\count96
@@ -441,8 +438,8 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count97
 ))
-\Gin@req@height=\dimen116
-\Gin@req@width=\dimen117
+\Gin@req@height=\dimen113
+\Gin@req@width=\dimen114
 )
 (c:/texlive/2016/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
@@ -464,44 +461,44 @@ Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \ttl@box=\box52
 \beforetitleunit=\skip54
 \aftertitleunit=\skip55
-\ttl@plus=\dimen118
-\ttl@minus=\dimen119
+\ttl@plus=\dimen115
+\ttl@minus=\dimen116
 \ttl@toksa=\toks17
-\titlewidth=\dimen120
-\titlewidthlast=\dimen121
-\titlewidthfirst=\dimen122
+\titlewidth=\dimen117
+\titlewidthlast=\dimen118
+\titlewidthfirst=\dimen119
 )
 (c:/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@colwidth=\skip56
 \multirow@cntb=\count98
 \multirow@dima=\skip57
-\bigstrutjot=\dimen123
+\bigstrutjot=\dimen120
 )
 (c:/texlive/2016/texmf-dist/tex/latex/lettrine/lettrine.sty
 File: lettrine.sty 2015/08/31 v1.9 (Daniel Flipo)
 \c@DefaultLines=\count99
 \c@DefaultDepth=\count100
-\DefaultFindent=\dimen124
-\DefaultNindent=\dimen125
-\DefaultSlope=\dimen126
-\DiscardVskip=\dimen127
+\DefaultFindent=\dimen121
+\DefaultNindent=\dimen122
+\DefaultSlope=\dimen123
+\DiscardVskip=\dimen124
 \L@lbox=\box53
 \L@tbox=\box54
 \c@L@lines=\count101
 \c@L@depth=\count102
-\L@Pindent=\dimen128
-\L@Findent=\dimen129
-\L@Nindent=\dimen130
-\L@lraise=\dimen131
-\L@first=\dimen132
-\L@next=\dimen133
-\L@slope=\dimen134
-\L@height=\dimen135
-\L@novskip=\dimen136
-\LettrineWidth=\dimen137
-\LettrineHeight=\dimen138
-\LettrineDepth=\dimen139
+\L@Pindent=\dimen125
+\L@Findent=\dimen126
+\L@Nindent=\dimen127
+\L@lraise=\dimen128
+\L@first=\dimen129
+\L@next=\dimen130
+\L@slope=\dimen131
+\L@height=\dimen132
+\L@novskip=\dimen133
+\LettrineWidth=\dimen134
+\LettrineHeight=\dimen135
+\LettrineDepth=\dimen136
 
 Loading lettrine.cfg
 (c:/texlive/2016/texmf-dist/tex/latex/lettrine/lettrine.cfg))
@@ -521,14 +518,14 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@cnth=\count103
 \Gm@cntv=\count104
 \c@Gm@tempcnt=\count105
-\Gm@bindingoffset=\dimen140
-\Gm@wd@mp=\dimen141
-\Gm@odd@mp=\dimen142
-\Gm@even@mp=\dimen143
-\Gm@layoutwidth=\dimen144
-\Gm@layoutheight=\dimen145
-\Gm@layouthoffset=\dimen146
-\Gm@layoutvoffset=\dimen147
+\Gm@bindingoffset=\dimen137
+\Gm@wd@mp=\dimen138
+\Gm@odd@mp=\dimen139
+\Gm@even@mp=\dimen140
+\Gm@layoutwidth=\dimen141
+\Gm@layoutheight=\dimen142
+\Gm@layouthoffset=\dimen143
+\Gm@layoutvoffset=\dimen144
 \Gm@dimlist=\toks18
 )
 (c:/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
@@ -537,13 +534,13 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 (c:/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen148
-\captionmargin@=\dimen149
-\captionwidth=\dimen150
-\caption@tempdima=\dimen151
-\caption@indent=\dimen152
-\caption@parindent=\dimen153
-\caption@hangindent=\dimen154
+\captionmargin=\dimen145
+\captionmargin@=\dimen146
+\captionwidth=\dimen147
+\caption@tempdima=\dimen148
+\caption@indent=\dimen149
+\caption@parindent=\dimen150
+\caption@hangindent=\dimen151
 )
 Package caption Info: We need package `newfloat' on input line 292.
 
@@ -571,19 +568,16 @@ LaTeX Font Info:    Try loading font information for OT1+ptm on input line 32.
  (c:/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-LaTeX Info: Redefining \l on input line 32.
-LaTeX Info: Redefining \L on input line 32.
-
 (c:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count107
-\scratchdimen=\dimen155
+\scratchdimen=\dimen152
 \scratchbox=\box55
 \nofMPsegments=\count108
 \nofMParguments=\count109
 \everyMPshowfont=\toks19
 \MPscratchCnt=\count110
-\MPscratchDim=\dimen156
+\MPscratchDim=\dimen153
 \MPnumerator=\count111
 \makeMPintoPDFobject=\count112
 \everyMPtoPDFconversion=\toks20
@@ -669,91 +663,59 @@ e
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 100.
-
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 52.
 (c:/texlive/2016/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 100.
+(Font)              <12> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 100.
+(Font)              <8> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 100.
-LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 100.
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--100
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--100
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--100
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--100
-
- []
-
+(Font)              <6> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 100.
+(Font)              <7> on input line 57.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 100.
-LaTeX Font Info:    Try loading font information for U+pzd on input line 100.
-(c:/texlive/2016/texmf-dist/tex/latex/psnfss/upzd.fd
-File: upzd.fd 2001/06/04 font definitions for U/pzd.
-)
+(Font)              <5> on input line 57.
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <12> not available
-(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 107.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 114.
-
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 62.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 79.
 
 (c:/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 114.
- [1{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 79.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 100.
+
+
+Package caption Warning: Unused \captionsetup[table] on input line 13.
+See the caption package documentation for explanation.
+
+[1{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 134.
-
-<img/adhoc_dtn.jpg, id=12, 389.95688pt x 245.41687pt>
-File: img/adhoc_dtn.jpg Graphic file (type jpg)
- <use img/adhoc_dtn.jpg>
-Package pdftex.def Info: img/adhoc_dtn.jpg used on input line 143.
-(pdftex.def)             Requested size: 193.47578pt x 121.7607pt.
-
-[2 <./img/adhoc_dtn.jpg>] (./TFG-template.aux) ) 
+(./TFG-template.aux) ) 
 Here is how much of TeX's memory you used:
- 4757 strings out of 493013
- 69016 string characters out of 6136994
- 159064 words of memory out of 5000000
- 8203 multiletter control sequences out of 15000+600000
- 30584 words of font info for 55 fonts, out of 8000000 for 9000
+ 4665 strings out of 493013
+ 67872 string characters out of 6136994
+ 151897 words of memory out of 5000000
+ 8124 multiletter control sequences out of 15000+600000
+ 25147 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,11n,43p,1588b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2016/texmf-dist/fon
-ts/enc/dvips/base/8r.enc}<c:/texlive/2016/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texli
-ve/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2016/texmf-d
-ist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/ur
-w/times/utmr8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pf
-b><c:/texlive/2016/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on TFG-template.pdf (2 pages, 96818 bytes).
+ 39i,11n,43p,668b,289s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}<
+c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texliv
+e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2016/tex
+mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2016/texmf-dist/fonts/t
+ype1/urw/helvetic/uhvr8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/times/
+utmb8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on TFG-template.pdf (1 page, 53337 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 33 PDF objects out of 1000 (max. 8388607)
+ 23 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

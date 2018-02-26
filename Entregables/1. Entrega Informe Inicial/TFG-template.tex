@@ -1,0 +1,126 @@
+\documentclass[10pt,a4paper,twocolumn,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{times}
+\usepackage{titlesec}
+\usepackage{multirow}
+\usepackage{lettrine}
+\usepackage[top=2cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
+\usepackage[figurename=Fig.,tablename=TAULA]{caption}
+\captionsetup[table]{textfont=sc}
+
+\author{\LARGE\sffamily Segovia Barreales, Richard}
+\title{\Huge{\sffamily Improving the usability of a video-see-through head-mounted display}}
+\date{}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+%
+%\large\bfseries\sffamily
+\titleformat{\section}
+{\large\sffamily\scshape\bfseries}
+{\textbf{\thesection}}{1em}{}
+
+\begin{document}
+
+\fancyhead[LO]{\scriptsize AUTOR: SEGOVIA BARREALES, RICHARD}
+\fancyhead[RO]{\thepage}
+\fancyhead[LE]{\thepage}
+\fancyhead[RE]{\scriptsize EE/UAB TFG INFORMÀTICA: IMPROVING THE USABILITY OF A VIDEO-SEE-THROUGH HEAD-MOUNTED DISPLAY}
+
+\fancyfoot[CO,CE]{}
+
+\fancypagestyle{primerapagina}
+{
+   \fancyhf{}
+   \fancyhead[L]{\scriptsize TFG EN ENGINYERIA INFORMÀTICA, ESCOLA D'ENGINYERIA (EE), UNIVERSITAT AUTÒNOMA DE BARCELONA (UAB)}
+   \fancyfoot[C]{\scriptsize Febrer de 2018, Escola d'Enginyeria (UAB)}
+}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\pagestyle{fancy}
+
+\maketitle
+
+\thispagestyle{primerapagina}
+
+
+\blfootnote{$\bullet$ E-mail de contacte: richard.segovia@e-campus.uab.cat}
+\blfootnote{$\bullet$ Menció en Computació}
+\blfootnote{$\bullet$ Treball tutoritzat per: Felipe Lumbreras (Computació)}
+\blfootnote{$\bullet$ Curs 2017/18}
+
+\section{Introduction}
+
+\lettrine[lines=3]{T}{he} main goal of this project is to develop a head-mounted display replacement for workers who usually use protection glasses in their job. The reason for 
+
+\bigskip
+
+\section{OBJECTIVES}
+
+%1. develop the headset
+%2. reduce using vergence movement
+%3. use depth of field blur to reduce dizziness
+%4. add features
+
+First we will be developing a software that will be capable of capture an stream from a stereo camera and display it in real time. The software will show one camera stream in each half of the screen, also the headset will enable only to each eye to see one half of the screen, all of this will simulate the stereo effect, creating a depth effect.
+
+Secondly, as is commonly known, using head mounted displays can cause motion sickness, this is not desired because it will reduce the effective hours of using, and as the main goal is to used them to work, this will reduce the working hours. For that reason reducing the sickness is a priority. To archive this goal, we will try to apply two techniques:
+\begin{itemize}
+	\item Accommodation-Vergence : It is commonly agreed that the Accommodation-Vergence  mismatch in head mounted displays causes a conflict on the expected depths increasing the feeling of discomfort and dizziness. One idea to reduce this effect is to dynamically move the position of screen frames as the environment changes, from closer objects to distant and vice-versa. To archive this we will be working a neural network that will receive images from the environment and will determine if we are inside or outside. We will try also to complement this information with disparity map.
+	
+	\item Depth of field (DoF) blur: Recent investigations suggest that applying a DoF blur to a scene viewed using a head-mounted display can reduce visual discomfort, the challenge here is that that investigations where using computer generated scenes, but we what to work with real world scenes, obtained using the cameras.
+	To archive this we are going to use disparity map and the information obtained by a neural network that discerns between indoor and outdoor environments to get it.  
+\end{itemize} 
+
+Finally if is feasible we will try to do a user testing session to compare between the different versions to know if our work has reduce the motion sickness.
+
+
+\section{SOURCES}
+
+\section{METHODOLOGY}
+
+\section{PLANNING}
+
+\begin{itemize}
+	\item Documentation 
+	\item Developing the viewer
+	\item Depth map
+	\item Creation of a neural network that discerns between indoors-outdoors environments
+			\begin{itemize}
+				\item Simple clasificator 
+				\item Vergence system
+				\item using the depthmap to complement the neural network
+			\end{itemize}
+	\item user testing session to check the reduction on the motion sickness
+\end{itemize}
+
+\begin{thebibliography}{11}
+\bibitem{latex}
+http://en.wikibooks.org/wiki/LaTeX
+
+\bibitem{2}
+Referència 2
+
+\bibitem{3}
+Etc.
+
+
+\end{thebibliography}
+
+\appendix
+
+\section*{Appendix}
+
+
+\end{document}
+
