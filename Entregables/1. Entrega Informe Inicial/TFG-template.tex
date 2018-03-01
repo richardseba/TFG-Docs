@@ -74,11 +74,14 @@
 
 First we will be developing a software that will be capable of capture an stream from a stereo camera and display it in real time. The software will show one camera stream in each half of the screen, also the headset will enable only to each eye to see one half of the screen, all of this will simulate the stereo effect, creating a depth effect.
 
-Secondly, as is commonly known, using head mounted displays can cause motion sickness, this is not desired because it will reduce the effective hours of using, and as the main goal is to used them to work, this will reduce the working hours. For that reason reducing the sickness is a priority. To archive this goal, we will try to apply two techniques:
+Secondly, as is commonly known, using head mounted displays can cause a variety of adverse physical reactions, as this headset will be used while working, these symptoms will reduce the concentration and the effective working hours. For that reason reducing these adverse physical reactions is a priority. To archive this goal, we will try to apply two techniques: 
+
 \begin{itemize}
-	\item Accommodation-Vergence : It is commonly agreed that the Accommodation-Vergence  mismatch in head mounted displays causes a conflict on the expected depths increasing the feeling of discomfort and dizziness. One idea to reduce this effect is to dynamically move the position of screen frames as the environment changes, from closer objects to distant and vice-versa. To archive this we will be working a neural network that will receive images from the environment and will determine if we are inside or outside. We will try also to complement this information with disparity map.
+	\item Accommodation-Vergence: As is reported in this\cite{disconfortReview} review about the main causes of discomfort, the mismatch in head mounted displays causes a conflict on the expected depths increasing the feeling of discomfort and dizziness. One idea to reduce this effect is to dynamically move the position of screen frames as the focus changes from closer to distant objects and vice versa. To archive this we will use a neuronal network that will be able to discern between indoors and outdoors, also we will need 
 	
-	\item Depth of field (DoF) blur: Recent investigations suggest that applying a DoF blur to a scene viewed using a head-mounted display can reduce visual discomfort, the challenge here is that that investigations where using computer generated scenes, but we what to work with real world scenes, obtained using the cameras.
+	 It is commonly agreed that the Accommodation-Vergence  mismatch in head mounted displays causes a conflict on the expected depths increasing the feeling of discomfort and dizziness. One idea to reduce this effect is to dynamically move the position of screen frames as the environment changes, from closer objects to distant and vice-versa. To archive this we will be working a neural network that will receive images from the environment and will determine if we are inside or outside. We will try also to complement this information with disparity map.
+	
+	\item Depth of field (DoF) blur: Recent investigations\cite{ifftConfortDoF} suggest that applying a DoF blur to a scene viewed using a head-mounted display can reduce visual discomfort, the challenge here is that that investigations where using computer generated scenes, but we what to work with real world scenes, obtained using the cameras.
 	To archive this we are going to use disparity map and the information obtained by a neural network that discerns between indoor and outdoor environments to get it.  
 \end{itemize} 
 
@@ -105,11 +108,11 @@ Finally if is feasible we will try to do a user testing session to compare betwe
 \end{itemize}
 
 \begin{thebibliography}{11}
-\bibitem{latex}
-http://en.wikibooks.org/wiki/LaTeX
+\bibitem{ifftConfortDoF}
+CARNEGIE, Kieran; RHEE, Taehyun. Reducing visual discomfort with HMDs using dynamic depth of field. IEEE computer graphics and applications, 2015, vol. 35, no 5, p. 34-41.
 
-\bibitem{2}
-Referència 2
+\bibitem{disconfortReview}
+TERZIC, Kasim; HANSARD, Miles. Causes of discomfort in stereoscopic content: a review. arXiv preprint arXiv:1703.04574, 2017.
 
 \bibitem{3}
 Etc.
