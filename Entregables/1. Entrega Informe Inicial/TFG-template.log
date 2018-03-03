@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.7)  1 MAR 2018 10:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.7)  2 MAR 2018 11:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -679,47 +679,63 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 57.
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <12> not available
 (Font)              Font shape `OT1/phv/b/sc' tried instead on input line 62.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 80.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 75.
 
 (c:/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 101.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 75.
 
-Underfull \hbox (badness 1048) in paragraph at lines 113--114
+Underfull \hbox (badness 10000) in paragraph at lines 75--77
+[]\OT1/ptm/m/n/10 Accommodation-Vergence: As is re-ported in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--77
+\OT1/ptm/m/n/10 these[[]][[]] ar-ti-cles the mis-match be-tween ac-
+ []
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
+[1{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+Underfull \hbox (badness 1048) in paragraph at lines 101--102
 \OT1/ptm/m/n/10 com-fort in stereo-scopic con-tent: a re-view. arXiv
+ []
+
+
+Underfull \hbox (badness 1248) in paragraph at lines 104--105
+[]\OT1/ptm/m/n/10 Hoffman, D.M., Gir-shick, A.R., Ake-ley, K. and
  []
 
 
 Package caption Warning: Unused \captionsetup[table] on input line 13.
 See the caption package documentation for explanation.
 
-[1{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[2
 
-
-]
-(./TFG-template.aux) ) 
+] (./TFG-template.aux) ) 
 Here is how much of TeX's memory you used:
- 4664 strings out of 493013
- 67888 string characters out of 6136994
+ 4670 strings out of 493013
+ 67996 string characters out of 6136994
  152897 words of memory out of 5000000
- 8123 multiletter control sequences out of 15000+600000
- 25147 words of font info for 48 fonts, out of 8000000 for 9000
+ 8128 multiletter control sequences out of 15000+600000
+ 26225 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,11n,43p,668b,289s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}<
-c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texliv
-e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2016/tex
-mf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2016/texmf-dist/fonts/t
-ype1/urw/helvetic/uhvr8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/times/
-utmb8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on TFG-template.pdf (1 page, 54291 bytes).
+ 39i,11n,43p,692b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc
+}<c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2016/t
+exmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2016/texmf-dist/fonts
+/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/time
+s/utmb8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on TFG-template.pdf (2 pages, 65356 bytes).
 PDF statistics:
- 33 PDF objects out of 1000 (max. 8388607)
- 23 compressed objects within 1 object stream
+ 36 PDF objects out of 1000 (max. 8388607)
+ 25 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

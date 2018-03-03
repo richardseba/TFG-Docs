@@ -42,7 +42,7 @@
 {
    \fancyhf{}
    \fancyhead[L]{\scriptsize TFG EN ENGINYERIA INFORMÀTICA, ESCOLA D'ENGINYERIA (EE), UNIVERSITAT AUTÒNOMA DE BARCELONA (UAB)}
-   \fancyfoot[C]{\scriptsize Febrer de 2018, Escola d'Enginyeria (UAB)}
+   \fancyfoot[C]{\scriptsize March 2018, Escola d'Enginyeria (UAB)}
 }
 
 \renewcommand{\headrulewidth}{0pt}
@@ -54,58 +54,46 @@
 \thispagestyle{primerapagina}
 
 
-\blfootnote{$\bullet$ E-mail de contacte: richard.segovia@e-campus.uab.cat}
+\blfootnote{$\bullet$ E-mail: richard.segovia@e-campus.uab.cat}
 \blfootnote{$\bullet$ Menció en Computació}
 \blfootnote{$\bullet$ Treball tutoritzat per: Felipe Lumbreras (Computació)}
 \blfootnote{$\bullet$ Curs 2017/18}
 
 \section{Introduction}
 
-\lettrine[lines=3]{T}{he} main goal of this project is to develop a head-mounted display replacement for workers who usually use protection glasses in their job. The reason for 
+\lettrine[lines=3]{T}{he} past summer during my internship I developed a basic video-see-through viewer for a headset prototype developed in the CVC\footnote{Computer Vision Center located in the UAB campus}, the main goal is to improve this viewer making it expandable for future modules and reduce the adverse physical reactions that it produces can produce to the users\cite{disconfortReview}. It has to be said that this research project is focused mainly in the software, the prototypes and other hardware aspects will be out of our concerns and will be developed by others researchers of the CVC.
 
 \bigskip
 
 \section{OBJECTIVES}
 
-%1. develop the headset
-%2. reduce using vergence movement
-%3. use depth of field blur to reduce dizziness
-%4. add features
+First we will be developing a software that will be capable of capture an stream from a stereo camera and display it in real time. The software will show one camera stream in each half of the screen, also the headset will enable only to each eye to see one half of the screen, all of this will simulate the stereo effect, creating a depth effect. Another goal is to prepare this software to be easily expandable with new modules in the future.
 
-First we will be developing a software that will be capable of capture an stream from a stereo camera and display it in real time. The software will show one camera stream in each half of the screen, also the headset will enable only to each eye to see one half of the screen, all of this will simulate the stereo effect, creating a depth effect.
-
-Secondly, as is commonly known, using head mounted displays can cause a variety of adverse physical reactions, as this headset will be used while working, these symptoms will reduce the concentration and the effective working hours. For that reason reducing these adverse physical reactions is a priority. To archive this goal, we will try to apply two techniques: 
+Secondly, as is commonly known, using head mounted displays can cause a variety of adverse physical reactions, since this headset will be used while working, these symptoms will reduce the concentration and the effective working hours. For that reason reducing these adverse physical reactions is a priority. To archive this goal, we will try to apply two techniques: 
 
 \begin{itemize}
-	\item Accommodation-Vergence: As is reported in this\cite{disconfortReview} review about the main causes of discomfort, the mismatch in head mounted displays causes a conflict on the expected depths increasing the feeling of discomfort and dizziness. One idea to reduce this effect is to dynamically move the position of screen frames as the focus changes from closer to distant objects and vice versa. To archive this we will use a neuronal network that will be able to discern between indoors and outdoors, also we will need 
+	\item Accommodation-Vergence: As is reported in these\cite{disconfortReview}\cite{vergenceDisconfort} articles the mismatch between accommodation and vergence in head mounted displays causes a conflict on the expected depths increasing the feeling of discomfort and dizziness.  One idea to reduce this effect is to dynamically move the position of screen frames as the focus changes from closer to distant objects and vice versa. To archive this we will use a neuronal network that will be able to discern between indoors and outdoors, also we will need the depth map obtained via the stereo camera setup. \\*
+	In addition to this, a progressive change from one focus to the other may be needed, as a big change in focus can induce sickness to the user.
 	
-	 It is commonly agreed that the Accommodation-Vergence  mismatch in head mounted displays causes a conflict on the expected depths increasing the feeling of discomfort and dizziness. One idea to reduce this effect is to dynamically move the position of screen frames as the environment changes, from closer objects to distant and vice-versa. To archive this we will be working a neural network that will receive images from the environment and will determine if we are inside or outside. We will try also to complement this information with disparity map.
-	
-	\item Depth of field (DoF) blur: Recent investigations\cite{ifftConfortDoF} suggest that applying a DoF blur to a scene viewed using a head-mounted display can reduce visual discomfort, the challenge here is that that investigations where using computer generated scenes, but we what to work with real world scenes, obtained using the cameras.
-	To archive this we are going to use disparity map and the information obtained by a neural network that discerns between indoor and outdoor environments to get it.  
+	\item Depth of field (DoF) blur: Recent investigations\cite{ifftConfortDoF} suggest that applying a DoF blur to a scene viewed using a head-mounted display can reduce visual discomfort, the challenge here is that our project has to make this DoF blur in real time in a real world environment, in contrast to the developed in that investigation that were computer generated scenes. To archive this we are going to use disparity map and the information obtained by a neural network that discerns between indoor and outdoor environments.
 \end{itemize} 
 
-Finally if is feasible we will try to do a user testing session to compare between the different versions to know if our work has reduce the motion sickness.
+Thirdly, as the headset will be used in workplaces, the idea of adding data to the environment, could improve the work-flow and the work efficiency. For this reason we think, that adding a third camera to the headset can add valuable information that can be mixed with the environment. For example with adding a infrared camera, we can warn to the user with a mark or a color objects too hot to be touched.
 
-
-\section{SOURCES}
+Finally we will try to do several user testing sessions to compare between the different versions of the developed software and the different headsets developed. The main goal of this sessions will be to evaluate if the developed software works and if it reduces the sickness feelings of the users.
 
 \section{METHODOLOGY}
 
 \section{PLANNING}
-
-\begin{itemize}
-	\item Documentation 
-	\item Developing the viewer
-	\item Depth map
-	\item Creation of a neural network that discerns between indoors-outdoors environments
-			\begin{itemize}
-				\item Simple clasificator 
-				\item Vergence system
-				\item using the depthmap to complement the neural network
-			\end{itemize}
-	\item user testing session to check the reduction on the motion sickness
-\end{itemize}
+\subsection{Creation of documentation, planning and }
+In this first stage of the project I will recap documentation about the state of the art and 
+\subsection{Improving the viewer}
+\subsection{Disparity map}
+\subsection{Accommodation-Vergence}
+\subsection{Depth of field blur}
+before starting we will make a mockup of a real world eviaroment with out of focus zones 
+\subsection{Third camera}
+\subsection{User Testing}
 
 \begin{thebibliography}{11}
 \bibitem{ifftConfortDoF}
@@ -114,8 +102,8 @@ CARNEGIE, Kieran; RHEE, Taehyun. Reducing visual discomfort with HMDs using dyna
 \bibitem{disconfortReview}
 TERZIC, Kasim; HANSARD, Miles. Causes of discomfort in stereoscopic content: a review. arXiv preprint arXiv:1703.04574, 2017.
 
-\bibitem{3}
-Etc.
+\bibitem{vergenceDisconfort}
+Hoffman, D.M., Girshick, A.R., Akeley, K. and Banks, M.S., 2008. Vergence–accommodation conflicts hinder visual performance and cause visual fatigue. Journal of vision, 8(3), pp.33-33.
 
 
 \end{thebibliography}
