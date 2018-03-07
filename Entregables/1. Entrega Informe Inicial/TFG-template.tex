@@ -82,7 +82,7 @@ Secondly, as is reported in \cite{disconfortReview}, using head mounted displays
 
 Thirdly, as the headset will be used in workplaces, the idea of adding data to the environment, could improve the work-flow and the work efficiency. For this reason we think, that adding a third camera to the headset can add valuable information that can be mixed with the environment. A similar idea can be found here \cite{vismerge} where a third camera is used to add information to the real world. For example with adding a infrared camera, we can warn to the user with a mark or coloring the objects too hot to be touched.
 
-Along all the development, user testing sessions will be done to check the improvements made between the different versions of the developed software and the different headsets developed. The main goal of this sessions will be to evaluate if the developed software works and if it reduces the sickness feelings of the users.
+Along all the development, user testing sessions will be taking place in order to check the improvements made between the different versions of the developed software and the different headsets developed. The main goal of this sessions will be to evaluate if the developed software works and if it reduces the sickness feelings of the users.
 
 \section{METHODOLOGY}
 Scrum and its variants are one of the most spread work methodologies nowadays.
@@ -130,21 +130,35 @@ This will, alongside with the DoF blur, be the main time-consuming stage of the 
 \end{enumerate}
 
 \subsection{Depth of field blur}
-This stage shares some tasks with \ref{subsec:vergence}
+This stage will be developed after the finishing of the previous Accommodation-Vergence phase \ref{subsec:vergence} and shares some development with it. 
 
+This problem can be resolved in to ways, using a disparity map only to create the DoF and using Neural network to aid the creation of it.
 
+%maybe volver a ponerlo en un enumerate pero haciendo el de neural network y el de disparity map mas extensos 
 
+\subsubsection{disparity map only}
+\label{subsubsec:disparityOnly}
+In this subphase the goal will be to develop a DoF blur using only the disparity map to get the depth and using the center point of the cameras as the focus point.
+\begin{enumerate}
+	\item Mock up blur: to ensure that the results of \cite{ifftConfortDoF} are applicable to real world scenarios, a mock up blur photo dataset will be made, and a user testing session will take place.
+	
+	\item Designing de pipeline: this task goal is to design, using some of the previous work, the different parts involving the treatment of the image stream using DoF blur.
+	
+	\item 
+\end{enumerate}
+
+\subsubsection{Neural network aided}
+After de development of \ref{subsubsec:disparityOnly}, this subphase will try to use a neural network to get an indicative value of whether we are indoors or outdoors 
+
+\begin{enumerate}
+	\item Neural network adaptation: this task will take the neural network developed in the previous phase and will modify it to be usable in this phase of the project. The idea is that this network will produce an indicative value of the blurriness needed. NECESITA REVISION
+
+\end{enumerate}
 
 
 \subsection{Dataset}
 
-\subsection{Improvements on the viewer}
-The development and improvement of the viewer will be done in parallel with all the other tasks.
-\subsection{Disparity map}
-
 \subsection{Third camera}
-
-\subsection{User Testing}
 
 
 \begin{thebibliography}{11}
