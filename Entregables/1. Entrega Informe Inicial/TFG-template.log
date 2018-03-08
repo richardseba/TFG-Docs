@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.1)  7 MAR 2018 10:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.1)  8 MAR 2018 10:55
 entering extended mode
 **./TFG-template.tex
 (TFG-template.tex
@@ -775,18 +775,24 @@ LaTeX Warning: Reference `' on page 2 undefined on input line 105.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 106.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 17.89995pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 [2]
-Underfull \hbox (badness 1048) in paragraph at lines 169--170
+Underfull \hbox (badness 1048) in paragraph at lines 160--161
 \OT1/ptm/m/n/10 com-fort in stereo-scopic con-tent: a re-view. arXiv
  []
 
 
-Underfull \hbox (badness 1248) in paragraph at lines 172--173
+Underfull \hbox (badness 1248) in paragraph at lines 163--164
 []\OT1/ptm/m/n/10 Hoffman, D.M., Gir-shick, A.R., Ake-ley, K. and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
 []\OT1/ptm/m/n/10 https://msdn.microsoft.com/en-
  []
 
@@ -794,21 +800,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 187--188
 Package caption Warning: Unused \captionsetup[table] on input line 14.
 See the caption package documentation for explanation.
 
-[3
-
-] (TFG-template.aux)
+[3] (TFG-template.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4739 strings out of 493303
- 72610 string characters out of 3128480
- 155085 words of memory out of 3000000
- 8195 multiletter control sequences out of 15000+200000
+ 4736 strings out of 493303
+ 72518 string characters out of 3128480
+ 155134 words of memory out of 3000000
+ 8192 multiletter control sequences out of 15000+200000
  27851 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,43p,731b,333s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,11n,43p,750b,289s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.
 enc}<C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmsy10.pfb><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/
@@ -817,7 +821,7 @@ KTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/rsegovia/AppData/Local/P
 rograms/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/rsegovia/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/rsegovi
 a/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on TFG-template.pdf (3 pages, 77109 bytes).
+Output written on TFG-template.pdf (3 pages, 77819 bytes).
 PDF statistics:
  37 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
