@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.1)  8 MAR 2018 10:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.1)  9 MAR 2018 13:36
 entering extended mode
 **./TFG-template.tex
 (TFG-template.tex
@@ -539,6 +539,10 @@ Loading lettrine.cfg
 
 ("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lettrine\lettri
 ne.cfg"))
+("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
 ("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geomet
 ry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
@@ -761,41 +765,43 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 
 
 ]
-Underfull \hbox (badness 1442) in paragraph at lines 97--98
-\OT1/ptm/m/n/10 ter-est-ing to grab some ideas from the Lean soft-ware
- []
-
-
-Underfull \hbox (badness 1052) in paragraph at lines 97--98
-\OT1/ptm/m/n/10 development[[]]. The idea of re-mov-ing the so called
- []
-
 
 LaTeX Warning: Reference `' on page 2 undefined on input line 105.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 106.
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 17.89995pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 107.
 [2]
-Underfull \hbox (badness 1048) in paragraph at lines 160--161
-\OT1/ptm/m/n/10 com-fort in stereo-scopic con-tent: a re-view. arXiv
+Underfull \hbox (badness 1442) in paragraph at lines 157--158
+\OT1/ptm/m/n/10 and FEDER un-der grants TIN2014-56919-C3-2-R and
+ []
+
+(TFG-template.bbl
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 6.
+
+("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.f
+d"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Underfull \hbox (badness 1097) in paragraph at lines 21--27
+[]\OT1/ptm/m/n/10 Anderson David J.  Lean soft-ware de-vel-op-ment.
  []
 
 
-Underfull \hbox (badness 1248) in paragraph at lines 163--164
-[]\OT1/ptm/m/n/10 Hoffman, D.M., Gir-shick, A.R., Ake-ley, K. and
+Underfull \hbox (badness 10000) in paragraph at lines 21--27
+\OT1/pcr/m/n/10 https : / / msdn . microsoft . com / en-[]us /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
-[]\OT1/ptm/m/n/10 https://msdn.microsoft.com/en-
+Underfull \hbox (badness 10000) in paragraph at lines 21--27
+\OT1/pcr/m/n/10 library / hh533841(v = vs . 120 ) .aspx$\OT1/ptm/m/n/10 ,
  []
 
+
+Underfull \hbox (badness 3364) in paragraph at lines 52--57
+[]\OT1/ptm/m/n/10 Robert S Kennedy, Nor-man E Lane, Kevin S
+ []
+
+)
 
 Package caption Warning: Unused \captionsetup[table] on input line 14.
 See the caption package documentation for explanation.
@@ -806,24 +812,27 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 4736 strings out of 493303
- 72518 string characters out of 3128480
- 155134 words of memory out of 3000000
- 8192 multiletter control sequences out of 15000+200000
- 27851 words of font info for 51 fonts, out of 3000000 for 9000
+ 4855 strings out of 493303
+ 74244 string characters out of 3128480
+ 156183 words of memory out of 3000000
+ 8297 multiletter control sequences out of 15000+200000
+ 30050 words of font info for 55 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,43p,750b,289s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,11n,43p,748b,289s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.
 enc}<C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmsy10.pfb><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/rsegovia/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/rsegovia/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/rsegovia/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/rsegovi
-a/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on TFG-template.pdf (3 pages, 77819 bytes).
+KTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/rsegovia/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/rsegovia/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/rsego
+via/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/User
+s/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><
+C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri
+8a.pfb>
+Output written on TFG-template.pdf (3 pages, 107658 bytes).
 PDF statistics:
- 37 PDF objects out of 1000 (max. 8388607)
+ 45 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
