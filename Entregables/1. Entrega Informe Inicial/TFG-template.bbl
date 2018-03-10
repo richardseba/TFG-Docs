@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{unpublishCVC}
+Coen Antens.
+\newblock Unpublished: User testing resume.
+\newblock 2018.
+
 \bibitem{web:trello}
 Atlassian.
 \newblock Trello.
@@ -16,6 +21,12 @@ The~QT Company.
 \newblock Qt.
 \newblock \url{https://www.qt.io/}, 2018.
 \newblock Last access March 9 2018.
+
+\bibitem{web:vive}
+HTC Corporation.
+\newblock Vive.
+\newblock \url{https://www.vive.com/us/}, 2018.
+\newblock Last access March 10 2018.
 
 \bibitem{web:leanMethod}
 Anderson David~J.
@@ -35,6 +46,12 @@ David~M Hoffman, Ahna~R Girshick, Kurt Akeley, and Martin~S Banks.
 \newblock Vergence--accommodation conflicts hinder visual performance and cause
   visual fatigue.
 \newblock {\em Journal of vision}, 8(3):33--33, 2008.
+
+\bibitem{web:oculus}
+Facebook Inc.
+\newblock Oculus rift.
+\newblock \url{https://www.oculus.com/}, 2018.
+\newblock Last access March 10 2018.
 
 \bibitem{web:github}
 GitHub Inc.
@@ -74,6 +91,12 @@ Daniel Scharstein, Heiko Hirschm{\"u}ller, York Kitajima, Greg Krathwohl, Nera
 \newblock High-resolution stereo datasets with subpixel-accurate ground truth.
 \newblock In {\em German Conference on Pattern Recognition}, pages 31--42.
   Springer, 2014.
+
+\bibitem{hdmSutherland}
+Ivan~E Sutherland.
+\newblock A head-mounted three dimensional display.
+\newblock In {\em Proceedings of the December 9-11, 1968, fall joint computer
+  conference, part I}, pages 757--764. ACM, 1968.
 
 \bibitem{disconfortReview}
 Kasim Terzic and Miles Hansard.
