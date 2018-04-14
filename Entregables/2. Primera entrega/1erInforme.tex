@@ -1,0 +1,114 @@
+\documentclass[10pt,a4paper,twocolumn,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{times}
+\usepackage{titlesec}
+\usepackage{multirow}
+\usepackage{lettrine}
+\usepackage{pdflscape}
+\usepackage[edges]{forest}
+\usepackage{url}
+\usepackage[top=2cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
+\usepackage[figurename=Fig.,tablename=TAULA]{caption}
+\captionsetup[table]{textfont=sc}
+
+\author{\LARGE\sffamily Segovia Barreales, Richard}
+\title{\Huge{\sffamily Reducing dizziness when using a video-see-through head-mounted display}}
+\date{}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+%
+%\large\bfseries\sffamily
+\titleformat{\section}
+{\large\sffamily\scshape\bfseries}
+{\textbf{\thesection}}{1em}{}
+
+\begin{document}
+
+\fancyhead[LO]{\scriptsize AUTHOR: SEGOVIA BARREALES, RICHARD}
+\fancyhead[RO]{\thepage}
+\fancyhead[LE]{\thepage}
+\fancyhead[RE]{\scriptsize EE/UAB TFG INFORMÀTICA: REDUCING DIZZINESS WHEN USING A VIDEO-SEE-THROUGH HEAD-MOUNTED DISPLAY}
+
+\fancyfoot[CO,CE]{}
+
+\fancypagestyle{primerapagina}
+{
+   \fancyhf{}
+   \fancyhead[L]{\scriptsize TFG EN ENGINYERIA INFORMÀTICA, ESCOLA D'ENGINYERIA (EE), UNIVERSITAT AUTÒNOMA DE BARCELONA (UAB)}
+   \fancyfoot[C]{\scriptsize March 2018, Escola d'Enginyeria (UAB)}
+}
+
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\pagestyle{fancy}
+
+\maketitle
+
+\thispagestyle{primerapagina}
+
+
+\blfootnote{$\bullet$ E-mail: richard.segovia@e-campus.uab.cat}
+\blfootnote{$\bullet$ Menció en Computació}
+\blfootnote{$\bullet$ Project supervised by: Coen Antens (CVC) and Felipe Lumbreras (Computació)}
+\blfootnote{$\bullet$ Course 2017/18}
+
+\section{Introduction}
+
+\lettrine[lines=3]{L}{ast} summer during my internship I developed a basic video-see-through viewer for a head mounted display (HDM) prototype developed in the CVC\footnote{Computer Vision Center located in the UAB campus.}, the main goal is to improve this viewer making it expandable for future modules and reduce the adverse physical reactions that it can produce to the users \cite{disconfortReview}, \cite{unpublishCVC}. It has to be said that this research project is focused mainly in the software, the prototypes and other hardware aspects will be out of our concerns and will be developed by others researchers of the CVC. A communication channel though is opened to discuss about the development of the whole project.
+
+The head mounted displays first appeared in 1965 when Ivan Sutherland developed the first HDM called "the sword of Damocles" \cite{hdmSutherland}, it paved the ground to further development in the field. The development of this technologies have grown in the last years mainly centered in the video-games field. Some examples of this are the Oculus \cite{web:oculus} in figure \ref{fig:oculus} or the HTC Vive \cite{web:vive}. These products are virtual reality headsets, therefore they are only capable of showing computer generated scenes. The developed project prototypes differ in this matter because they can also show the real world, this kind of HDMs are called video-see-through.
+
+
+\section{Objectives}
+%- Se habia infraestimado el tiempo de desarrollo de la parte del calculo de la vergencia como veremos en planning
+%- esto obliga al retraso y a la replanificacion del projecto
+%- se introduce como objetivo tener un sistema de calibracion compatible con la interfaz del visor especificacion!
+
+After these firsts weeks of development some objectives have change and other have appeared, as we will explain in \ref{sec:planning} the development time of the depth map was underestimated and some change had to be made in the project planning.
+
+Related with the depth map, a new objective appeared, the integration of a calibration system that will allow us to undistort the stereo pair 
+
+\section{Methodology}
+%- se han ido utilizando las herramientas descritas en la primera parte, trello, github
+%se utiliza opencv para el calculo de la calibracion
+%se ha ido documentando cada parte del funcionamiento
+
+\section{Planning and development progress}
+\label{sec:planning}
+
+%- En el momento de la integracion y utilizacion de la libreria libelas nos dimos cuenta de que era necesaria tambien la integracion de un sistema de calibracion de las camaras que nos permitiese obtener el undistort de las imagenes para que el par stereo estuviese perfectamente alineado. Esto supuso un retraso en el desarrollo, ademas la libreria libelas necesito ciertas modificaciones para conseguir que funcionase correctamente. 
+%
+%- muy sensible a la calibracion! problema fisico! se da a conocer a los compañeros que estan trabajando con los prototipos
+%
+%- lentitud de ejecucion de libelas -> reducir tamaño de la imagen captada
+%								   -> utilizar libreria libelas openmp?
+%								   -> poner tabla
+%- presets echos (?) pero no testeados con usuarios
+%- las pruebas con usuarios tambien se han retrasado pero ya se estan diseñando(explicar)
+%- se ha utilizado opencv en c para implementar la calibracion de las camaras(se introduce y se realiza este objetivo)
+% 
+
+
+
+\section{Acknowledgment}
+This work is supported in part by a CVC transfer project with ProCare Light company, and partially funded by the Spanish Ministry of Economy and Competitiveness and FEDER under grants TIN2014-56919-C3-2-R and TIN2017-89723-P.
+
+\bibliography{biblio}
+\bibliographystyle{plain}
+
+\appendix
+
+
+
+\end{document}
+
