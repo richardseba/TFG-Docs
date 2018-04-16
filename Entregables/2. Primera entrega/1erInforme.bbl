@@ -1,31 +1,9 @@
 \begin{thebibliography}{1}
 
-\bibitem{unpublishCVC}
-Coen Antens.
-\newblock Unpublished: User testing resume.
-\newblock 2018.
-
-\bibitem{web:vive}
-HTC Corporation.
-\newblock Vive.
-\newblock \url{https://www.vive.com/us/}, 2018.
+\bibitem{web:opencv}
+Opencv team.
+\newblock Opencv library.
+\newblock \url{https://opencv.org/}, 2018.
 \newblock Last access March 10 2018.
-
-\bibitem{web:oculus}
-Facebook Inc.
-\newblock Oculus rift.
-\newblock \url{https://www.oculus.com/}, 2018.
-\newblock Last access March 10 2018.
-
-\bibitem{hdmSutherland}
-Ivan~E Sutherland.
-\newblock A head-mounted three dimensional display.
-\newblock In {\em Proceedings of the December 9-11, 1968, fall joint computer
-  conference, part I}, pages 757--764. ACM, 1968.
-
-\bibitem{disconfortReview}
-Kasim Terzic and Miles Hansard.
-\newblock Causes of discomfort in stereoscopic content: a review.
-\newblock {\em arXiv preprint arXiv:1703.04574}, 2017.
 
 \end{thebibliography}

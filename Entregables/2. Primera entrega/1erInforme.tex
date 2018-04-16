@@ -64,24 +64,26 @@
 
 \section{Introduction}
 
-\lettrine[lines=3]{L}{ast} summer during my internship I developed a basic video-see-through viewer for a head mounted display (HDM) prototype developed in the CVC\footnote{Computer Vision Center located in the UAB campus.}, the main goal is to improve this viewer making it expandable for future modules and reduce the adverse physical reactions that it can produce to the users \cite{disconfortReview}, \cite{unpublishCVC}. It has to be said that this research project is focused mainly in the software, the prototypes and other hardware aspects will be out of our concerns and will be developed by others researchers of the CVC. A communication channel though is opened to discuss about the development of the whole project.
-
-The head mounted displays first appeared in 1965 when Ivan Sutherland developed the first HDM called "the sword of Damocles" \cite{hdmSutherland}, it paved the ground to further development in the field. The development of this technologies have grown in the last years mainly centered in the video-games field. Some examples of this are the Oculus \cite{web:oculus} in figure \ref{fig:oculus} or the HTC Vive \cite{web:vive}. These products are virtual reality headsets, therefore they are only capable of showing computer generated scenes. The developed project prototypes differ in this matter because they can also show the real world, this kind of HDMs are called video-see-through.
-
 
 \section{Objectives}
 %- Se habia infraestimado el tiempo de desarrollo de la parte del calculo de la vergencia como veremos en planning
 %- esto obliga al retraso y a la replanificacion del projecto
 %- se introduce como objetivo tener un sistema de calibracion compatible con la interfaz del visor especificacion!
 
-After these firsts weeks of development some objectives have change and other have appeared, as we will explain in \ref{sec:planning} the development time of the depth map was underestimated and some change had to be made in the project planning.
+After these firsts weeks of development some objectives have change and other have appeared, as we will explain in section \ref{sec:planning} the development time of the depth map was underestimated and some change had to be made in the project planning.
 
-Related with the depth map, a new objective appeared, the integration of a calibration system that will allow us to undistort the stereo pair 
+Related with the depth map, a new objective appeared, the integration of a calibration system that will allow us to undistort the stereo image pair. The integration of this system is now mandatory because undistorted images are required in order to obtain a reliable depth map.
+
+Also after the development of the depth map a issue appeared, the speed of the generation of depth map images was far from real time, this could give our system a huge latency, preventing any dizziness improvement or real scenario uses. For that reason, the improvement of this speed will be a new objective.
+
 
 \section{Methodology}
 %- se han ido utilizando las herramientas descritas en la primera parte, trello, github
 %se utiliza opencv para el calculo de la calibracion
 %se ha ido documentando cada parte del funcionamiento
+% utilizar libelas openmp?
+The custom scrum methodology explained in the previous report has been followed without any change. Evey part of the development process has been documented and every change in the code has been uploaded to a github repository. The OpenCV \cite{web:opencv} library has been used to develop the calibration and undistort phase. 
+
 
 \section{Planning and development progress}
 \label{sec:planning}
@@ -98,7 +100,9 @@ Related with the depth map, a new objective appeared, the integration of a calib
 %- se ha utilizado opencv en c para implementar la calibracion de las camaras(se introduce y se realiza este objetivo)
 % 
 
-
+\begin{itemize}
+	\item Reduction of the image resolution: In our use case, only the center of the images is necesary, this is because it is where the user will be usually looking at, therefore taking off the outer pixels of the images will not alter the behavior of the vergence system and will improve the speed of the generation of depth map images.
+\end{itemize}
 
 \section{Acknowledgment}
 This work is supported in part by a CVC transfer project with ProCare Light company, and partially funded by the Spanish Ministry of Economy and Competitiveness and FEDER under grants TIN2014-56919-C3-2-R and TIN2017-89723-P.
