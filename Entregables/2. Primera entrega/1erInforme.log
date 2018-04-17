@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.1)  16 APR 2018 13:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.1)  17 APR 2018 18:03
 entering extended mode
 **./1erInforme.tex
 (1erInforme.tex
@@ -1296,19 +1296,19 @@ Package: newfloat 2015/09/17 v1.1-109 Defining new floating environments (AR)
 ) (1erInforme.aux)
 \openout1 = `1erInforme.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 36.
 
 ("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.f
 d"
@@ -1423,50 +1423,62 @@ G,.JBIG2,.JB2,.eps]
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 55.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 56.
 
 ("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1phv.f
 d"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 55.
+(Font)              <12> on input line 56.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 55.
+(Font)              <8> on input line 56.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 55.
+(Font)              <6> on input line 56.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 60.
+(Font)              <7> on input line 61.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 60.
+(Font)              <5> on input line 61.
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <12> not available
-(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 65.
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 66.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 74.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
 <img/1200px-Oculus-Rift-CV1-Headset-Front.jpg, id=4, 1204.5pt x 853.1875pt>
 File: img/1200px-Oculus-Rift-CV1-Headset-Front.jpg Graphic file (type jpg)
 <use img/1200px-Oculus-Rift-CV1-Headset-Front.jpg>
 Package pdftex.def Info: img/1200px-Oculus-Rift-CV1-Headset-Front.jpg  used on 
-input line 81.
+input line 82.
 (pdftex.def)             Requested size: 165.79317pt x 117.42755pt.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 87.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 88.
 
 ("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omsptm.f
 d"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 87.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 88.
  [1{C:/Users/rsegovia/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
- <./img/1200px-Oculus-Rift-CV1-Headset-Front.jpg>] [2] [3]
-Underfull \hbox (badness 7832) in paragraph at lines 217--217
-|[]\OT1/phv/b/sc/12 Development progress and re-
+ <./img/1200px-Oculus-Rift-CV1-Headset-Front.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+
  []
 
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 149.
 
-Underfull \hbox (badness 1442) in paragraph at lines 237--238
+LaTeX Warning: Citation `?' on page 2 undefined on input line 149.
+
+[2] [3]
+
+LaTeX Warning: Reference `' on page 4 undefined on input line 249.
+
+
+LaTeX Warning: Reference `' on page 4 undefined on input line 249.
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 293--294
 \OT1/ptm/m/n/10 and FEDER un-der grants TIN2014-56919-C3-2-R and
  []
 
@@ -1476,7 +1488,7 @@ LaTeX Font Info:    Try loading font information for OT1+pcr on input line 11.
 ("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.f
 d"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
+) [4]
 Underfull \hbox (badness 1097) in paragraph at lines 32--38
 []\OT1/ptm/m/n/10 Anderson David J.  Lean soft-ware de-vel-op-ment.
  []
@@ -1502,13 +1514,11 @@ Underfull \hbox (badness 3364) in paragraph at lines 69--74
 []\OT1/ptm/m/n/10 Robert S Kennedy, Nor-man E Lane, Kevin S
  []
 
-) [4] [5
-
-]
+) [5]
 <img/gantt.png, id=29, 1099.85907pt x 566.86781pt>
 File: img/gantt.png Graphic file (type png)
 <use img/gantt.png>
-Package pdftex.def Info: img/gantt.png  used on input line 281.
+Package pdftex.def Info: img/gantt.png  used on input line 337.
 (pdftex.def)             Requested size: 745.46222pt x 384.21945pt.
 
 Overfull \hbox (1007.22757pt too wide) has occurred while \output is active
@@ -1518,32 +1528,31 @@ Overfull \hbox (1007.22757pt too wide) has occurred while \output is active
 [6
 
 
- <./img/gantt.png>]
+ <./img/gantt.png>] (1erInforme.aux)
 
-Package caption Warning: Unused \captionsetup[table] on input line 16.
-See the caption package documentation for explanation.
+LaTeX Warning: There were undefined references.
 
-(1erInforme.aux) ) 
+ ) 
 Here is how much of TeX's memory you used:
- 34691 strings out of 493303
- 785547 string characters out of 3128480
- 812352 words of memory out of 3000000
- 37815 multiletter control sequences out of 15000+200000
- 555056 words of font info for 61 fonts, out of 3000000 for 9000
+ 34697 strings out of 493303
+ 785593 string characters out of 3128480
+ 811250 words of memory out of 3000000
+ 37820 multiletter control sequences out of 15000+200000
+ 556682 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  135i,13n,177p,10380b,2273s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/en
-c/dvips/base/8r.enc}<C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/rsegovia/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/rsegovia/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/rsegovia/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users
-/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb
-><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utm
-b8a.pfb><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/ti
-mes/utmr8a.pfb><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/urw/times/utmri8a.pfb>
-Output written on 1erInforme.pdf (6 pages, 200562 bytes).
+{C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.
+enc}<C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/rsegovia/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/rsegovia/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/rsegovia/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/rsego
+via/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/User
+s/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><
+C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri
+8a.pfb>
+Output written on 1erInforme.pdf (6 pages, 204780 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
