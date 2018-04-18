@@ -10,6 +10,7 @@
 \usepackage{multirow}
 \usepackage{lettrine}
 \usepackage{pdflscape}
+\usepackage{subcaption}
 \usepackage{booktabs}
 \usepackage[edges]{forest}
 \usepackage{url}
@@ -68,7 +69,7 @@
 	
 	\lettrine[lines=3]{L}{ast} summer during my internship I developed a basic video-see-through viewer for a head mounted display (HDM) prototype developed in the CVC\footnote{Computer Vision Center located in the UAB campus.}, the main goal is to improve this viewer making it expandable for future modules and reduce the adverse physical reactions that it can produce to the users \cite{disconfortReview}, \cite{unpublishCVC}. It has to be said that this research project is focused mainly in the software, the prototypes and other hardware aspects will be out of our concerns and will be developed by others researchers of the CVC. A communication channel though is opened to discuss about the development of the whole project.
 	
-	The head mounted displays first appeared in 1965 when Ivan Sutherland developed the first HDM called "the sword of Damocles" \cite{hdmSutherland}, it paved the ground to further development in the field. The development of this technologies have grown in the last years mainly centered in the video-games field. Some examples of this are the Oculus \cite{web:oculus} in figure \ref{fig:oculus} or the HTC Vive \cite{web:vive}. These products are virtual reality headsets, therefore they are only capable of showing computer generated scenes. The developed project prototypes differ in this matter because they can also show the real world, this kind of HDMs are called video-see-through.
+	The head mounted displays first appeared in 1965 when Ivan Sutherland developed the first HDM called "the sword of Damocles" \cite{hdmSutherland}, it paved the ground to further development in the field. The development of this technologies have grown in the last years mainly centered in the video-games field. Some examples of this are the Oculus \cite{web:oculus} or the HTC Vive \cite{web:vive}. These products are virtual reality headsets, therefore they are only capable of showing computer generated scenes. The developed project prototypes differ in this matter because they can also show the real world, this kind of HDMs are called video-see-through, the current version of the prototype can be seen in the figure \ref{fig:proto}.
 	
 	
 	\section{Objectives}
@@ -80,9 +81,9 @@
 	
 	\begin{figure}
 		\centering
-		\includegraphics[width=0.7\linewidth]{img/1200px-Oculus-Rift-CV1-Headset-Front}
-		\caption{Oculus rift head mounted display.}
-		\label{fig:oculus}
+		\includegraphics[width=0.7\linewidth]{img/231.jpg}
+		\caption{Current version of the HMD see through prototype}
+		\label{fig:proto}
 	\end{figure}
 	
 	\begin{itemize}
@@ -264,9 +265,9 @@
 		
 		\item Faster libraries and implementation: Another option would be using faster or optimized libraries to be able to speedup the performance in the generation of images. As the we are using libraries already implemented our possibilities are limited in this matter, an option would be using a multithreading version of the LIBELAS library, already implemented in \cite{web:LIBELAS}.
 	\end{itemize}
-	In this case, the first option will be selected, but if needed the second solution can also be used. In the table \ref{tab:depthmap} can be seen the current performance of the depth map generator. As well as the times, in the figure \ref{} we can see a full resolution disparity map of the image \ref{}.
+	In this case, the first option will be selected, but if needed the second solution can also be used. In the table \ref{tab:depthmap} can be seen the current performance of the depth map generator. As well as the times, in the figure \ref{fig:depthmap} we can see a full resolution disparity map and the original image. In this example is visible that the disparity is far from perfect, that is because there is still some calibration that can be done in the LIBELAS parameters. Also is worth mention the extremely high accuracy needed in the calibration phase in order to obtain a correct depth map, any minor change in the camera setup, can give inaccurate depth maps.
 
-	\begin{table}[t!]
+	\begin{table}
 		\begin{center}
 			\begin{tabular}{cccc}
 				\toprule
@@ -289,9 +290,20 @@
 		\end{center}
 	\end{table}
 
-	%Insert photo of map here!
+	\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.7\linewidth}
+		\includegraphics[width=\linewidth]{img/4}
+		\caption{Original Image}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.7\linewidth}
+		\includegraphics[width=\linewidth]{img/4b}
+		\caption{Depth map image.}
+	\end{subfigure}
+	\caption{Original and depth map obtained using the LIBELAS library.}
+	\label{fig:depthmap}
+\end{figure}
 	
-	Its worth mention the extremely high accuracy needed in the calibration phase in order to obtain a correct depth map, any minor change in the camera setup, can give inaccurate depth maps.
 
 	\section{Acknowledgment}
 	This work is supported in part by a CVC transfer project with ProCare Light company, and partially funded by the Spanish Ministry of Economy and Competitiveness and FEDER under grants TIN2014-56919-C3-2-R and TIN2017-89723-P.
@@ -345,7 +357,7 @@
 		\begin{figure}
 			\centering
 			\includegraphics[width=1\linewidth]{img/gantt2}
-			\caption{Gantt diagram of the project. Note that red blue task are remaining tasks, grey task are done tasks, red task are tasks not done in the scheduled time and orange task are rescheduled tasks }
+			\caption{Gantt diagram of the project. Note that red blue tasks are remaining tasks, grey task are done tasks, red tasks are tasks not done in the scheduled time and yellow tasks are rescheduled tasks }
 			\label{fig:gantt}
 		\end{figure}
 		
