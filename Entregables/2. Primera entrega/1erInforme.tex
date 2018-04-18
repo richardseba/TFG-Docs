@@ -231,7 +231,11 @@
 		\item Depth map development: As it is explained in \ref{subsec:vergence}, LIBELAS library was selected. One of the main reasons for this selection was the performance. That is because high processing times must be avoided in order to prevent latency in the DoF or the vergence modules. The goal of this task was integrating the LIBELAS library with calibration and the camera output aiming to obtain the depth map. 
 		
 		\item Calibration dataset: Once the calibration and the depth generation systems were integrated, the calibration dataset was captured, following the explained in \ref{subsec:dataset}. This dataset needs to be updated every time the headset gets manipulated to ensure the calibration, and therefore the undistortion is accurate.
+		
+		\item Depth map evaluation: Once the module is completely working, a evaluation will take place in order to evaluate the quality and the reliability of the depth map obtained. This task is currently in progress. The goal of this task will be to document, calibrate and modify the depth map to ensure its output has the enough quality to continue with further modules.
 	\end{itemize}
+
+	
 
 	As some task like: the user testing sessions, progressive preset selection and the neural network development were delayed, the planning timeline had to be updated. The current version of the gantt diagram can be found in the figure \ref{fig:gantt}, in the appendix.
 	
@@ -315,6 +319,7 @@
 			[Calibration]
 			[Depth map]
 			[Calibration dataset]
+			[Depth map evaluation]
 			]
 			[Accommodation-Vergence
 			[Preset creation]
@@ -332,8 +337,7 @@
 			[Screen quality]
 			]
 		\end{forest}
-		\caption{Objective Tree of the project}
-		
+		\caption{Objective Tree of the project}	
 		\label{fig:objective}
 	\end{figure}
 	
