@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.1)  18 APR 2018 12:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.1)  18 APR 2018 16:27
 entering extended mode
 **./1erInforme.tex
 (1erInforme.tex
@@ -1535,18 +1535,20 @@ Underfull \hbox (badness 3364) in paragraph at lines 69--74
 []\OT1/ptm/m/n/10 Robert S Kennedy, Nor-man E Lane, Kevin S
  []
 
-) [5]
-<img/gantt.png, id=29, 1099.85907pt x 566.86781pt>
+) [5] [6
+
+]
+<img/gantt.png, id=32, 1099.85907pt x 566.86781pt>
 File: img/gantt.png Graphic file (type png)
 <use img/gantt.png>
-Package pdftex.def Info: img/gantt.png  used on input line 337.
+Package pdftex.def Info: img/gantt.png  used on input line 343.
 (pdftex.def)             Requested size: 745.46222pt x 384.21945pt.
 
 Overfull \hbox (1007.22757pt too wide) has occurred while \output is active
 [] []|[] []
  []
 
-[6
+[7
 
 
  <./img/gantt.png>] (1erInforme.aux)
@@ -1555,13 +1557,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 34754 strings out of 493303
- 786419 string characters out of 3128480
- 813015 words of memory out of 3000000
- 37873 multiletter control sequences out of 15000+200000
+ 35083 strings out of 493303
+ 792470 string characters out of 3128480
+ 817469 words of memory out of 3000000
+ 38202 multiletter control sequences out of 15000+200000
  556682 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 135i,13n,177p,10380b,2273s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 135i,13n,177p,10380b,2619s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.
 enc}<C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmsy10.pfb><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/
@@ -1573,9 +1575,9 @@ via/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/User
 s/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><
 C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on 1erInforme.pdf (6 pages, 205009 bytes).
+Output written on 1erInforme.pdf (7 pages, 205914 bytes).
 PDF statistics:
- 61 PDF objects out of 1000 (max. 8388607)
+ 66 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 
