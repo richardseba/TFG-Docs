@@ -10,6 +10,7 @@
 \usepackage{multirow}
 \usepackage{lettrine}
 \usepackage{pdflscape}
+\usepackage{booktabs}
 \usepackage[edges]{forest}
 \usepackage{url}
 \usepackage[top=2cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
@@ -105,15 +106,15 @@
 	
 	After these firsts weeks of development some objectives have change and other have appeared, as we will explain in section \ref{sec:planning}, the main issue was that the depth map generation needed some work before integrating it into the system.
 	
-	The integration of a reliable depth map generation was essential to the project, it is needed to complete both Accommodation-Vergence and DoF goals, and as it give us knowledge of the enviaroment it would probably be key in future developments. For these reasons it was decided to add it as a objetive itself. The main goal will be to integrate a fast and reliable depth map generator with all of the required components.
+	The integration of a reliable depth map generation is essential to the project, it is needed to complete both Accommodation-Vergence and DoF goals, and as it give us knowledge of the enviaroment it would probably be key in future developments. For these reasons it was decided to add it as a objetive itself. The main goal will be to integrate a fast and reliable depth map generator with all of the required components.
 	
 	As the depth map generation requires a stereo pair of undistorted images in order to obtain a reliable depth map, the integration of a system capable of read calibration files or calibrate itself and undistort the output of the cameras is required.  
 
-	The performance of the depth map generation is also key, as a slow image generation will give the system great latency and that could limit the uses cases of the system. \\
+	The performance of the depth map generation is also key, as a slow image generation will give the system great latency and that could limit the uses cases of the module. \\
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-	The current objectives tree can be found in the figure \ref{fig:objective} in the appendix, it was done to recollect all the goals that this project want to achieve. As we will see in \ref{sec:planning}, not all of this goals will be reachable because of time constraints.
+	The current objectives tree can be found in the figure \ref{fig:objective} in the appendix, it was done to recollect all the goals that this project want to achieve. As we will see in \ref{sec:planning}, not all of this goals will be reachable due to time constraints.
 	
 	\section{Methodology}
 	Scrum and its variants are one of the most spread work methodologies nowadays.
@@ -146,8 +147,9 @@
 	
 	Also a dataset will be used to make sure our dataset is correct and to encompass a broader range of environments. For that reason we selected first the Middlebury stereo dataset \cite{web:middelburyDataset} because it has a great dataset of stereo images and the groundtruth of their depth map. Additionally a dataset with indoor and outdoor scenes is recommended. Several dataset could be used with that purpose, for example the MIT's places dataset \cite{web:mitplaces} and the INDSECS indoors only dataset \cite{web:indecs}.
 	
-	Also a calibration dataset is required in order to generate a quality calibration. This dataset will contain a series of images of a chesslike pattern \cite{?} located in differents parts and depths of the image. Is required that the patterns appears completely in both camera. This dataset will be updated every time the cameras or the HDM gets manipulated, this is because any minor change in the focal length or the position between the cameras will affect the results of the calibration.
+	A calibration dataset is required in order to generate a quality calibration. This dataset will contain a series of images of a chesslike pattern \cite{?} located in differents parts and depths of the image. Is required that the patterns appears completely in both camera. This dataset will be updated every time the cameras or the HDM gets manipulated, this is because any minor change in the focal length or the position between the cameras will affect the results of the calibration.
 	
+	To be able to evaluate the depth map generation, a video sequence of the stereo pair must be captured and later processed by the depth map module. It would be convenient the integration of a video capture module to the current program to ease the evaluation task.
 	
 	%for the next report: a dataset with different scenarios were captured in order to test the potencial of the depth map and the libelas thingy
 	
@@ -194,7 +196,7 @@
 		\item Automatic switching: The goal of this task will be to free the user from the interaction with the system developed in task \ref{itm:QualityImprovements}, to achieve this a neural network will be developed to detect when a user is looking a screen.
 	\end{enumerate}
 	
-	Part of the development of this objective will be left to future projects because of time constrains.
+	Part of the development of this objective will be left to future projects due to time constrains.
 	
 	\subsection{Third camera}
 	This stage will have as a main goal the integration of a third camera in the viewer software and highlighting relevant information obtained using the third camera on stream viewed by the user. It can be split in the following tasks.
@@ -205,7 +207,7 @@
 		\item Research mixture: After the development of task \ref{itm:Integration}, a system to allow the mixture of images between visible and the third camera spectrum will be developed, the goal will be to add information to the user from the third camera different spectrum.
 	\end{enumerate}
 	
-	Part of the development of this objective will be left to future projects because of time constrains.
+	Part of the development of this objective will be left to future projects due to time constrains.
 	
 	
 	\subsection{Research, documentation and planning}
@@ -218,8 +220,20 @@
 		\item Closure documentation: When the project will approach the finish, an article, a recompilation of all the work done and a presentation will be made to wrap up the project.
 		
 	\end{enumerate}
+
+	\subsection{Planning changes}
+		
+	During the firsts weeks of work some problems have arisen, the main issue was that in order to integrate a system capable of generating depth map image, is was required to undistort the image pair captured. This is because each optical lens of each camera introduce a distortion on the image captured. In addition, as the lenses are not exactly equal and they are not exactly a alienated, a stereo calibration system was required in order to produce the undistortion. This stage of the project was split in three parts.
 	
-	The general planning timeline can be found in the Gantt diagram, figure \ref{fig:gantt}, in the appendix.
+	\begin{itemize}
+		\item Calibration development: To develop the calibration and undistortion, the OpenCV library \cite{web:opencv} was used, it was selected because it has a great varity of calibration and undistortion functions already implemented and also because it was already being used in other modules of the interface. The goal of this task was to develop and integrate a monocular and stereo calibration module.
+		
+		\item Depth map development: As it is explained in \ref{subsec:vergence}, LIBELAS library was selected. One of the main reasons for this selection was the performance. That is because high processing times must be avoided in order to prevent latency in the DoF or the vergence modules. The goal of this task was integrating the LIBELAS library with calibration and the camera output aiming to obtain the depth map. 
+		
+		\item Calibration dataset: Once the calibration and the depth generation systems were integrated, the calibration dataset was captured, following the explained in \ref{subsec:dataset}. This dataset needs to be updated every time the headset gets manipulated to ensure the calibration, and therefore the undistortion is accurate.
+	\end{itemize}
+
+	As some task like: the user testing sessions, progressive preset selection and the neural network development were delayed, the planning timeline had to be updated. The current version of the gantt diagram can be found in the figure \ref{fig:gantt}, in the appendix.
 	
 	\section{Development progress}
 	%- En el momento de la integracion y utilizacion de la libreria libelas nos dimos cuenta de que era necesaria tambien la integracion de un sistema de calibracion de las camaras que nos permitiese obtener el undistort de las imagenes para que el par stereo estuviese perfectamente alineado. Esto supuso un retraso en el desarrollo, ademas la libreria libelas necesito ciertas modificaciones para conseguir que funcionase correctamente. 
@@ -246,49 +260,35 @@
 		
 		\item Faster libraries and implementation: Another option would be using faster or optimized libraries to be able to speedup the performance in the generation of images. As the we are using libraries already implemented our possibilities are limited in this matter, an option would be using a multithreading version of the LIBELAS library, already implemented in \cite{web:LIBELAS}.
 	\end{itemize}
-	In this case, the first option will be selected, but if needed the second solution can also be used. In the table \ref{tab:depthmap} can be seen the current performance of the depth map generator. As well as the times, in the figure \ref{} we can see the full resolution disparity map of the image \ref{}.
+	In this case, the first option will be selected, but if needed the second solution can also be used. In the table \ref{tab:depthmap} can be seen the current performance of the depth map generator. As well as the times, in the figure \ref{} we can see a full resolution disparity map of the image \ref{}.
 
-	\begin{table}
-		\centering
-		\begin{tabular}{|c|c|c|c|}
-			\hline 
-			Seconds b/w frames & Fps & Width & Height \\ 
-			\hline 
-			1.98 & 0.50 & 1600 & 1200 \\ 
-	
-			1.21 & 0.82 & 1100 & 1100 \\ 
-	
-			0.46 & 2.16 & 800 & 600 \\ 
-	
-			0.21 & 4.67 & 600 & 400 \\ 
-	
-			0.33 & 2.97 & 600 & 600 \\ 
-			\hline 
-			
-		\end{tabular} 
-	\caption{Frames per second (Fps) for the generation of the depth map for each image resolution }
-	\label{tab:depthmap}
+	\begin{table}[t!]
+		\begin{center}
+			\begin{tabular}{cccc}
+				\toprule
+				fps & Seconds & Width & Height \\ 
+				\midrule
+				0.50 & 1.98 & 1600 & 1200 \\ 
+		
+				0.82 & 1.21 & 1100 & 1100 \\ 
+		
+				2.16 & 0.46 & 800 & 600 \\ 
+		
+				4.67 & 0.21 & 600 & 400 \\ 
+		
+				2.97 & 0.33 & 600 & 600 \\ 
+				\bottomrule
+				
+			\end{tabular} 
+			\caption{Frames per second (fps) and seconds between frames for the generation of the depth map for each image resolution }
+			\label{tab:depthmap}
+		\end{center}
 	\end{table}
 
 	%Insert photo of map here!
 	
 	Its worth mention the extremely high accuracy needed in the calibration phase in order to obtain a correct depth map, any minor change in the camera setup, can give inaccurate depth maps.
-	
-	
-	\section{Replanning}
-	
-	
-	During the firsts weeks of work some problems have arisen, the main issue was that in order to integrate a system capable of generating depth map image, is was required to undistort the image pair captured. This is because each optical lens of each camera introduce a distortion on the image captured. In addition, as the lenses are not exactly equal and they are not exactly a alienated, a stereo calibration system was required in order to produce the undistortion. This stage of the project was split in three parts.
-	
-	\begin{itemize}
-		\item Calibration development: To develop the calibration and undistortion, the OpenCV library \cite{web:opencv} was used as it has some calibration functions already implemented and is a well known library.
-		\item Depth map development: As it is explained in \ref{subsec:vergence}, LIBELAS library was selected. One of the main reasons for this selection was the performance. !!!!!!!!!!!!!!!!!
-		\item Calibration dataset: Once the calibration and the depth generation systems were integrated, the calibration dataset was captured, following the explained in \ref{subsec:dataset}. This dataset needs to be updated every time the headset gets manipulated to ensure the calibration, and therefore the undistortion is accurate.
-	\end{itemize}
-	
-	
-	
-	
+
 	\section{Acknowledgment}
 	This work is supported in part by a CVC transfer project with ProCare Light company, and partially funded by the Spanish Ministry of Economy and Competitiveness and FEDER under grants TIN2014-56919-C3-2-R and TIN2017-89723-P.
 	
