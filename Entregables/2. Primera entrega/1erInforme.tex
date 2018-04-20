@@ -69,7 +69,7 @@
 	
 	\lettrine[lines=3]{L}{ast} summer during my internship I developed a basic video-see-through viewer for a head mounted display (HDM) prototype developed in the CVC\footnote{Computer Vision Center located in the UAB campus.}, the main goal is to improve this viewer making it expandable for future modules and reduce the adverse physical reactions that it can produce to the users \cite{disconfortReview}, \cite{unpublishCVC}. It has to be said that this research project is focused mainly in the software, the prototypes and other hardware aspects will be out of our concerns and will be developed by others researchers of the CVC. A communication channel though is opened to discuss about the development of the whole project.
 	
-	The head mounted displays first appeared in 1965 when Ivan Sutherland developed the first HDM called "the sword of Damocles" \cite{hdmSutherland}, it paved the ground to further development in the field. The development of this technologies have grown in the last years mainly centered in the video-games field. Some examples of this are the Oculus \cite{web:oculus} or the HTC Vive \cite{web:vive}. These products are virtual reality headsets, therefore they are only capable of showing computer generated scenes. The developed project prototypes differ in this matter because they can also show the real world, this kind of HDMs are called video-see-through, the current version of the prototype can be seen in the figure \ref{fig:proto}.
+	The head mounted displays first appeared in 1965 when Ivan Sutherland developed the first HDM called "the sword of Damocles" \cite{hdmSutherland}, it paved the ground to further development in the field. The development of this technologies have grown in the last years mainly centered in the video-games field. Some examples of this are the Oculus \cite{web:oculus} or the HTC Vive \cite{web:vive}. These products are virtual reality headsets, therefore they are only capable of showing computer generated scenes. The developed project prototypes differ in this matter because they can also show the real world, this kind of HDMs are called video-see-through, the current version of the prototype can be seen in figure \ref{fig:proto}.
 	
 	
 	\section{Objectives}
@@ -82,7 +82,7 @@
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.7\linewidth]{img/231.jpg}
-		\caption{Current version of the HMD see through prototype}
+		\caption{Current version of the HMD video-see-through prototype}
 		\label{fig:proto}
 	\end{figure}
 	
@@ -136,7 +136,7 @@
 	%se utiliza opencv para el calculo de la calibracion
 	%se ha ido documentando cada parte del funcionamiento
 
-	The custom scrum methodology already explained has been followed without any change in the first weeks of development. Every part of the development process has been documented and every change in the code has been uploaded to a private github repository. It is worth mention that the OpenCV \cite{web:opencv} library has been used to develop the calibration and undistort phase. 
+	The custom scrum methodology already explained has been followed without any change in the first weeks of development. Every part of the development process has been documented and every change in the code has been uploaded to a private github repository. It is worth mention that the OpenCV \cite{web:opencv} library has been used to develop the calibration and undistort module. 
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	\section{Planning}
@@ -148,7 +148,7 @@
 	
 	Also a dataset will be used to make sure our dataset is correct and to encompass a broader range of environments. For that reason we selected first the Middlebury stereo dataset \cite{web:middelburyDataset} because it has a great dataset of stereo images and the groundtruth of their depth map. Additionally a dataset with indoor and outdoor scenes is recommended. Several dataset could be used with that purpose, for example the MIT's places dataset \cite{web:mitplaces} and the INDSECS indoors only dataset \cite{web:indecs}.
 	
-	A calibration dataset is required in order to generate a quality calibration. This dataset will contain a series of images of a chesslike pattern \cite{?} located in differents parts and depths of the image. Is required that the patterns appears completely in both camera. This dataset will be updated every time the cameras or the HDM gets manipulated, this is because any minor change in the focal length or the position between the cameras will affect the results of the calibration.
+	A calibration dataset is required in order to generate a quality calibration. This dataset will contain a series of images of a chesslike pattern located in differents parts and depths of the image. Is required that the patterns appears completely in both camera. This dataset will be updated every time the cameras or the HDM gets manipulated, this is because any minor change in the focal length or the position between the cameras will affect the results of the calibration.
 	
 	To be able to evaluate the depth map generation, a video sequence of the stereo pair must be captured and later processed by the depth map module. It would be convenient the integration of a video capture module to the current program to ease the evaluation task.
 	

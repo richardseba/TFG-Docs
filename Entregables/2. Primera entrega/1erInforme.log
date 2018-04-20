@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.1)  18 APR 2018 18:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.1)  19 APR 2018 10:33
 entering extended mode
 **./1erInforme.tex
 (1erInforme.tex
@@ -1493,18 +1493,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--115
 
  []
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 151.
-
-LaTeX Warning: Citation `?' on page 2 undefined on input line 151.
-
-[2] [3]
-<img/4.png, id=21, 288.57813pt x 222.8325pt>
+[2] [3] [4]
+<img/4.png, id=24, 288.57813pt x 222.8325pt>
 File: img/4.png Graphic file (type png)
 <use img/4.png>
 Package pdftex.def Info: img/4.png  used on input line 296.
 (pdftex.def)             Requested size: 165.79317pt x 128.02568pt.
-<img/4b.png, id=23, 291.0875pt x 223.83624pt>
+<img/4b.png, id=26, 291.0875pt x 223.83624pt>
 File: img/4b.png Graphic file (type png)
 <use img/4b.png>
 Package pdftex.def Info: img/4b.png  used on input line 300.
@@ -1514,7 +1509,7 @@ Underfull \hbox (badness 1442) in paragraph at lines 309--310
 \OT1/ptm/m/n/10 and FEDER un-der grants TIN2014-56919-C3-2-R and
  []
 
-[4] (1erInforme.bbl
+(1erInforme.bbl
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 11.
 
 ("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.f
@@ -1546,7 +1541,9 @@ Underfull \hbox (badness 3364) in paragraph at lines 69--74
 []\OT1/ptm/m/n/10 Robert S Kennedy, Nor-man E Lane, Kevin S
  []
 
-[5 <./img/4.png> <./img/4b.png>]) [6]
+[5 <./img/4.png> <./img/4b.png>]) [6
+
+]
 <img/gantt2.png, id=37, 1203.7472pt x 627.84563pt>
 File: img/gantt2.png Graphic file (type png)
 <use img/gantt2.png>
@@ -1560,31 +1557,27 @@ Overfull \hbox (1007.22757pt too wide) has occurred while \output is active
 [7
 
 
- <./img/gantt2.png>] (1erInforme.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+ <./img/gantt2.png>] (1erInforme.aux) ) 
 Here is how much of TeX's memory you used:
- 35233 strings out of 493303
- 794945 string characters out of 3128480
- 816273 words of memory out of 3000000
- 38346 multiletter control sequences out of 15000+200000
- 558267 words of font info for 65 fonts, out of 3000000 for 9000
+ 35229 strings out of 493303
+ 794907 string characters out of 3128480
+ 814625 words of memory out of 3000000
+ 38343 multiletter control sequences out of 15000+200000
+ 556641 words of font info for 63 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  135i,12n,177p,10380b,2710s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.
-enc}<C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/rsegovia/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/rsegovia/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/rsegovia/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/rsego
-via/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/User
-s/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><
-C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri
-8a.pfb>
-Output written on 1erInforme.pdf (7 pages, 2409214 bytes).
+{C:/Users/rsegovia/AppData/Local/Program
+s/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/rsegovia/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/rsegovia/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Use
+rs/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pf
+b><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic
+/uhvb8a.pfb><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/ur
+w/helvetic/uhvr8a.pfb><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/urw/times/utmb8a.pfb><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rsegovia/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on 1erInforme.pdf (7 pages, 2408739 bytes).
 PDF statistics:
  70 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
