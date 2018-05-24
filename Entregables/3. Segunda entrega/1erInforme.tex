@@ -129,6 +129,9 @@
 	
 	Involving the tools that will need to be used develop the project, first of all, the current viewer version is made in C++ using the QT libraries \cite{web:qt}, therefore any tools that would be used need to be compatible with the current version of the viewer. For that reason, further investigation will be performed to identify which neural network library is more suitable.
 	
+	It has been decided that TensorFlow \cite{web:tensor} will be used as neural network library. This was decided because tensor allow us to use either Python or C++\footnote{Currently, the TensorFlow C++ runtime is only available for Linux}as development language. In addition to that it is also possible to save a trained model in tensor and load it using OpenCV both in Python and C++. Other reason to choose tensor over other alternatives is because is commonly used by the CVC researchers, therefore, if any advice is needed, it can be solved asking one CVC researcher.
+	A Siamese neural network is a net composed with two completely separated input layers, in our case, one for each camera. After some layers of feature extraction, we arrive to a layer where the two inputs streams converge into a single layer. After this layer we have some layersof  
+	
 	The custom scrum methodology already explained has been followed without any change in the development. Every part of the development process has been documented and every change in the code has been uploaded to a private Github repository. It is worth mention that the OpenCV \cite{web:opencv} library has been used to develop the calibration and undistort module. 
 	
 	Once the tasks \ref{obj:dispmap}, \ref{obj:acc:preset} and \ref{obj:acc:dispmap} were finished, a protocol was designed in order to do every user testing session in the same conditions. It has the following considerations: 
