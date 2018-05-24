@@ -111,8 +111,6 @@
 
 	The performance of the depth map generation is also a key issue, as a slow image generation will give the system great latency and that could limit the uses cases of the module. 
 	
-
-
 	The current objectives and tasks list can be found in the appendix, it was done to recollect all the goals that this project want to achieve. Future references to the objectives and tasks will use the appendix list numeration. As we will see in \ref{sec:planning}, not all of this goals will be reachable due to time constraints.
 	
 	\section{Methodology}
@@ -127,10 +125,7 @@
 	
 	Keeping the main scrum methodology, I think it is interesting to grab some ideas from the Lean software development \cite{web:leanMethod}. The idea of removing the so called "Muda", non-important extra features and processes, could be beneficial for this project because it could reach an overwhelming dimension for the limited time that is had.
 	
-	Involving the tools that will need to be used develop the project, first of all, the current viewer version is made in C++ using the QT libraries \cite{web:qt}, therefore any tools that would be used need to be compatible with the current version of the viewer. For that reason, further investigation will be performed to identify which neural network library is more suitable.
-	
-	It has been decided that TensorFlow \cite{web:tensor} will be used as neural network library. This was decided because tensor allow us to use either Python or C++\footnote{Currently, the TensorFlow C++ runtime is only available for Linux}as development language. In addition to that it is also possible to save a trained model in tensor and load it using OpenCV both in Python and C++. Other reason to choose tensor over other alternatives is because is commonly used by the CVC researchers, therefore, if any advice is needed, it can be solved asking one CVC researcher.
-	A Siamese neural network is a net composed with two completely separated input layers, in our case, one for each camera. After some layers of feature extraction, we arrive to a layer where the two inputs streams converge into a single layer. After this layer we have some layersof  
+	Involving the tools that will need to be used develop the project, first of all, the current viewer version is made in C++ using the QT libraries \cite{web:qt}, therefore any tools that would be used need to be compatible with the current version of the viewer. For that reason among others, TensorFlow\cite{web:tensor} was chosen as the main library for building the neuronal network. Currently, tensor supports  Python and C++\footnote{Currently, the TensorFlow C++ runtime is only available for Linux}as development language. In addition to that it is also possible to save a trained model in tensor and load it using OpenCV both in Python and C++. Other reason to choose tensor over other alternatives is because is commonly used by the CVC researchers, therefore, if any advice is needed, it can be solved asking one CVC researcher.
 	
 	The custom scrum methodology already explained has been followed without any change in the development. Every part of the development process has been documented and every change in the code has been uploaded to a private Github repository. It is worth mention that the OpenCV \cite{web:opencv} library has been used to develop the calibration and undistort module. 
 	
@@ -349,13 +344,40 @@
 	
 	Related with the task \ref{obj:dataset:record}, the viewer has been ported to a 64 bits architecture, consequently, the number of frames that can be stored in memory has grown significantly. this will allow us to record longer dataset videos.
 	
-	Related with the task \ref{obj:dispmap}, a color map has been added to improve the visibility of the depth. This is because for humans is easier to see a gradient of colors rather than a gradient of grays. 
+	Related with the task \ref{obj:dispmap}, a color map has been added to improve the visibility of the depth. This was added  because for humans is easier to see a gradient of colors rather than a gradient of grays.  
 	
-	Regarding task \ref{obj:acc:nn}, although we still have no conclusive results from the user testing, we have started researching the tools and the architecture needed to create the neural network. 
-	First, it has been decided that TensorFlow \cite{web:tensor} will be used as neural network library. This was decided because tensor allow us to use either Python or C++\footnote{Currently, the TensorFlow C++ runtime is only available for Linux}as development language. In addition to that it is also possible to save a trained model in tensor and load it using OpenCV both in Python and C++. Other reason to choose tensor over other alternatives is because is commonly used by the CVC researchers, therefore, if any advice is needed, it can be solved asking one CVC researcher. 
-	Secondly after reading some papers about stereo \cite{redfelipeSintesisStereo},\cite{efficientStereoMatcher} we arrived to the conclusion that a Siamese architecture is the best option to create our neural network. %poner mas info o ponerla en otra parte?
+	Secondly after reading some papers about stereo we arrived to the conclusion that a Siamese architecture is the best option to create our neural network. A Siamese neural network is a net composed with two completely separated input layers, in our case, one for each camera. After some layers of feature extraction, we arrive to a layer where the two separated nets converge into one layer, after this layer we have some more layers where the inputs are compared and some feature extraction and feature extraction.
 	
-	%falta comentar resultados preeliminares de los test de vergencia y eso
+	Taking in account that the first user testing phase has been done with a limited amount of users, we have extracted some interesting conclusions, Table \ref{tab:userTestResults}. It seems that there are two types of users, the ones that feel comfortable since the beginning of the test and do not feel the need to change the presets, and the users that need to customize the distance between images to feel comfortable.
+	We notice that the users that did not change much the distance between image did not feel dizzy when using a setting in different distance than the original. On the contrary, the users that did change the distance between images mostly felt dizzy when using a setting set for a different distance than they were seeing. At the same time, we notice that in most cases, both types of users feel when using the close setting in large distances objects are seen further away, and vice versa in case of far settings in closer distances.
+	Moreover, we also notice that some users found difficult to find the keys used to move the images, for that reason we decided to move the keys that change the position of the right image from i,j,k and l to the arrow keys. We also notice some other little inconveniences while doing the test, for that reason a part of the protocol will be changed to improve the experience and commodity of the users.
+	
+	
+
+\begin{table}
+	\begin{center}
+		\begin{tabular}{ccccccc}
+			\toprule
+			 & \multicolumn{2}{c}{Close} & \multicolumn{2}{c}{Medium} & \multicolumn{2}{c}{Far} \\ 
+			Feelings & $\Delta X$ & $\Delta Y$ & $\Delta X$ & $\Delta Y$ & $\Delta X$ & $\Delta X$ \\ 
+			\midrule
+			Not dizzy & 0 & 12 & 6 & 0 & -18 & 0 \\ 
+			\midrule 
+		 	Dizzy & 6 & 0 & -258 & 0 & -114 & 30 \\ 
+			\midrule
+			Not dizzy & 6 & 0 & 6 & 0 & 6 & 0 \\ 
+			\midrule 
+			Dizzy & 6 & -6 & -66 & 12 & -72 & -6 \\ 
+			\midrule
+			Dizzy & -24 & 0 & -132 & 0 & -84 & 0 \\ 
+			\midrule
+			Dizzy & -48 & 0 & -78 & 10 & -90 & -12 \\ 
+			\bottomrule
+		\end{tabular} 
+	\caption{Results of the vergence in the user testing sessions. Note that $\Delta X$ means separation between the two images in the X axis and $\Delta Y$ means separation in the Y axis. }
+	\label{tab:userTestResults}
+	\end{center}
+\end{table}
 	
 	
 
