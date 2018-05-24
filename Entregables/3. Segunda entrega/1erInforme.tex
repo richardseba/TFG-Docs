@@ -67,11 +67,9 @@
 	
 	\section{Introduction}
 	
-	\lettrine[lines=3]{T}{his} project has its origins in the internship that I done in the Computer Vision Center (CVC) in summer 2017. During my internship I developed a basic video-see-through viewer for a head mounted display (HDM) developed in the CVC. Along with the development we discovered that the main concern that our prototypes faced during our user testing sessions was the feeling of dizziness and motion sickness produced by the headset. Hence the motivation for this project, reduce the adverse physical reactions that it produces to the users \cite{disconfortReview}, \cite{unpublishCVC} and continue improving the viewer making adding new modules while keeping its expandability. It has to be said that this research project is focused mainly on the software, the prototypes and other hardware aspects will be out of our concerns and will be developed by CVC researchers. A communication channel though is opened to discuss about the development of the whole project. 
+	\lettrine[lines=3]{T}{his} project has its origins in the internship that I done in the Computer Vision Center (CVC) in summer 2017. During my internship I developed a basic video-see-through viewer for a head mounted display (HMD) developed in the CVC. Along with the development we discovered that the main concern that our prototypes faced during our user testing sessions was the feeling of dizziness and motion sickness produced by the headset. Hence the motivation for this project, reduce the adverse physical reactions that it produces to the users \cite{disconfortReview}, \cite{unpublishCVC} and continue improving the viewer making adding new modules while keeping its expandability. It has to be said that this research project is focused mainly on the software, the prototypes and other hardware aspects will be out of our concerns and will be developed by CVC researchers. A communication channel though is opened to discuss about the development of the whole project. 
 	
-	The head mounted displays first appeared in 1965 when Ivan Sutherland developed the first HDM called "the sword of Damocles" \cite{hdmSutherland}, it stablishes the ground for further development in the field. The development of these technologies has grown in the last years mainly centered in the video-games field. Some examples, are the Oculus \cite{web:oculus} or the HTC Vive \cite{web:vive}. These products are virtual reality headsets, therefore they are only capable of showing computer generated scenes. The developed project prototypes differ in this matter because they can also show the real world, this kind of HDMs are called video-see-through, the current version of the prototype can be seen in Figure \ref{fig:proto}. %actualizar imagen del prototipo
-	
-	%Para poner en contexto, las primeras gafas [...] 
+	The head mounted displays first appeared in 1965 when Ivan Sutherland developed the first HMD called "the sword of Damocles" \cite{hdmSutherland}, it stablishes the ground for further development in the field. The development of these technologies has grown in the last years mainly centered in the video-games field. Some examples, are the Oculus \cite{web:oculus} or the HTC Vive \cite{web:vive}. These products are virtual reality headsets, therefore they are only capable of showing computer generated scenes. The developed project prototypes differ in this matter because they can also show the real world, this kind of HMDs are called video-see-through, the current version of the prototype can be seen in Figure \ref{fig:proto}. %actualizar imagen del prototipo
 	
 	%si contemplamos el estado actual del mundillo, en general, las aproximaciones a variaciones en la vergencia se hacen apartir de la visualizacion del comportamiento del ojo, posicion para poder calcular la vergencia 
 	
@@ -79,14 +77,14 @@
 	\section{Objectives}
 	
 	\subsection{Initial objetives}
-	First, we will be developing a software that will be capable of capture stream from a stereo camera and display it in real time. The software will show one camera stream on each half of the screen, also the HDM will enable only to each eye to see one half of the screen, all of this will simulate the stereo effect (creating a depth effect). Another goal is to prepare this software to be easily expandable with new modules in the future.
+	First, we will be developing a software that will be capable of capture stream from a stereo camera and display it in real time. The software will show one camera stream on each half of the screen, also the HMD will enable only to each eye to see one half of the screen, all of this will simulate the stereo effect (creating a depth effect). Another goal is to prepare this software to be easily expandable with new modules in the future.
 	
-	Second, as is reported in \cite{disconfortReview}, and we discovered in a user testing session in the CVC \cite{unpublishCVC}, using head mounted displays can cause a variety of adverse physical reactions, since this HDM will be used while working, these symptoms will reduce the concentration and the effective working hours. For that reason, reducing these adverse physical reactions is a priority. To achieve this goal, we will try to apply two techniques: 
+	Second, as is reported in \cite{disconfortReview}, and we discovered in a user testing session in the CVC \cite{unpublishCVC}, using head mounted displays can cause a variety of adverse physical reactions, since this HMD will be used while working, these symptoms will reduce the concentration and the effective working hours. For that reason, reducing these adverse physical reactions is a priority. To achieve this goal, we will try to apply two techniques: 
 	
 	\begin{figure}
 		\centering
-		\includegraphics[width=1\linewidth]{img/231.jpg}
-		\caption{Current version of the HMD video-see-through prototype}
+		\includegraphics[width=1\linewidth]{img/imagenproto3.jpg}
+		\caption{Current version of the HMD video-see-through prototype.}
 		\label{fig:proto}
 	\end{figure}
 	
@@ -97,9 +95,9 @@
 		\item Depth of field (DoF) blur: Recent investigations \cite{ifftConfortDoF} suggest that applying a DoF blur to a scene viewed using a head-mounted display can reduce visual discomfort, the challenge here is that our project has to make this DoF blur in real time in a real world environment, in contrast to the developed in that investigation where they used computer generated scenes. To achieve this, we are going to use disparity map and the information obtained by a neural network that discerns between closer and distant objects.
 	\end{itemize} 
 	
-	Third, as the HDM will be used in workplaces, the idea of adding data to the environment, could improve the work-flow and the work efficiency. For this reason, we think, that adding a third camera to the system can add valuable information that can be mixed with the environment. A similar idea can be found here \cite{vismerge} where a third camera is used to add information to the real world. For example, by adding an infrared camera, the user can be warned by highlighting objects too hot to be touched.
+	Third, as the HMD will be used in workplaces, the idea of adding data to the environment, could improve the work-flow and the work efficiency. For this reason, we think, that adding a third camera to the system can add valuable information that can be mixed with the environment. A similar idea can be found here \cite{vismerge} where a third camera is used to add information to the real world. For example, by adding an infrared camera, the user can be warned by highlighting objects too hot to be touched.
 	
-	Fourth, as we discovered in a user testing done in the CVC \cite{unpublishCVC} last January, using a computer while wearing the HDM is a difficult task, mainly because the screen was unreadable for the brightness saturation of the image. For that reason, a system capable of detecting computer screens and adapt the brightness, contrast and others parameters of the image stream will be developed.
+	Fourth, as we discovered in a user testing done in the CVC \cite{unpublishCVC} last January, using a computer while wearing the HMD is a difficult task, mainly because the screen was unreadable for the brightness saturation of the image. For that reason, a system capable of detecting computer screens and adapt the brightness, contrast and others parameters of the image stream will be developed.
 	
 	Along all the development, user testing sessions will take place to check the improvements made between the different versions of the developed software and the different prototypes developed. The main goal of this sessions will be to evaluate whether the developed software works and if it reduces the sickness feelings of the users. The procedure used in the user testing will be like the performed in \cite{ifftConfortDoF}, where the Simulator Sickness Questionnaire \cite{ssqQuestion} where used to evaluate the symptoms. 
 	
@@ -131,7 +129,18 @@
 	
 	Involving the tools that will need to be used develop the project, first of all, the current viewer version is made in C++ using the QT libraries \cite{web:qt}, therefore any tools that would be used need to be compatible with the current version of the viewer. For that reason, further investigation will be performed to identify which neural network library is more suitable.
 	
-	The custom scrum methodology already explained has been followed without any change in the first weeks of development. Every part of the development process has been documented and every change in the code has been uploaded to a private Github repository. It is worth mention that the OpenCV \cite{web:opencv} library has been used to develop the calibration and undistort module. 
+	The custom scrum methodology already explained has been followed without any change in the development. Every part of the development process has been documented and every change in the code has been uploaded to a private Github repository. It is worth mention that the OpenCV \cite{web:opencv} library has been used to develop the calibration and undistort module. 
+	
+	Once the tasks \ref{obj:dispmap}, \ref{obj:acc:preset} and \ref{obj:acc:dispmap} were finished, a protocol was designed in order to do every user testing session in the same conditions. It has the following considerations: 
+
+	\begin{itemize}
+		\item To perform the testing, 3 ophthalmological patterns will be set in 3 different locations, one at reading distance, other at close distance, like the pc screen; and other far away at the wall of the room. 
+		\item  Each user will do one session per day and the distance calibration done by the user will be done in a random order. 
+		\item  Every user will rest for a few seconds between each calibration of the preset.  
+		\item  Every preset calibration will start in with the camera images in the center of the ROI. 
+		\item  Once the user calibration is finished, every user will comment its feelings when using a setting preset in the other distances. 
+	\end{itemize}
+	
 	
 	\section{Planning}
 	\label{sec:planning}
@@ -142,7 +151,7 @@
 	
 	Also, a dataset will be used to make sure our dataset is correct and to encompass a broader range of environments. For that reason, we selected first the Middlebury stereo dataset \cite{web:middelburyDataset} because it has a great dataset of stereo images and the groundtruth of their depth map. Additionally a dataset with indoor and outdoor scenes is recommended. Several dataset could be used with that purpose, for example the MIT's places dataset \cite{web:mitplaces} and the INDSECS indoors only dataset \cite{web:indecs}.
 	
-	A calibration dataset is required to generate a quality calibration. This dataset will contain a series of images of a chess like pattern located in different parts and depths of the image. A requirement is that the patterns appears completely in both camera. This dataset will be updated every time the cameras or the HDM gets manipulated, this is because any minor change in the focal length or the position between the cameras will affect the results of the calibration.
+	A calibration dataset is required to generate a quality calibration. This dataset will contain a series of images of a chess like pattern located in different parts and depths of the image. A requirement is that the patterns appears completely in both camera. This dataset will be updated every time the cameras or the HMD gets manipulated, this is because any minor change in the focal length or the position between the cameras will affect the results of the calibration.
 	
 	To be able to evaluate the depth map generation, a video sequence of the stereo pair must be captured and later processed by the depth map module. It would be convenient the integration of a video capture module to the current program to ease the evaluation task.
 	
@@ -218,7 +227,7 @@
 
 	\subsection{Planning changes}
 		
-	During the firsts weeks of work some problems have arisen, the main issue was that in order to integrate a system capable of generating depth map image, is was required to undistort the image pair captured. This is because each optical lens of each camera introduces a distortion on the image captured. In addition, as the lenses are not exactly equal and they are not exactly alienated, a stereo calibration system was required to produce the undistortion. This stage of the project was split in four parts.
+	During the firsts weeks of work some problems arisen, the main issue was that in order to integrate a system capable of generating depth map image, is was required to undistort the image pair captured. This is because each optical lens of each camera introduces a distortion on the image captured. In addition, as the lenses are not exactly equal and they are not exactly alienated, a stereo calibration system was required to produce the undistortion. This stage of the project was split in four parts.
 	
 	\begin{itemize}
 		\item Calibration development: To develop the calibration and undistortion, the OpenCV library \cite{web:opencv} was used, it was selected because it has a great varity of calibration and undistortion functions already implemented and also because it was already being used in other modules of the interface. The goal of this task was to develop and integrate a monocular and stereo calibration module.
@@ -230,7 +239,7 @@
 		\item Depth map evaluation: Once the module is completely working, a evaluation will take place to evaluate the quality and the reliability of the depth map obtained. This task is currently in progress. The goal of this task will be to document, calibrate and modify the depth map to ensure its outputs have the enough quality to continue with further modules.
 	\end{itemize}
 
-	
+		Before starting the user testing, we realized that several changes have to be done in the way the images move inside the screen of the viewer. These changes were done, first to make more user friendly the setting up of the camera positions and secondly to be able to use most of the screen of the HMD without leaving any black margins like it was happening with the current version. Moreover, these changes allow the user to fit the size of the objects shown on the screen to a closer to real size, therefore reducing the possible inconveniences produced by this size gap between the screen and the reality.  
 
 	As some task like: the user testing sessions, progressive preset selection and the neural network development were delayed, the planning timeline had to be updated. The current version of the Gantt diagram can be found in the figure \ref{fig:gantt}, in the appendix.
 	
@@ -239,8 +248,9 @@
 	
 	\section{Development progress}
 	 
+	\subsection{First development phase}
 	
-	At the start, the first objective that needed to be completed was \ref{obj:viewer}. It was delayed because the main HDM prototype was being revised. Therefore the first objective started was \ref{obj:dispmap}, the development of the depth map system. The LIBELAS library was downloaded and some of the headers were updated to make it compatible with the compiler used, Microsoft Visual c++ compiler v15. After the firsts stand-alone test we realized that a calibration and undistort module was necessary, as the LIBELAS requires a totally undistorted image with completely rectified epipolar lines\footnote{In stereo systems, when two points that can be seen in both images and are in the same Y coordinate}. 
+	At the start, the first objective that needed to be completed was \ref{obj:viewer}. It was delayed because the main HMD prototype was being revised. Therefore the first objective started was \ref{obj:dispmap}, the development of the depth map system. The LIBELAS library was downloaded and some of the headers were updated to make it compatible with the compiler used, Microsoft Visual c++ compiler v15. After the firsts stand-alone test we realized that a calibration and undistort module was necessary, as the LIBELAS requires a totally undistorted image with completely rectified epipolar lines\footnote{In stereo systems, when two points that can be seen in both images and are in the same Y coordinate}. 
 	
 	The implementation of the calibration and undistort parts was difficult mainly due to the lack and the outdated documentation of the calibration library in OpenCV C++. Finally, the module was implemented as two classes, the monocular calibration class and the stereo calibration class, the stereo one uses two monocular objects to store the non-shared parameters. Both can save and load their parameters from YAML\footnote{YAML is a human readable serialization lenguage commonly used to save data and for configuration files.} files.
 	
@@ -328,31 +338,21 @@
 	% - Los usuarios deberan comentar sus sensaciones utilizando el preset de cerca en disstancias lejanas y intermedias y el preset de lejos en distancias cercanas y intermedias 
 	% - Los datos seran guardados en una hoja de calculo
 	
-	Before starting the user testing, we realized that several changes have to be done in the way the images move inside the screen of the viewer. These changes were done, first to make more user friendly the setting up of the camera positions and secondly to be able to use most of the screen of the HDM without leaving any black margins like is happening with the current version. Moreover, these changes allow the user to fit the size of the objects shown on the screen to a closer to real size, therefore reducing the possible inconveniences produced by this size gap between the screen and the reality.  
+	\subsection{Second development phase}
 	
-	Once the tasks \ref{obj:dispmap}, \ref{obj:acc:preset} and \ref{obj:acc:dispmap} were finished, a protocol was designed in order to do every user testing session in the same conditions. It has the following considerations: 
-	
-	\begin{itemize}
-		\item To perform the testing, 3 ophthalmological patterns will be set in 3 different locations, one at reading distance, other at close distance, like the pc screen; and other far away at the wall of the room. 
-		\item  Each user will do one session per day and the distance calibration done by the user will be done in a random order. 
-		\item  Every user will rest for a few seconds between each calibration of the preset.  
-		\item  Every preset calibration will start in with the camera images in the center of the ROI. 
-		\item  Once the user calibration is finished, every user will comment its feelings when using a setting preset in the other distances. 
-	\end{itemize}
+	Before starting the user testing, we realized that several changes have to be done in the way the images move inside the screen of the viewer. These changes were done, first to make more user friendly the setting up of the camera positions and secondly to be able to use most of the screen of the HMD without leaving any black margins like it was happening with the current version. Moreover, these changes allow the user to fit the size of the objects shown on the screen to a closer to real size, therefore reducing the possible inconveniences produced by this size gap between the screen and the reality.  
 
-	It is worth to mention that the development team of the hardware prototype has finished the third prototype ((((((((((imagen)))))))))))))))), it now has an improved holding system that ensures that the camera will not move during our tests. Previously, despite our efforts to keep the camera movements at minimum, every time we started recording after calibration, the movement of the HDM or even the tension on the wire, ended up moving, and therefore decalibrating the cameras.   
+	It is worth to mention that the development team of the hardware prototype has finished the third prototype, in Figure \ref{fig:proto}, it now has an improved holding system that ensures that the camera will not move during our tests. Previously, despite our efforts to keep the camera movements at minimum, every time we started recording after calibration, the movement of the HMD or even the tension on the wire, ended up moving, and therefore decalibrating the cameras.   
 	
 	Related with the task \ref{obj:dataset:record}, the viewer has been ported to a 64 bits architecture, consequently, the number of frames that can be stored in memory has grown significantly. this will allow us to record longer dataset videos.
 	
 	Related with the task \ref{obj:dispmap}, a color map has been added to improve the visibility of the depth. This is because for humans is easier to see a gradient of colors rather than a gradient of grays. 
 	
-	Regarding task \ref{obj:acc:nn}, we still had no conclusive results from the user testing, but we started researching the tools and the architecture needed to create the neural network. 
-	First, it has been decided that TensorFlow(((((((((((())))))))))))(ref) will be used as neural network library. This was decided because tensor allow us to use either Python or C++\footnote{Currently, the TensorFlow C++ runtime is only available for Linux}as development language. In addition to that it is also possible to save a trained model in tensor and load it using OpenCV both in Python and C++. Other reason to choose tensor over other alternatives is because is commonly used by the CVC researchers, therefore, if any advice is needed, it can be solved asking one CVC researcher. 
-	Secondly after reading some papers about stereo ((((((((((((ref))))))))))))))))) we arrived to the conclusion that a Siamese architecture is the best option to create our neural network. %poner mas info o ponerla en otra parte?
+	Regarding task \ref{obj:acc:nn}, although we still have no conclusive results from the user testing, we have started researching the tools and the architecture needed to create the neural network. 
+	First, it has been decided that TensorFlow \cite{web:tensor} will be used as neural network library. This was decided because tensor allow us to use either Python or C++\footnote{Currently, the TensorFlow C++ runtime is only available for Linux}as development language. In addition to that it is also possible to save a trained model in tensor and load it using OpenCV both in Python and C++. Other reason to choose tensor over other alternatives is because is commonly used by the CVC researchers, therefore, if any advice is needed, it can be solved asking one CVC researcher. 
+	Secondly after reading some papers about stereo \cite{redfelipeSintesisStereo},\cite{efficientStereoMatcher} we arrived to the conclusion that a Siamese architecture is the best option to create our neural network. %poner mas info o ponerla en otra parte?
 	
 	%falta comentar resultados preeliminares de los test de vergencia y eso
-	
-	
 	
 	
 
@@ -366,10 +366,11 @@
 
 	\section{Objective and tasks list}
 	\begin{enumerate}
-		\item \label{obj:viewer} Modular HDM Viewer 
+		\item \label{obj:viewer} Modular HMD Viewer 
 		\begin{enumerate}
 			\item Preset Shortcuts
 			\item Better program configuration
+			\item Better viewer scene
 		\end{enumerate}
 	
 		\item Dataset generation
