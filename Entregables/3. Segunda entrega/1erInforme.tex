@@ -79,7 +79,7 @@
 	\subsection{Initial objetives}
 	First, we will be developing a software that will be capable of capture stream from a stereo camera and display it in real time. The software will show one camera stream on each half of the screen, also the HMD will enable only to each eye to see one half of the screen, all of this will simulate the stereo effect (creating a depth effect). Another goal is to prepare this software to be easily expandable with new modules in the future.
 	
-	Second, as is reported in \cite{disconfortReview}, and we discovered in a user testing session in the CVC \cite{unpublishCVC}, using head mounted displays can cause a variety of adverse physical reactions, since this HMD will be used while working, these symptoms will reduce the concentration and the effective working hours. For that reason, reducing these adverse physical reactions is a priority. To achieve this goal, we will try to apply two techniques: 
+	Second, as is reported in \cite{disconfortReview}, and we discovered in a user testing session in the CVC \cite{unpublishCVC}, using head mounted displays can cause a variety of adverse physical reactions, as the end goal for our HMD is to be used it in workplaces, these symptoms can reduce the concentration and the efficiency of the workers. For that reason, reducing these adverse physical reactions is a priority. To achieve this goal, we will try to apply two techniques: 
 	
 	\begin{figure}
 		\centering
@@ -99,7 +99,7 @@
 	
 	Fourth, as we discovered in a user testing done in the CVC \cite{unpublishCVC} last January, using a computer while wearing the HMD is a difficult task, mainly because the screen was unreadable for the brightness saturation of the image. For that reason, a system capable of detecting computer screens and adapt the brightness, contrast and others parameters of the image stream will be developed.
 	
-	Along all the development, user testing sessions will take place to check the improvements made between the different versions of the developed software and the different prototypes developed. The main goal of this sessions will be to evaluate whether the developed software works and if it reduces the sickness feelings of the users. The procedure used in the user testing will be like the performed in \cite{ifftConfortDoF}, where the Simulator Sickness Questionnaire \cite{ssqQuestion} where used to evaluate the symptoms. 
+	Along all the development, user testing sessions will take place to check the improvements made between the different versions of the developed software and the different prototypes developed. The main goal of this sessions will be to evaluate whether the developed software works and if it reduces the sickness feelings of the users. The procedure used in the user testing will be like the performed in \cite{ifftConfortDoF}, where the Simulator Sickness Questionnaire \cite{ssqQuestion} was used to evaluate the symptoms. 
 	
 	\subsection{Progress and changes}
 	
@@ -107,17 +107,16 @@
 	
 	The integration of a reliable depth map generation is essential to the project, it is needed to complete both Accommodation-Vergence and DoF goals, and as it give us knowledge of the environment it would probably be key in future developments. For these reasons it was decided to add it as an objective itself. The main goal will be to integrate a fast and reliable depth map generator with all the required components.
 	
-	As the depth map generation requires a stereo pair of undistorted images to obtain a reliable depth map, the integration of a system capable of read calibration files or calibrate itself and undistort the output of the cameras is required.  
+	As the depth map generation requires a stereo pair of undistorted images to obtain a reliable depth map, the integration of a system capable of reading calibration files or calibrate itself and undistort the output of the cameras is required.  
 
-	The performance of the depth map generation is also a key issue, as a slow image generation will give the system great latency and that could limit the uses cases of the module. 
+	The performance of the depth map generation is also a key issue, as a slow image generation will give the system high latency and that could cap the uses cases of the module. 
 	
-	The current objectives and tasks list can be found in the appendix, it was done to recollect all the goals that this project want to achieve. Future references to the objectives and tasks will use the appendix list numeration. As we will see in \ref{sec:planning}, not all of this goals will be reachable due to time constraints.
+	The current objectives and tasks list can be found in the appendix, this was done to gather all the goals that this project seek to achieve. Future references to the objectives and tasks will use the appendix list numeration. As we will see in \ref{sec:planning}, not all of this goals will be reachable due to time constraints.
 	
 	\section{Methodology}
-	Scrum and its variants are one of the most spread work methodologies nowadays.
-	The Scrum methodology is the selected to be used in this project, however, as this project will only be done by one person, some changes have to be made. 
+	Scrum and its variants are one of the most spread work methodologies nowadays. Therefore we believe convenient to use scrum as the foundation of this project, however, as this project will only be done by one person, some changes have to be made. 
 	
-	First as there is only one developer the daily meeting will be substituted with a weekly meeting with the stakeholders, in this case the tutor and the boss of the laboratory department in the CVC, in these meetings we will evaluate the development done, the issues faced that week and the problems solved. In addition to that we will discuss and review future milestones and the progress towards them.
+	First as there is only one developer the daily meeting will be substituted with a weekly meeting with the project supervisors, in this case the tutor and the boss of the laboratory department in the CVC. In these meetings we will evaluate the development done, the issues faced that week and the problems solved. In addition to that we will discuss and review future milestones and the progress towards them.
 	
 	Second, a backlog will be prepared at the beginning of the project and will contain the main goals divided in tasks, these tasks will be organized in groups of sprints easily done in a week. As each sprint has a backlog of task to be done, a tool can be used to organize this backlog, in this case Trello\cite{web:trello} will be used.
 	
@@ -125,7 +124,7 @@
 	
 	Keeping the main scrum methodology, I think it is interesting to grab some ideas from the Lean software development \cite{web:leanMethod}. The idea of removing the so called "Muda", non-important extra features and processes, could be beneficial for this project because it could reach an overwhelming dimension for the limited time that is had.
 	
-	Involving the tools that will need to be used develop the project, first of all, the current viewer version is made in C++ using the QT libraries \cite{web:qt}, therefore any tools that would be used need to be compatible with the current version of the viewer. For that reason among others, TensorFlow\cite{web:tensor} was chosen as the main library for building the neuronal network. Currently, tensor supports  Python and C++\footnote{Currently, the TensorFlow's C++ runtime is only available for Linux.}as development language. In addition to that it is also possible to save a trained model in tensor and load it using OpenCV both in Python and C++. Other reason to choose tensor over other alternatives is because is commonly used by the CVC researchers, therefore, if any advice is needed, it can be solved asking one CVC researcher.
+	Involving the tools that will need to be used develop the project, first of all, the current viewer version is made in C++ using QT libraries \cite{web:qt}, therefore any tools that would be used need to be compatible with the current version of the viewer. For that reason among others, TensorFlow\cite{web:tensor} was chosen as the main library for building the neuronal network. Currently, tensor supports  Python and C++\footnote{Currently, the TensorFlow's C++ runtime is only available for Linux.}as development language. In addition to that it is also possible to save a trained model in tensor and load it using OpenCV both in Python and C++. Other reason to choose tensor over other alternatives is because is commonly used by the CVC researchers, therefore, if any advice is needed, it can be solved asking one CVC researcher.
 	
 	The custom scrum methodology already explained has been followed without any change in the development. Every part of the development process has been documented and every change in the code has been uploaded to a private Github repository. It is worth mention that the OpenCV \cite{web:opencv} library has been used to develop the calibration and undistort module. 
 	
@@ -145,11 +144,12 @@
 	
 	\subsection{Dataset}
 	\label{subsec:dataset}
-	To be able to develop this project a dataset will be necessary to train the neural networks and to check the depth map. In this case as we have available three hardware prototypes, a data collection procedure will be possible and simple. For that reason, a dataset caption session is planned.
+	To be able to develop this project a dataset will be necessary to train the neural networks and to check the depth map. In this case as we have available three hardware prototypes, a data collection procedure will be possible. For that reason, a dataset recording session is planned.
 	
-	Also, a dataset will be used to make sure our dataset is correct and to encompass a broader range of environments. For that reason, we selected first the Middlebury stereo dataset \cite{web:middelburyDataset} because it has a great dataset of stereo images and the groundtruth of their depth map. Additionally a dataset with indoor and outdoor scenes is recommended. Several dataset could be used with that purpose, for example the MIT's places dataset \cite{web:mitplaces} and the INDSECS indoors only dataset \cite{web:indecs}.
+	%this is part maybe can go away, i don't think is relevant anymore
+	Also, a dataset will be used to make sure our training is correct and to encompass a broader range of environments. For that reason, we selected first the Middlebury stereo dataset \cite{web:middelburyDataset} because it has a great dataset of stereo images and the groundtruth of their depth map. Additionally a dataset with indoor and outdoor scenes is recommended. Several dataset could be used with that purpose, for example the MIT's places dataset \cite{web:mitplaces} and the INDSECS indoors only dataset \cite{web:indecs}.
 	
-	A calibration dataset is required to generate a quality calibration. This dataset will contain a series of images of a chess like pattern located in different parts and depths of the image. A requirement is that the patterns appears completely in both camera. This dataset will be updated every time the cameras or the HMD gets manipulated, this is because any minor change in the focal length or the position between the cameras will affect the results of the calibration.
+	A calibration dataset is required to generate a quality calibration. This dataset will contain a series of images of a chess like pattern located in different parts and depths of the image. A requirement is that the patterns appears completely in both cameras. This dataset will be updated every time the cameras or the HMD gets manipulated, that is because any minor change in the focal length or the position between the cameras will affect the results of the calibration.
 	
 	To be able to evaluate the depth map generation, a video sequence of the stereo pair must be captured and later processed by the depth map module. It would be convenient the integration of a video capture module to the current program to ease the evaluation task.
 	
@@ -157,14 +157,14 @@
 	
 	\subsection{Accommodation-Vergence}
 	\label{subsec:vergence}
-	In this stage, a neural network will be trained to detect the distance of the focus and the necessary vergence in the screen placement to help the user a more comfortable experience.
+	In this stage, a neural network will be trained to detect the distance of the focus and the necessary vergence between images to improve the user comfort.
 	This will, alongside with the DoF blur, be the main time-consuming stage of the project and will have the following parts:
 	\begin{enumerate}
 		\item \label{itm:preset}  Preset creation: In this task, the current viewer will be expanded with the creation of multiple and easy to change presets that will allow further user testing.
 		
 		\item \label{itm:UserTesting} User testing, presets: In this first user testing session after the finalization of task \ref{itm:preset}, the users will be told to configure their own focus settings and to try to change between them to adapt the focus to closer or distant objects. The goal here is to acknowledge whether the user feels better accommodation with the focus between objects.
 		
-		\item \label{itm:ProgressivePreset} Progressive preset change: After the development of \ref{itm:preset} and \ref{itm:UserTesting}, if the users report sickness because of the sudden change between presets, a smooth transition between them will be developed to reduce the issue. 
+		\item \label{itm:ProgressivePreset} Progressive preset change: After the development of \ref{itm:preset} and \ref{itm:UserTesting}, if the users report sickness because of the sudden change between presets, a smooth transition between them will be developed to reduce this issue. 
 		
 		\item Disparity map: In parallel with the development of the tasks \ref{itm:preset}, \ref{itm:UserTesting} and \ref{itm:ProgressivePreset}, a disparity map generator from a stereo pair is required to continue with further development. As this subject is complex per se and is not the main goal of this project, a library that already implements a good stereo matcher, like LIBELAS\cite{web:LIBELAS}, will be used. 
 		
@@ -238,22 +238,24 @@
 	\end{itemize}
 
 	Before starting the user testing, we realized that several changes have to be done in the way the images move inside the screen of the viewer. These changes were done, first to make more user friendly the setting up of the camera positions and secondly to be able to use most of the screen of the HMD without leaving any black margins like it was happening with the current version. Moreover, these changes allow the user to fit the size of the objects shown on the screen to a closer to real size, therefore reducing the possible inconveniences produced by this size gap between the screen and the reality.
+	
+	At this point of the project is obvious that some tasks of the project will not be done due to time constrains, these tasks are \ref{obj:screen}, \ref{obj:third:mix} and \ref{obj:dof:nn}. The task of making the change between presets is still undone due to the delay in the user testing. 
 
 	As some task like: the user testing sessions, progressive preset selection and the neural network development were delayed, the planning timeline had to be updated. The current version of the Gantt diagram can be found in the figure \ref{fig:gantt}, in the appendix.
 	
-	% En este punto del projecto, se hace evidente que ciertas tareas que en principio iban a ser realizadas no van a poder hacerse porque las tareas anteriores han llevado mas tiempo del esperado, estas tareas son 7,6.A, 5.C
+	% En este punto del projecto, se hace evidente que ciertas tareas que en principio iban a ser realizadas no van a poder hacerse porque las tareas anteriores han llevado mas tiempo del esperado, estas tareas son 7,6.B, 5.C
 	% la tarea de implementar una modificacion dinamica de la vergencia, todavia esta pendiente debido al retraso de las pruebas con usuarios
 	
 	\section{Development progress}
 	 
 	\subsection{First development phase}
 	
-	At the start, the first objective that needed to be completed was \ref{obj:viewer}. It was delayed because the main HMD prototype was being revised. Therefore the first objective started was \ref{obj:dispmap}, the development of the depth map system. The LIBELAS library was downloaded and some of the headers were updated to make it compatible with the compiler used, Microsoft Visual c++ compiler v15. After the firsts stand-alone test we realized that a calibration and undistort module was necessary, as the LIBELAS requires a totally undistorted image with completely rectified epipolar lines\footnote{In stereo systems, when two points that can be seen in both images and are in the same Y coordinate}. 
+	At the start, the first objective that needed to be completed was \ref{obj:viewer}. It was delayed because the main HMD prototype was being revised. Therefore the first objective started was \ref{obj:dispmap}, the development of the depth map system. The LIBELAS library was downloaded and some of the headers were updated to make it compatible with the compiler used, Microsoft Visual c++ compiler v15. After the firsts stand-alone test we realized that a calibration and undistort module was necessary, as LIBELAS requires a totally undistorted image with completely rectified epipolar lines\footnote{In stereo systems, when two points that can be seen in both images and are in the same Y coordinate}. 
 	
-	The implementation of the calibration and undistort parts was difficult mainly due to the lack and the outdated documentation of the calibration library in OpenCV C++. Finally, the module was implemented as two classes, the monocular calibration class and the stereo calibration class, the stereo one uses two monocular objects to store the non-shared parameters. Both can save and load their parameters from YAML\footnote{YAML is a human readable serialization lenguage commonly used to save data and for configuration files.} files.
+	The implementation of the calibration and undistort parts was difficult mainly due to the lack and the outdated documentation of the calibration library in OpenCV C++. Finally, the module was implemented in two classes, the monocular calibration class and the stereo calibration class, the stereo one uses two monocular calibration objects to store the non-shared parameters. Both can save and load their parameters from YAML\footnote{YAML is a human readable serialization lenguage commonly used to save data and for configuration files.} configuration files.
 	
 	Once the calibration and undistort modules were integrated, the depth map module was finally tested within the interface. 
-	The first thing noticed was the huge latency between each frame, as can be seen in the results in  this is not desired because we need a high-speed system that adapts quickly the vergence distance. There are two possible ways to solve the issue.
+	The first thing noticed was the huge latency between each frame, as can be seen in the results in \ref{tab:depthmap}. These results are not optimal, since we need a high-speed system that adapts quickly the vergence distance. We found out two possible ways to address this issue:
 	
 	\begin{itemize}
 		\item Reduction of the image resolution: In our use case, only the center of the images is necessary, this is because it is where the user will be usually looking at, therefore taking off the outer pixels of the images will not alter the behavior of the vergence system and will improve the speed of the generation of depth map images.
@@ -304,7 +306,7 @@
 			\includegraphics[width=\linewidth]{img/4b}
 			\caption{Depth map image.}
 		\end{subfigure}
-		\caption{Original and depth map obtained using the LIBELAS library.}
+		\caption{Original and depth map images obtained using the LIBELAS library.}
 		\label{fig:depthmap}
 	\end{figure}
 	
@@ -318,38 +320,43 @@
 	
 	Related with the task \ref{obj:dispmap}, a color map has been added to improve the visibility of the depth. This was added  because for humans is easier to see a gradient of colors rather than a gradient of grays.  
 	
-	Secondly after reading some papers about stereo we arrived to the conclusion that a Siamese architecture is the best option to create our neural network. A Siamese neural network is a net composed with two completely separated input layers, in our case, one for each camera. After some layers of feature extraction, we arrive to a layer where the two separated nets converge into one layer, after this layer we have some more layers where the inputs are compared and some feature extraction and feature extraction.
+	Secondly after reading some papers about stereo \cite{redfelipeSintesisStereo},\cite{efficientStereoMatcher} we arrived to the conclusion that a Siamese architecture was the best option to create our neural network. A Siamese neural network is a net composed with two completely separated input layers, in our case, one for each camera. After some layers of feature extraction, we arrive to a layer where the two separated nets converge into one layer, after this layer we have some more layers where the inputs are compared and some feature extraction and feature extraction.
 	
-	Taking in account that the first user testing phase has been done with a limited amount of users, we have extracted some interesting conclusions, Table \ref{tab:userTestResults}. It seems that there are two types of users, the ones that feel comfortable since the beginning of the test and do not feel the need to change the presets, and the users that need to customize the distance between images to feel comfortable.
-	We notice that the users that did not change much the distance between image did not feel dizzy when using a setting in different distance than the original. On the contrary, the users that did change the distance between images mostly felt dizzy when using a setting set for a different distance than they were seeing. At the same time, we notice that in most cases, both types of users feel when using the close setting in large distances objects are seen further away, and vice versa in case of far settings in closer distances.
-	Moreover, we also notice that some users found difficult to find the keys used to move the images, for that reason we decided to move the keys that change the position of the right image from i,j,k and l to the arrow keys. We also notice some other little inconveniences while doing the test, for that reason a part of the protocol will be changed to improve the experience and commodity of the users.
+	Taking in account that the first user testing phase has been done with a limited amount of users, we have extracted some interesting conclusions, Table \ref{tab:userTestResults}. It seems that there are two types of users, the ones that feel comfortable since the beginning of the test and do not feel the need to change the presets, subjects S1 and S3; and the users that need to customize the distance between images to feel comfortable, subjects S2, S4, S5 and S6.
+	We notice that the users that did not change much the distance between image did not feel dizzy when using a setting in different distance than the original. On the contrary, the users that did change the distance between images mostly felt dizzy when using a setting set for a different distance than they were seeing. A new round of user testing session with more users will be done to verify if these results are correct.
 	
+	At the same time, we notice that in most cases, both types of users feel when using the close setting in large distances objects are seen further away, and vice versa in case of far settings in closer distances.
 	
+	After these first user testing sessions we notice some issues in the protocol and the viewer that need to be addressed. First we need to ensure that the users like S1 and S3 are correctly seeing the stereoscopic 3D. Second, some users found difficult to set the vergence in the close distance for lack of a relevant 3D object or form, for this reason we propose to introduce an object into the test to ease the setting up. 
+	Third, during the testing of the settings in other distances, we think that it is necessary to make the test also in the distance where the setting was set to verify if the user still feels that it is the correct setup. Fourth, we notice that some users found difficult to find the keys used to move the images, for that reason we decided to move the keys that change the position of the right image from i,j,k and l to the arrow keys. Fifth, after the testing was done we notice that the cameras were slightly out of focus and the brightness, contrast and color balance was not correct, as this can also impact in the user comfortability, for now on before every user testing session, the general camera configuration will be check.
 
-\begin{table}
-	\begin{center}
-		\begin{tabular}{ccccccc}
-			\toprule
-			 & \multicolumn{2}{c}{Close} & \multicolumn{2}{c}{Medium} & \multicolumn{2}{c}{Far} \\ 
-			Feelings & $\Delta X$ & $\Delta Y$ & $\Delta X$ & $\Delta Y$ & $\Delta X$ & $\Delta X$ \\ 
-			\midrule
-			Not dizzy & 0 & 12 & 6 & 0 & -18 & 0 \\ 
-			\midrule 
-		 	Dizzy & 6 & 0 & -258 & 0 & -114 & 30 \\ 
-			\midrule
-			Not dizzy & 6 & 0 & 6 & 0 & 6 & 0 \\ 
-			\midrule 
-			Dizzy & 6 & -6 & -66 & 12 & -72 & -6 \\ 
-			\midrule
-			Dizzy & -24 & 0 & -132 & 0 & -84 & 0 \\ 
-			\midrule
-			Dizzy & -48 & 0 & -78 & 10 & -90 & -12 \\ 
-			\bottomrule
-		\end{tabular} 
-	\caption{Results of the vergence in the user testing sessions. Note that $\Delta X$ means separation between the two images in the X axis and $\Delta Y$ means separation in the Y axis. }
-	\label{tab:userTestResults}
-	\end{center}
-\end{table}
+
+	\begin{table*}
+		\begin{center}
+			\begin{tabular}{cccccccc}
+				\toprule
+				 & & \multicolumn{2}{c}{Close} & \multicolumn{2}{c}{Medium} & \multicolumn{2}{c}{Far} \\ 
+				Subject &Feelings & $\Delta X$ & $\Delta Y$ & $\Delta X$ & $\Delta Y$ & $\Delta X$ & $\Delta X$ \\ 
+				\midrule
+				S1&Confortable & 0 & 12 & 6 & 0 & -18 & 0 \\ 
+				\midrule 
+			 	S2&Disconfort & 6 & 0 & -258 & 0 & -114 & 30 \\ 
+				\midrule
+				S3&Confortable & 6 & 0 & 6 & 0 & 6 & 0 \\ 
+				\midrule 
+				S4&Disconfort & 6 & -6 & -66 & 12 & -72 & -6 \\ 
+				\midrule
+				S5&Disconfort & -24 & 0 & -132 & 0 & -84 & 0 \\ 
+				\midrule
+				S6&Disconfort & -48 & 0 & -78 & 10 & -90 & -12 \\ 
+				\bottomrule
+			\end{tabular} 
+		\caption{Results of the vergence in the user testing sessions. The first column represents the general feelings of the users when changing the settings. Note that $\Delta X$ means separation between the two images in the X axis and $\Delta Y$ means separation in the Y axis. }
+		\label{tab:userTestResults}
+		\end{center}
+	\end{table*}
+
+	\section{Provisional Conclusions}
 	
 	
 
@@ -397,17 +404,17 @@
 		\begin{enumerate}
 			\item Mock-up blur
 			\item Disparity map Version
-			\item Neural network Version
+			\item \label{obj:dof:nn} Neural network Version
 			\item User testing
 		\end{enumerate}
 	
 		\item \label{obj:third} Third eye
 		\begin{enumerate}
 			\item Integration of the viewer
-			\item Research mixture of images
+			\item \label{obj:third:mix} Research mixture of images
 		\end{enumerate}
-	
-		\item Screen quality
+		
+		\item \label{obj:screen} Screen quality
 	\end{enumerate}
 
 
