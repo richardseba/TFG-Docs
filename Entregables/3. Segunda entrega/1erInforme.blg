@@ -4,45 +4,45 @@ The top-level auxiliary file: 1erInforme.aux
 The style file: plain.bst
 Database file #1: biblio.bib
 Warning--empty note in unpublishCVC
-You've used 22 entries,
+You've used 23 entries,
             2118 wiz_defined-function locations,
-            626 strings with 7455 characters,
-and the built_in function-call counts, 6983 in all, are:
-= -- 693
-> -- 325
+            630 strings with 7557 characters,
+and the built_in function-call counts, 7200 in all, are:
+= -- 715
+> -- 332
 < -- 5
-+ -- 132
-- -- 108
-* -- 396
-:= -- 1152
-add.period$ -- 78
-call.type$ -- 22
-change.case$ -- 120
++ -- 135
+- -- 110
+* -- 402
+:= -- 1189
+add.period$ -- 82
+call.type$ -- 23
+change.case$ -- 124
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 259
-empty$ -- 568
-format.name$ -- 108
-if$ -- 1497
+cite$ -- 24
+duplicate$ -- 266
+empty$ -- 590
+format.name$ -- 110
+if$ -- 1545
 int.to.chr$ -- 0
-int.to.str$ -- 22
+int.to.str$ -- 23
 missing$ -- 12
-newline$ -- 122
-num.names$ -- 44
-pop$ -- 167
+newline$ -- 128
+num.names$ -- 46
+pop$ -- 175
 preamble$ -- 1
-purify$ -- 98
+purify$ -- 101
 quote$ -- 0
-skip$ -- 201
+skip$ -- 207
 stack$ -- 0
-substring$ -- 327
-swap$ -- 70
+substring$ -- 332
+swap$ -- 71
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 88
+type$ -- 92
 warning$ -- 1
-while$ -- 65
-width$ -- 24
-write$ -- 250
+while$ -- 67
+width$ -- 25
+write$ -- 262
 (There was 1 warning)

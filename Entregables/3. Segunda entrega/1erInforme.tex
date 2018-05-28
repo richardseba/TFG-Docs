@@ -67,9 +67,9 @@
 	
 	\section{Introduction}
 	
-	\lettrine[lines=3]{T}{his} project has its origins in the internship that I done in the Computer Vision Center (CVC) in summer 2017. During my internship I developed a basic video-see-through viewer for a head mounted display (HMD) developed in the CVC. Along with the development we discovered that the main concern that our prototypes faced during our user testing sessions was the feeling of dizziness and motion sickness produced by the headset. Hence the motivation for this project, reduce the adverse physical reactions that it produces to the users \cite{disconfortReview}, \cite{unpublishCVC} and continue improving the viewer making adding new modules while keeping its expandability. It has to be said that this research project is focused mainly on the software, the prototypes and other hardware aspects will be out of our concerns and will be developed by CVC researchers. A communication channel though is opened to discuss about the development of the whole project. 
+	\lettrine[lines=3]{T}{his} project has its origins in the internship that I did at the Computer Vision Center (CVC) during the summer of 2017. During my internship I developed a basic video-see-through viewer for a head mounted display (HMD) developed in the CVC. Along with the development we discovered that the main concern that our prototypes faced during our user testing sessions was the feeling of dizziness and motion sickness produced by the headset. Hence the motivation for this project is reduce the adverse physical reactions that it produces to the users \cite{disconfortReview}, \cite{unpublishCVC} and continue improving the viewer adding new modules while keeping its expandability. It has to be said that this research project is focused mainly on the software, the prototypes and other hardware aspects will be out of our concerns and will be developed by CVC researchers. A communication channel though is opened to discuss about the development of the whole project. 
 	
-	The head mounted displays first appeared in 1965 when Ivan Sutherland developed the first HMD called "the sword of Damocles" \cite{hdmSutherland}, it stablishes the ground for further development in the field. The development of these technologies has grown in the last years mainly centered in the video-games field. Some examples, are the Oculus \cite{web:oculus} or the HTC Vive \cite{web:vive}. These products are virtual reality headsets, therefore they are only capable of showing computer generated scenes. The developed project prototypes differ in this matter because they can also show the real world, this kind of HMDs are called video-see-through, the current version of the prototype can be seen in Figure \ref{fig:proto}.
+	The head mounted displays first appeared in 1965 when Ivan Sutherland developed the first HMD called "the sword of Damocles" \cite{hdmSutherland}, it established the ground for further development in the field. The development of these technologies has grown in the last years mainly centered in the video-games field. Some examples, are the Oculus \cite{web:oculus} or the HTC Vive \cite{web:vive}. These products are virtual reality headsets, therefore they are only capable of showing computer generated scenes. The developed project prototypes differ in this matter because they can also show the real world using two integrated cameras. This kind of HMDs are called video-see-through, the current version of the prototype can be seen in Figure \ref{fig:proto}.
 	
 	%si contemplamos el estado actual del mundillo, en general, las aproximaciones a variaciones en la vergencia se hacen apartir de la visualizacion del comportamiento del ojo, posicion para poder calcular la vergencia 
 	
@@ -77,7 +77,7 @@
 	\section{Objectives}
 	
 	\subsection{Initial objetives}
-	First, we will be developing a software that will be capable of capture stream from a stereo camera and display it in real time. The software will show one camera stream on each half of the screen, also the HMD will enable only to each eye to see one half of the screen, all of this will simulate the stereo effect (creating a depth effect). Another goal is to prepare this software to be easily expandable with new modules in the future.
+	First, we will develop a software that will be capable of capture stream from a stereo camera and display it in real time. The software will show one camera stream on each half of the screen, also the HMD will enable only to each eye to see one half of the screen, all of this will simulate the stereo effect (creating a depth effect). Another goal is to prepare this software to be easily expandable with new modules in the future.
 	
 	Second, as is reported in \cite{disconfortReview}, and we discovered in a user testing session in the CVC \cite{unpublishCVC}, using head mounted displays can cause a variety of adverse physical reactions, as the end goal for our HMD is to be used it in workplaces, these symptoms can reduce the concentration and the efficiency of the workers. For that reason, reducing these adverse physical reactions is a priority. To achieve this goal, we will try to apply two techniques: 
 	
@@ -124,19 +124,27 @@
 	
 	Keeping the main scrum methodology, I think it is interesting to grab some ideas from the Lean software development \cite{web:leanMethod}. The idea of removing the so called "Muda", non-important extra features and processes, could be beneficial for this project because it could reach an overwhelming dimension for the limited time that is had.
 	
-	Involving the tools that will need to be used develop the project, first of all, the current viewer version is made in C++ using QT libraries \cite{web:qt}, therefore any tools that would be used need to be compatible with the current version of the viewer. For that reason among others, TensorFlow\cite{web:tensor} was chosen as the main library for building the neuronal network. Currently, tensor supports  Python and C++\footnote{Currently, the TensorFlow's C++ runtime is only available for Linux.}as development language. In addition to that it is also possible to save a trained model in tensor and load it using OpenCV both in Python and C++. Other reason to choose tensor over other alternatives is because is commonly used by the CVC researchers, therefore, if any advice is needed, it can be solved asking one CVC researcher.
+	Involving the tools that will need to be used develop the project, first of all, the current viewer version is made in C++ using QT libraries \cite{web:qt}, therefore any tools that would be used need to be compatible with the current version of the viewer. For that reason among others, TensorFlow\cite{web:tensor} was chosen as the main library for building the neuronal network. Currently, TensorFlow supports  Python and C++\footnote{Currently, the TensorFlow's C++ runtime is only available for Linux.}as development languages. In addition, it is also possible to save a trained model in Tensor and load it using OpenCV both in Python and C++. Other reason to choose Tensor over other alternatives is because is commonly used by the CVC researchers, therefore, if any advice is needed, it can be solved asking one CVC researcher.
 	
 	The custom scrum methodology already explained has been followed without any change in the development. Every part of the development process has been documented and every change in the code has been uploaded to a private Github repository. It is worth mention that the OpenCV \cite{web:opencv} library has been used to develop the calibration and undistort module. 
 	
 	Once the tasks \ref{obj:dispmap}, \ref{obj:acc:preset} and \ref{obj:acc:dispmap} were finished, a protocol was designed in order to do every user testing session in the same conditions. It has the following considerations: 
 
 	\begin{itemize}
-		\item To perform the testing, 3 ophthalmological patterns will be set in 3 different locations, one at reading distance, other at close distance, like the pc screen; and other far away at the wall of the room. 
+		\item To perform the testing, 3 ophthalmological patterns, Figure \ref{fig:snellen}, will be set in 3 different locations, one at reading distance, other at close distance, like the pc screen; and other far away at the wall of the room. 
 		\item  Each user will do one session per day and the distance calibration done by the user will be done in a random order. 
 		\item  Every user will rest for a few seconds between each calibration of the preset.  
 		\item  Every preset calibration will start in with the camera images in the center of the ROI. 
 		\item  Once the user calibration is finished, every user will comment its feelings when using a setting preset in the other distances. 
 	\end{itemize}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{img/Snellenchart_es-1}
+	\caption{Ophthalmological pattern used in the user testing sessions from task \ref{obj:acc:preset}. The pattern was downloaded from \cite{web:snellen}.}
+	\label{fig:snellen}
+\end{figure}
+
 	
 	
 	\section{Planning}
@@ -176,7 +184,7 @@
 	\subsection{Depth of field blur}
 	This stage will be developed after the finishing of the previous Accommodation-Vergence phase \ref{subsec:vergence} and shares some development with it. 
 	
-	This problem can be resolved in to ways, using a disparity map only to create the DoF and using Neural network to aid the creation of it.
+	This problem can be resolved in two ways, using a disparity map only to create the DoF and using Neural Network to aid the creation of it.
 	
 	\begin{enumerate}
 		\item Mock up blur: to ensure that the results of \cite{ifftConfortDoF} are applicable to real world scenarios, a mock up blur photo dataset will be made, and a user testing session will take place.
@@ -225,12 +233,12 @@
 
 	\subsection{Planning changes}
 		
-	During the firsts weeks of work some problems arisen, the main issue was that in order to integrate a system capable of generating depth map image, is was required to undistort the image pair captured. This is because each optical lens of each camera introduces a distortion on the image captured. In addition, as the lenses are not exactly equal and they are not exactly alienated, a stereo calibration system was required to produce the undistortion. This stage of the project was split in four parts.
+	During the firsts weeks of work some problems arose, the main issue was that in order to integrate a system capable of generating depth map image, it was required to undistort the image pair captured. This is because each optical lens of each camera introduces a distortion to the image captured. In addition, as the lenses are not exactly equal and they are not exactly aligned, a stereo calibration system was required to produce the undistortion. This stage of the project was split in four parts.
 	
 	\begin{itemize}
 		\item Calibration development: To develop the calibration and undistortion, the OpenCV library \cite{web:opencv} was used, it was selected because it has a great varity of calibration and undistortion functions already implemented and also because it was already being used in other modules of the interface. The goal of this task was to develop and integrate a monocular and stereo calibration module.
 		
-		\item Depth map development: As it is explained in \ref{subsec:vergence}, LIBELAS library was selected. One of the main reasons for this selection was the performance. That is because high processing times must be avoided to prevent latency in the DoF or the vergence modules. The goal of this task was integrating the LIBELAS library with calibration and the camera output aiming to obtain the depth map. 
+		\item Depth map development: As explained in \ref{subsec:vergence}, LIBELAS library was selected. One of the main reasons for this selection was the performance. That is, because high processing times must be avoided to prevent latency in the DoF or the vergence modules. The goal of this task was integrating the LIBELAS library with calibration and the camera output aiming to obtain the depth map. 
 		
 		\item Calibration dataset: Once the calibration and the depth generation systems were integrated, the calibration dataset was captured, following the explained in \ref{subsec:dataset}. This dataset needs to be updated every time the headset gets manipulated to ensure the calibration, and therefore the undistortion is accurate.
 		
@@ -241,7 +249,7 @@
 	
 	At this point of the project is obvious that some tasks of the project will not be done due to time constrains, these tasks are \ref{obj:screen}, \ref{obj:third:mix} and \ref{obj:dof:nn}. The task of making the change between presets is still undone due to the delay in the user testing. 
 
-	As some task like: the user testing sessions, progressive preset selection and the neural network development were delayed, the planning timeline had to be updated. The current version of the Gantt diagram can be found in the figure \ref{fig:gantt}, in the appendix.
+	As some task like the user testing sessions, progressive preset selection and the neural network development were delayed, the planning timeline had to be updated. The current version of the Gantt diagram can be found in the figure \ref{fig:gantt}, in the appendix.
 	
 	% En este punto del projecto, se hace evidente que ciertas tareas que en principio iban a ser realizadas no van a poder hacerse porque las tareas anteriores han llevado mas tiempo del esperado, estas tareas son 7,6.B, 5.C
 	% la tarea de implementar una modificacion dinamica de la vergencia, todavia esta pendiente debido al retraso de las pruebas con usuarios
@@ -262,7 +270,7 @@
 		
 		\item Faster libraries and implementation: Another option would be using faster or optimized libraries to be able to speed up the performance in the generation of images. As the we are using libraries already implemented our possibilities are limited in this matter, an option would be using a multithreading version of the LIBELAS library, already implemented in \cite{web:LIBELAS}.
 	\end{itemize}
-	In this case, the first option will be selected, but if needed the second solution can also be used. In the table \ref{tab:depthmap} can be seen the current performance of the depth map generator. As well as the times, in the Figure \ref{fig:depthmap} we can see a full resolution disparity map and the original image. In this example is visible that the disparity is far from perfect, that is because there is still some calibration that can be done in the LIBELAS parameters. Also, is worth mention the extremely high accuracy needed in the calibration phase to obtain a correct depth map, any minor change in the camera setup, can give inaccurate depth maps.
+	In this case, the first option will be selected, but if needed the second solution can also be used. In Table \ref{tab:depthmap} can be observed the current performance of the depth map generator. As well as the times, in the Figure \ref{fig:depthmap} we can see a full resolution disparity map and the original image. In this example is visible that the disparity is far from perfect, that is because there is still some calibration that can be done in the LIBELAS parameters. Also, is worth mention the extremely high accuracy needed in the calibration phase to obtain a correct depth map, any minor change in the camera setup, can give inaccurate depth maps.
 	At this point, we considered that the only remaining task to be done in \ref{obj:dispmap} is \ref{obj:dispmap:eval}.
 	
 	The point \ref{obj:dataset:record} was also developed in these firsts weeks of work, the implementation of this module has been done with OpenCV. It has two options:
@@ -318,7 +326,7 @@
 	
 	Related with the task \ref{obj:dataset:record}, the viewer has been ported to a 64 bits architecture, consequently, the number of frames that can be stored in memory has grown significantly. this will allow us to record longer dataset videos.
 	
-	Related with the task \ref{obj:dispmap}, a color map has been added to improve the visibility of the depth. This was added  because for humans is easier to see a gradient of colors rather than a gradient of grays.  
+	Related with the task \ref{obj:dispmap}, a color map has been added to improve the visibility of the depth. This was added  because for humans is easier to see a gradient of colors rather than levels of gray.  
 	
 	Secondly after reading some papers about stereo \cite{redfelipeSintesisStereo},\cite{efficientStereoMatcher} we arrived to the conclusion that a Siamese architecture was the best option to create our neural network. A Siamese neural network is a net composed with two completely separated input layers, in our case, one for each camera. After some layers of feature extraction, we arrive to a layer where the two separated nets converge into one layer, after this layer we have some more layers where the inputs are compared and some feature extraction and feature extraction.
 	
@@ -357,6 +365,9 @@
 	\end{table*}
 
 	\section{Provisional Conclusions}
+	First, after the finishing the user testing session, we notice that users felt more comfortable in general, this is mainly due to the improvements in the prototype itself and because the improvement on the viewer that now uses the full screen instead of leaving black margins. Having said that, there is still work to do to include a dynamic change in the vergence using the distances obtained by the depth map.
+	Second, after the results of the first user testing session, we concluded that further analysis and therefore more user testing must be done to prove that the pattern that we discovered is true. If our theory confirms, we will start working on the dynamic vergence. 
+	
 	
 	
 
@@ -422,8 +433,8 @@
 		\section{Gantt planning}
 		\begin{figure}[b!]
 			\centering
-			\includegraphics[width=1\linewidth]{img/gantt2}
-			\caption{Gantt diagram of the project. Note that red blue tasks are remaining tasks, grey task are done tasks, red tasks are tasks not done in the scheduled time and yellow tasks are rescheduled tasks.}
+			\includegraphics[width=1\linewidth]{img/gantt3}
+			\caption{Gantt diagram of the project. Note that blue tasks are remaining tasks, grey task are done tasks, red tasks are tasks not done in the scheduled time, yellow tasks are rescheduled tasks, black tasks are task that will not be completed and green tasks are tasks that probably will not be completed due to time constrains }
 			\label{fig:gantt}
 		\end{figure}
 		
