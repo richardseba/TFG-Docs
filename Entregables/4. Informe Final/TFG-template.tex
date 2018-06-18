@@ -111,8 +111,12 @@
 	\blfootnote{$\bullet$ Course 2017/18}
 	
 	\section{Introduction}
+	%- introduccion al vr
+	%- explicar motivacion, practicas de verano, procarelight, usuarios mareados
+	%- explicar projecto en si
+	%- explicar Accomodation vergence con un dibujo y de forma resumida
 	
-	explicacion del proyecto, motivacion, estado inicial del desarrollo (trabajo hecho en practicas)
+	
 
 	\section{Objectives}
 	\begin{itemize}
@@ -128,34 +132,36 @@
 	hablar de tecnicas de desarrollo agil y sobretodo de las librerias utilizadas y de las limitaciones y ventajas que estas nos han aportado.
 	
 	\section{State of the art}
-	explicar de donde viene el vr, hacia donde va, tecnicas tipicas usadas para resolucion del problema de la vergencia (seguimiento de los ojos), hablar de tecnicas de depth map
+	%explicar de donde viene el vr, hacia donde va, tecnicas tipicas usadas para resolucion del problema de la vergencia (seguimiento de los ojos), hablar de tecnicas de depth map
+	%- hardware que se utiliza ahora, problema y incovenientes
+	%- depth map, Libelas, explicar que existe la middlebury datebase y porque hemos elegido libelas
+	%- calibration (?) explicar en que consiste
 	
 	\section{Tools and Development}
 	
 	este apartado hablare del codigo desarrollado, los problemas encontrados y las soluciones realizadas
 	
 	\subsection{Calibration}
-	en este apartado hablare sobre que tecnicas se han usado para realizar la calibracion y como se ha implementado y estructurado.
+	en este apartado hablare sobre que tecnicas se han usado para realizar la calibracion y como se ha implementado y estructurado, explicar problemas encontrados para la calibracion (descalibracion constante parametros utilizados)
 	
 	\subsection{Libelas}
-	en este apartado se explicaran las razones por las que se usa esta libreria, para que sirve, como se utiliza y que necesita para obtener la profundidad (imagenes epipolares, texturas heterogeneas etc.)
+	 como se utiliza y que necesita para obtener la profundidad (imagenes epipolares, texturas heterogeneas etc.), problemas de sensibilidad a la calibracion, 
 	
-	\subsection{Recording }
+	\subsection{Dataset}
 	%grabacion, y captura del dataset
-	en este apartado se hablara del modulo de grabacion, y el pipeline paralelo (sin usar el viewer) que se montó para hacer funcionar el sistema en tiempo real y poder realizar los primeros analisis.
+	en este apartado se hablara del modulo de grabacion, y el pipeline paralelo (sin usar el viewer) que se montó para hacer funcionar el sistema en tiempo real y poder realizar los analisis.
 	
-	\subsection{Accomodation-Vergence}
-	aqui se explicara el problema de la acomodation vergence y como trataremos de solucionarlo (quizas esto tendria que estar antes y aqui hacer un apartado mas tecnico y menos explicativo sobre Accomodation-Vergence en si)
-	
-	\subsection{Viewer}
+	\subsection{Integration with the viewer}
+	%imagen del diseño del pipeline final, explicar clasificador 
 	%presets, movimiento de las pantallas , guardado de parametros, integracion de las partes, threads
 	en este apartado se explicaran mejoras secundarias en el visor, creacion de los presets, smooth presets transition, movimiento de la roi por encima de las imagenes etc, y de como se han integrado todos los modulos dentro de visor intentando preservar en todo momento el rendimiento (threads, explicacion del pipeline final)
+
 	
 	\section{Results}
 	
-	\subsection{Calibration Comparison}
+	%\subsection{Calibration Comparison}
 	%comparaciones entre imagenes no calibradas y imagenes calibradas
-	en este apartado compararemos las imagenes originales con calibracion obtenida via opencv y la obtenida via matlab (quizas es un poco innceseraio este apartado ?)
+	%en este apartado compararemos las imagenes originales con calibracion obtenida via opencv y la obtenida via %matlab (quizas es un poco innceseraio este apartado ?)
 	
 	\subsection{Libelas}
 	%rendimiento fps y resultados en cuanto a profundidad. imagenes!!
@@ -164,16 +170,17 @@
 	\subsection{First user testing}
 	aqui expondremos los resultados de la primera prueba de user testing que se hizo, explicaremos nuestras conclusiones previas sobre los resultados de la prueba y nuestras propuestas para tratar de mejorar los resultados
 	
-	\subsection{Final user testing}
+	\subsection{Second user testing}
 	en este apartado mostraremos los distintos resultados obtenidos en la segunda sesion de user testing , explicaremos los resultados y concluiremos si nuestra hipotesis es correcta y si la solucion desarrollada es suficiente para resolver este problema, en caso de que no, nos plantearemos cuales son o han sido los problemas que impiden que el usuario sienta una mejora al utilizar la vergencia dinamica.
 	
 	\section{Conclusions}
+	%Parte importante!
 	Finalmente expondremos todo el trabajo realizado y apartir de los resultados de las sesiones de user testing explicaremos si se han logrado los objetivos y cuanto margen de mejora hay en caso de haberlo. 
 	
 	\section{Future work}
 	%cosas que se han quedado en el cajon
 	(quizas esto es mas para la presentacion, nose si en el informe tambien se deberia de poner)
-	en este apartado explicaremos ideas que se plantearon y que no llegaron a realizarse y ideas con las que podria continuarse este proyecto, (DoF blur, third camera, Augmented reality,  )
+	en este apartado explicaremos ideas que se plantearon y que no llegaron a realizarse y ideas con las que podria continuarse este proyecto, (DoF blur, third camera, Augmented reality, sistemas mas pequeños (voyo)  )
 	
 	\section*{Acknowledgment}
 	This work is supported in part by a CVC transfer project with ProCare Light company, and partially funded by the Spanish Ministry of Economy and Competitiveness and FEDER under grants TIN2014-56919-C3-2-R and TIN2017-89723-P.
