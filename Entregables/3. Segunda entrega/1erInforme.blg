@@ -1,48 +1,5 @@
-This is BibTeX, Version 0.99d (TeX Live 2016/W32TeX)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
-The top-level auxiliary file: 1erInforme.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: 1erInforme.aux
 The style file: plain.bst
 Database file #1: biblio.bib
 Warning--empty note in unpublishCVC
-You've used 23 entries,
-            2118 wiz_defined-function locations,
-            630 strings with 7557 characters,
-and the built_in function-call counts, 7200 in all, are:
-= -- 715
-> -- 332
-< -- 5
-+ -- 135
-- -- 110
-* -- 402
-:= -- 1189
-add.period$ -- 82
-call.type$ -- 23
-change.case$ -- 124
-chr.to.int$ -- 0
-cite$ -- 24
-duplicate$ -- 266
-empty$ -- 590
-format.name$ -- 110
-if$ -- 1545
-int.to.chr$ -- 0
-int.to.str$ -- 23
-missing$ -- 12
-newline$ -- 128
-num.names$ -- 46
-pop$ -- 175
-preamble$ -- 1
-purify$ -- 101
-quote$ -- 0
-skip$ -- 207
-stack$ -- 0
-substring$ -- 332
-swap$ -- 71
-text.length$ -- 5
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 92
-warning$ -- 1
-while$ -- 67
-width$ -- 25
-write$ -- 262
 (There was 1 warning)

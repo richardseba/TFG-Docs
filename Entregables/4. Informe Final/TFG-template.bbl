@@ -1,3 +1,33 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{web:trello}
+Atlassian.
+\newblock Trello.
+\newblock \url{https://trello.com}, 2018.
+\newblock Last access March 9th 2018.
+
+\bibitem{web:qt}
+The~QT Company.
+\newblock Qt.
+\newblock \url{https://www.qt.io/}, 2018.
+\newblock Last access March 9th 2018.
+
+\bibitem{web:github}
+GitHub Inc.
+\newblock Github.
+\newblock \url{https://github.com/}, 2018.
+\newblock Last access March 9th 2018.
+
+\bibitem{web:githubDesktop}
+GitHub Inc.
+\newblock Github desktop.
+\newblock \url{https://desktop.github.com/}, 2018.
+\newblock Last access March 9th 2018.
+
+\bibitem{web:opencv}
+Opencv team.
+\newblock Opencv library.
+\newblock \url{https://opencv.org/}, 2018.
+\newblock Last access March 10th 2018.
 
 \end{thebibliography}

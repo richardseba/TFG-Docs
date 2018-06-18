@@ -113,29 +113,45 @@
 	\section{Introduction}
 	%- introduccion al vr
 	%- explicar motivacion, practicas de verano, procarelight, usuarios mareados
-	%- explicar projecto en si
+	%- explicar projecto en si, idea
 	%- explicar Accomodation vergence con un dibujo y de forma resumida
 	
 	
-
-	\section{Objectives}
-	\begin{itemize}
-		\item Añadir caracteristicas y modulos que permitan futuros desarrollos
-		\item Mejorar la usabilidad de la interfaz 
-		\item Evaluar si el efecto accomodation vergence esta generando un discomfort a los usuarios 
-		\item Si se detecta que el efecto del accomodation vergence genera incomodidad a los usuarios, se debera implementar una tecnica que permita evitar o reducir este problema.
-		\item Evaluar las sensaciones de los usuarios tras las mejoras implementadas.
-	\end{itemize}	
-
-	\section{Methodology}
-	%dudas sobre este apartado
-	hablar de tecnicas de desarrollo agil y sobretodo de las librerias utilizadas y de las limitaciones y ventajas que estas nos han aportado.
-	
+		
 	\section{State of the art}
 	%explicar de donde viene el vr, hacia donde va, tecnicas tipicas usadas para resolucion del problema de la vergencia (seguimiento de los ojos), hablar de tecnicas de depth map
 	%- hardware que se utiliza ahora, problema y incovenientes
 	%- depth map, Libelas, explicar que existe la middlebury datebase y porque hemos elegido libelas
 	%- calibration (?) explicar en que consiste
+	
+
+	\section{Objectives}
+	After the previous analysis and explanation of the problem, the main objectives will be the following: 
+
+	\begin{itemize}
+		\item Evaluate the user experience when using the HMD and determine whether the accommodation-vergence effect causes dizziness and general discomfort on the users. 
+		
+		\item If the Accomodation-Vergence is one of the causes of the discomfort on the users, the problem will be solved using the deph information that can be obtained using stereo vision. 
+		
+		\item Evaluate the user experience after the development and conclude if our approach for solving this problem has reduce the discomfort on the users. 
+		
+		\item Add the required modules keeping in mind the usefulness of these for future developments.
+		
+		\item Make all the required changes in the visualization program without reducing the performance. 
+	\end{itemize}
+
+	\section{Methodology}
+	%dudas sobre este apartado
+	%hablar de tecnicas de desarrollo agil y sobretodo de las librerias utilizadas y de las limitaciones y ventajas que estas nos han aportado.
+	
+	Scrum and its variants are one of the most spread work methodologies nowadays. Therefore we believe convenient to use it as one of the foundation of this project, however, as this project was only done by one person, some changes were made. 
+	
+	As there was only one developer, the daily meeting was replaced with a weekly meeting with the project supervisors, in this case the tutor and the boss of the laboratory department in the CVC. In these meetings we evaluated the development done, the issues faced that week and the problems solved. Related with the scrum methodology, Github \cite{web:github},\cite{web:githubDesktop} was used as version control system and trello\cite{web:trello} as the task manager system.
+	
+	Involving the tools used to develop this project, C++ and QT \cite{web:qt} were used mainly because the previous development of the visualization system was done using that environment. In addition to that, OpenCV was used as the library for image processing and calibration, see REF!!.
+	
+	
+	
 	
 	\section{Tools and Development}
 	
@@ -194,6 +210,7 @@
 	lista de tareas y objetivos (similar a lo que tenia en las otras entregas)
 	
 	\section{Additional images}
+	%añadir imagenes de oftalmologia
 	En este apartado se incluiran imagenes extra de ejemplo(mas escenarios) i/o imagenes que no quepan en el documento en si
 	
 	\section{Gantt planning}
