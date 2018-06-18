@@ -1,0 +1,197 @@
+% !TeX spellcheck = en_US
+\documentclass[10pt,a4paper,twocolumn,twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{times}
+\usepackage{titlesec}
+\usepackage{multirow}
+\usepackage{lettrine}
+\usepackage{pdflscape}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage[edges]{forest}
+\usepackage{url}
+\usepackage[top=2cm, bottom=1.5cm, left=2cm, right=2cm]{geometry}
+\usepackage[figurename=Fig.,tablename=Table]{caption}
+\captionsetup[table]{textfont=sc}
+
+\author{\LARGE\sffamily Segovia Barreales, Richard}
+\title{\Huge{\sffamily Reducing dizziness when using a video-see-through head-mounted display}}
+\date{}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+%
+%\large\bfseries\sffamily
+\titleformat{\section}
+{\large\sffamily\scshape\bfseries}
+{\textbf{\thesection}}{1em}{}
+
+\begin{document}
+
+	\fancyhead[LO]{\scriptsize AUTHOR: SEGOVIA BARREALES, RICHARD}
+	\fancyhead[RO]{\thepage}
+	\fancyhead[LE]{\thepage}
+	\fancyhead[RE]{\scriptsize EE/UAB TFG INFORMÀTICA: REDUCING DIZZINESS WHEN USING A VIDEO-SEE-THROUGH HEAD-MOUNTED DISPLAY}
+	
+	\fancyfoot[CO,CE]{}
+	
+	\fancypagestyle{primerapagina}
+	{
+	   \fancyhf{}
+	   \fancyhead[L]{\scriptsize TFG EN ENGINYERIA INFORMÀTICA, ESCOLA D'ENGINYERIA (EE), UNIVERSITAT AUTÒNOMA DE BARCELONA (UAB)}
+	   \fancyfoot[C]{\scriptsize June 2018, Escola d'Enginyeria (UAB)}
+	}
+	
+	%\lhead{\thepage}
+	%\chead{}
+	%\rhead{\tiny EE/UAB TFG INFORMÀTICA: TÍTOL (ABREUJAT SI ÉS MOLT LLARG)}
+	%\lhead{ EE/UAB \thepage}
+	%\lfoot{}
+	%\cfoot{\tiny{February 2015, Escola d'Enginyeria (UAB)}}
+	%\rfoot{}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+	\pagestyle{fancy}
+	
+	%\thispagestyle{myheadings}
+	\twocolumn[\begin{@twocolumnfalse}
+	
+	%\vspace*{-1cm}{\scriptsize TFG EN ENGINYERIA INFORMÀTICA, ESCOLA D'ENGINYERIA (EE), UNIVERSITAT AUTÒNOMA DE BARCELONA (UAB)}
+	
+	\maketitle
+	
+	\thispagestyle{primerapagina}
+	%\twocolumn[\begin{@twocolumnfalse}
+	%\maketitle
+	%\begin{abstract}
+	\begin{center}
+	\parbox{0.915\textwidth}
+	{\sffamily
+	\textbf{Resum--}
+	Resum del projecte, màxim 10 línies. ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... .................. ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........ .......... ..  ... . ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ........... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... 
+	\\
+	\\
+	\textbf{Paraules clau-- } Paraules clau del treball, màxim 2 línies . .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... ................\\
+	\\
+	%\end{abstract}
+	%\bigskip
+	%\begin{abstract}
+	\bigskip
+	\\
+	\textbf{Abstract--} Versió en anglès del resum . ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... .................. ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........ .......... ..  ... . ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ........... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... 
+	\\
+	\\
+	\textbf{Keywords-- } Versió en anglès de les paraules clau. .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .................. ..\\
+	}
+	
+	\bigskip
+	
+	{\vrule depth 0pt height 0.5pt width 4cm\hspace{7.5pt}%
+	\raisebox{-3.5pt}{\fontfamily{pzd}\fontencoding{U}\fontseries{m}\fontshape{n}\fontsize{11}{12}\selectfont\char70}%
+	\hspace{7.5pt}\vrule depth 0pt height 0.5pt width 4cm\relax}
+	
+	\end{center}
+	
+	\bigskip
+	%\end{abstract}
+	\end{@twocolumnfalse}]
+	
+	\blfootnote{$\bullet$ E-mail: richard.segovia@e-campus.uab.cat}
+	\blfootnote{$\bullet$ Menció en Computació}
+	\blfootnote{$\bullet$ Project supervised by: Coen Antens (CVC) and Felipe Lumbreras (Computació)}
+	\blfootnote{$\bullet$ Course 2017/18}
+	
+	\section{Introduction}
+	
+	explicacion del proyecto, motivacion, estado inicial del desarrollo (trabajo hecho en practicas)
+
+	\section{Objectives}
+	\begin{itemize}
+		\item Añadir caracteristicas y modulos que permitan futuros desarrollos
+		\item Mejorar la usabilidad de la interfaz 
+		\item Evaluar si el efecto accomodation vergence esta generando un discomfort a los usuarios 
+		\item Si se detecta que el efecto del accomodation vergence genera incomodidad a los usuarios, se debera implementar una tecnica que permita evitar o reducir este problema.
+		\item Evaluar las sensaciones de los usuarios tras las mejoras implementadas.
+	\end{itemize}	
+
+	\section{Methodology}
+	%dudas sobre este apartado
+	hablar de tecnicas de desarrollo agil y sobretodo de las librerias utilizadas y de las limitaciones y ventajas que estas nos han aportado.
+	
+	\section{State of the art}
+	explicar de donde viene el vr, hacia donde va, tecnicas tipicas usadas para resolucion del problema de la vergencia (seguimiento de los ojos), hablar de tecnicas de depth map
+	
+	\section{Tools and Development}
+	
+	este apartado hablare del codigo desarrollado, los problemas encontrados y las soluciones realizadas
+	
+	\subsection{Calibration}
+	en este apartado hablare sobre que tecnicas se han usado para realizar la calibracion y como se ha implementado y estructurado.
+	
+	\subsection{Libelas}
+	en este apartado se explicaran las razones por las que se usa esta libreria, para que sirve, como se utiliza y que necesita para obtener la profundidad (imagenes epipolares, texturas heterogeneas etc.)
+	
+	\subsection{Recording }
+	%grabacion, y captura del dataset
+	en este apartado se hablara del modulo de grabacion, y el pipeline paralelo (sin usar el viewer) que se montó para hacer funcionar el sistema en tiempo real y poder realizar los primeros analisis.
+	
+	\subsection{Accomodation-Vergence}
+	aqui se explicara el problema de la acomodation vergence y como trataremos de solucionarlo (quizas esto tendria que estar antes y aqui hacer un apartado mas tecnico y menos explicativo sobre Accomodation-Vergence en si)
+	
+	\subsection{Viewer}
+	%presets, movimiento de las pantallas , guardado de parametros, integracion de las partes, threads
+	en este apartado se explicaran mejoras secundarias en el visor, creacion de los presets, smooth presets transition, movimiento de la roi por encima de las imagenes etc, y de como se han integrado todos los modulos dentro de visor intentando preservar en todo momento el rendimiento (threads, explicacion del pipeline final)
+	
+	\section{Results}
+	
+	\subsection{Calibration Comparison}
+	%comparaciones entre imagenes no calibradas y imagenes calibradas
+	en este apartado compararemos las imagenes originales con calibracion obtenida via opencv y la obtenida via matlab (quizas es un poco innceseraio este apartado ?)
+	
+	\subsection{Libelas}
+	%rendimiento fps y resultados en cuanto a profundidad. imagenes!!
+	en este apartado de evaluaran los resultados con distintas resoluciones (subsampling) tanto en rendimiento puro (fps) como en resultados visuales de la profundidad (calidad de la dispariedad obtenida). tambien se vera una comparativa entre superficies/objetos con textura variada y sin textura
+	
+	\subsection{First user testing}
+	aqui expondremos los resultados de la primera prueba de user testing que se hizo, explicaremos nuestras conclusiones previas sobre los resultados de la prueba y nuestras propuestas para tratar de mejorar los resultados
+	
+	\subsection{Final user testing}
+	en este apartado mostraremos los distintos resultados obtenidos en la segunda sesion de user testing , explicaremos los resultados y concluiremos si nuestra hipotesis es correcta y si la solucion desarrollada es suficiente para resolver este problema, en caso de que no, nos plantearemos cuales son o han sido los problemas que impiden que el usuario sienta una mejora al utilizar la vergencia dinamica.
+	
+	\section{Conclusions}
+	Finalmente expondremos todo el trabajo realizado y apartir de los resultados de las sesiones de user testing explicaremos si se han logrado los objetivos y cuanto margen de mejora hay en caso de haberlo. 
+	
+	\section{Future work}
+	%cosas que se han quedado en el cajon
+	(quizas esto es mas para la presentacion, nose si en el informe tambien se deberia de poner)
+	en este apartado explicaremos ideas que se plantearon y que no llegaron a realizarse y ideas con las que podria continuarse este proyecto, (DoF blur, third camera, Augmented reality,  )
+	
+	\section*{Acknowledgment}
+	This work is supported in part by a CVC transfer project with ProCare Light company, and partially funded by the Spanish Ministry of Economy and Competitiveness and FEDER under grants TIN2014-56919-C3-2-R and TIN2017-89723-P.
+	
+	\bibliography{biblio}
+	\bibliographystyle{plain}
+	
+	\appendix
+	
+	\section{Objective and tasks list}
+	lista de tareas y objetivos (similar a lo que tenia en las otras entregas)
+	
+	\section{Additional images}
+	En este apartado se incluiran imagenes extra de ejemplo(mas escenarios) i/o imagenes que no quepan en el documento en si
+	
+	\section{Gantt planning}
+	el diagrama de gantt final (quizas esto va en el dossier en vez de aqui?)
+
+
+\end{document}
+

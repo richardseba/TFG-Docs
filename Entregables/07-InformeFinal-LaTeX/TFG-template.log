@@ -1,15 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.1)  5 MAR 2018 11:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.7)  16 JUN 2018 15:25
 entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
 **./TFG-template.tex
-(TFG-template.tex
-LaTeX2e <2017-04-15>
-Babel <3.17> and hyphenation patterns for 75 language(s) loaded.
-
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cl
-s"
+(./TFG-template.tex
+LaTeX2e <2017/01/01> patch level 3
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+(c:/texlive/2016/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size10.clo
-"
+(c:/texlive/2016/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -24,20 +23,19 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.s
-ty"
+(c:/texlive/2016/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\utf8.def"
+(c:/texlive/2016/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
+(c:/texlive/2016/texmf-dist/tex/latex/base/t1enc.dfu
 File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -278,8 +276,7 @@ File: t1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ot1enc.dfu
-"
+(c:/texlive/2016/texmf-dist/tex/latex/base/ot1enc.dfu
 File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A0 (decimal 160)
    defining Unicode char U+00A1 (decimal 161)
@@ -320,8 +317,7 @@ File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omsenc.dfu
-"
+(c:/texlive/2016/texmf-dist/tex/latex/base/omsenc.dfu
 File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -345,41 +341,16 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.s
-ty"
-Package: babel 2018/01/24 3.17 The Babel package
+(c:/texlive/2016/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2016/04/23 3.9r The Babel package
 
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\switch.
-def"
-File: switch.def 2018/01/24 3.17 Babel switching mechanism
-)
-*************************************
-* Local config file bblopts.cfg used
-*
-
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\arabi\bblopts.c
-fg"
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\babel-catalan\c
-atalan.ldf"
+(c:/texlive/2016/texmf-dist/tex/generic/babel-catalan/catalan.ldf
 Language: catalan 2005/03/29 v2.2p Catalan support from the babel system
 
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.d
-ef"
-File: babel.def 2018/01/24 3.17 Babel common definitions
-
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\switch.
-def"
-File: switch.def 2018/01/24 3.17 Babel switching mechanism
-)
+(c:/texlive/2016/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2016/04/23 3.9r Babel common definitions
 \babel@savecnt=\count87
 \U@D=\dimen103
-
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\txtbabe
-l.def")
-\bbl@dirlevel=\count88
 )
 Package babel Info: Making " an active character on input line 91.
 Warning: You are using encoding OT1 instead of T1.
@@ -388,10 +359,9 @@ Some word breaks will not be found.
 \rightllkern=\dimen105
 \raiselldim=\dimen106
 ))
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\multicol.
-sty"
-Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
-\c@tracingmulticols=\count89
+(c:/texlive/2016/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
+\c@tracingmulticols=\count88
 
 
 Package multicol Warning: May not work with the twocolumn option on input line 
@@ -399,11 +369,11 @@ Package multicol Warning: May not work with the twocolumn option on input line
 
 \mult@box=\box26
 \multicol@leftmargin=\dimen107
-\c@unbalance=\count90
-\c@collectmore=\count91
-\doublecol@number=\count92
-\multicoltolerance=\count93
-\multicolpretolerance=\count94
+\c@unbalance=\count89
+\c@collectmore=\count90
+\doublecol@number=\count91
+\multicoltolerance=\count92
+\multicolpretolerance=\count93
 \full@width=\dimen108
 \page@free=\dimen109
 \premulticols=\dimen110
@@ -434,65 +404,62 @@ Package multicol Warning: May not work with the twocolumn option on input line
 \@tempa=\box47
 \@tempa=\box48
 \@tempa=\box49
-\c@columnbadness=\count95
-\c@finalcolumnbadness=\count96
+\c@columnbadness=\count94
+\c@finalcolumnbadness=\count95
 \last@try=\dimen113
 \multicolovershoot=\dimen114
 \multicolundershoot=\dimen115
 \mult@nat@firstbox=\box50
 \colbreak@box=\box51
-\mc@col@check@num=\count97
-)
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphi
-cx.sty"
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+\mc@col@check@num=\count96
+) (c:/texlive/2016/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\keyval
-.sty"
+(c:/texlive/2016/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphi
-cs.sty"
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+(c:/texlive/2016/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/10/09 v1.0u Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\trig.s
-ty"
+(c:/texlive/2016/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-cfg\gr
-aphics.cfg"
+(c:/texlive/2016/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics-def\pd
-ftex.def"
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+(c:/texlive/2016/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+(c:/texlive/2016/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(c:/texlive/2016/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count97
 ))
 \Gin@req@height=\dimen116
 \Gin@req@width=\dimen117
 )
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fancyhdr\fancyh
-dr.sty"
-Package: fancyhdr 2017/06/30 v3.9a Extensive control of page headers and footer
-s
-\f@nch@headwidth=\skip45
-\f@nch@O@elh=\skip46
-\f@nch@O@erh=\skip47
-\f@nch@O@olh=\skip48
-\f@nch@O@orh=\skip49
-\f@nch@O@elf=\skip50
-\f@nch@O@erf=\skip51
-\f@nch@O@olf=\skip52
-\f@nch@O@orf=\skip53
+(c:/texlive/2016/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2016/09/06 3.8 Extensive control of page headers and footers
+\fancy@headwidth=\skip45
+\f@ncyO@elh=\skip46
+\f@ncyO@erh=\skip47
+\f@ncyO@olh=\skip48
+\f@ncyO@orh=\skip49
+\f@ncyO@elf=\skip50
+\f@ncyO@erf=\skip51
+\f@ncyO@olf=\skip52
+\f@ncyO@orf=\skip53
 )
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\times.st
-y"
+(c:/texlive/2016/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\titlesec\titles
-ec.sty"
+(c:/texlive/2016/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \ttl@box=\box52
 \beforetitleunit=\skip54
@@ -504,16 +471,14 @@ Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 \titlewidthlast=\dimen121
 \titlewidthfirst=\dimen122
 )
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\multirow\multir
-ow.sty"
+(c:/texlive/2016/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@colwidth=\skip56
 \multirow@cntb=\count98
 \multirow@dima=\skip57
 \bigstrutjot=\dimen123
 )
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lettrine\lettri
-ne.sty"
+(c:/texlive/2016/texmf-dist/tex/latex/lettrine/lettrine.sty
 File: lettrine.sty 2015/08/31 v1.9 (Daniel Flipo)
 \c@DefaultLines=\count99
 \c@DefaultDepth=\count100
@@ -539,24 +504,18 @@ File: lettrine.sty 2015/08/31 v1.9 (Daniel Flipo)
 \LettrineDepth=\dimen139
 
 Loading lettrine.cfg
-
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lettrine\lettri
-ne.cfg"))
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geomet
-ry.sty"
+(c:/texlive/2016/texmf-dist/tex/latex/lettrine/lettrine.cfg))
+(c:/texlive/2016/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifpd
-f.sty"
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+(c:/texlive/2016/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
 )
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ifvt
-ex.sty"
+(c:/texlive/2016/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\generic\ifxetex\ifxet
-ex.sty"
+(c:/texlive/2016/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count103
@@ -571,15 +530,11 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen146
 \Gm@layoutvoffset=\dimen147
 \Gm@dimlist=\toks18
-
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\geometry\geomet
-ry.cfg"))
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption
-.sty"
+)
+(c:/texlive/2016/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\caption
-3.sty"
+(c:/texlive/2016/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen148
@@ -592,12 +547,34 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 )
 Package caption Info: We need package `newfloat' on input line 292.
 
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\caption\newfloa
-t.sty"
+(c:/texlive/2016/texmf-dist/tex/latex/caption/newfloat.sty
 Package: newfloat 2015/09/17 v1.1-109 Defining new floating environments (AR)
 )
 \c@ContinuedFloat=\count106
-) (TFG-template.aux)
+)
+(./TFG-template.aux
+! Undefined control sequence.
+l.3 \babel@aux
+              {catalan}{}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \babel@aux{c
+                atalan}{}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
 \openout1 = `TFG-template.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
@@ -613,16 +590,13 @@ LaTeX Font Info:    ... okay on input line 32.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 32.
-
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.f
-d"
+ (c:/texlive/2016/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Info: Redefining \l on input line 32.
 LaTeX Info: Redefining \L on input line 32.
 
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf
-.mkii"
+(c:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count107
 \scratchdimen=\dimen155
@@ -635,65 +609,52 @@ LaTeX Info: Redefining \L on input line 32.
 \MPnumerator=\count111
 \makeMPintoPDFobject=\count112
 \everyMPtoPDFconversion=\toks20
+) (c:/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstop
-df-base.sty"
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\infw
-arerr.sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\grfext
-.sty"
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvde
-finekeys.sty"
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\ltxc
-mds.sty"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\kvopti
-ons.sty"
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\kvse
-tkeys.sty"
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\etex
-cmds.sty"
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\iflu
-atex.sty"
+(c:/texlive/2016/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\pdft
-excmds.sty"
-Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
+(c:/texlive/2016/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(c:/texlive/2016/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(c:/texlive/2016/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(c:/texlive/2016/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(c:/texlive/2016/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(c:/texlive/2016/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-)
+
+(c:/texlive/2016/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -730,11 +691,14 @@ G,.JBIG2,.JB2,.eps]
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
+[1{c:/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
 LaTeX Font Info:    Try loading font information for OT1+phv on input line 100.
 
 
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1phv.f
-d"
+(c:/texlive/2016/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -770,7 +734,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 100.
 LaTeX Font Info:    Try loading font information for U+pzd on input line 100.
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\upzd.fd"
+(c:/texlive/2016/texmf-dist/tex/latex/psnfss/upzd.fd
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <12> not available
@@ -778,47 +742,49 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <12> not available
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 114.
 
 
-("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omsptm.f
-d"
+(c:/texlive/2016/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 114.
- [1{C:/Users/rsegovia/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
+ [2
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 134.
-<img/adhoc_dtn.jpg, id=11, 389.95688pt x 245.41687pt>
+
+<img/adhoc_dtn.jpg, id=16, 389.95688pt x 245.41687pt>
 File: img/adhoc_dtn.jpg Graphic file (type jpg)
-<use img/adhoc_dtn.jpg>
-Package pdftex.def Info: img/adhoc_dtn.jpg  used on input line 143.
+ <use img/adhoc_dtn.jpg>
+Package pdftex.def Info: img/adhoc_dtn.jpg used on input line 143.
 (pdftex.def)             Requested size: 193.47578pt x 121.7607pt.
 
-[2 <./img/adhoc_dtn.jpg>] (TFG-template.aux) ) 
+[3 <./img/adhoc_dtn.jpg>] (./TFG-template.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 4801 strings out of 493303
- 73296 string characters out of 3128480
- 159169 words of memory out of 3000000
- 8246 multiletter control sequences out of 15000+200000
- 30584 words of font info for 55 fonts, out of 3000000 for 9000
+ 4756 strings out of 493013
+ 69008 string characters out of 6136994
+ 159071 words of memory out of 5000000
+ 8202 multiletter control sequences out of 15000+600000
+ 30584 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,43p,1589b,351s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/rsegovia/AppData/Local/
-Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/rsegovia/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/rsego
-via/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-<C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/u
-hvb8a.pfb><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/
-helvetic/uhvr8a.pfb><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/urw/times/utmb8a.pfb><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rsegovia/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/urw/times/utmri8a.pfb><C:/Users/rsegovia/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on TFG-template.pdf (2 pages, 102824 bytes).
+ 39i,11n,43p,1588b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2016/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2016/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/helvet
+ic/uhvb8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><
+c:/texlive/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2016/te
+xmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2016/texmf-dist/fonts/typ
+e1/urw/times/utmri8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/zapfding/u
+zdr.pfb>
+Output written on TFG-template.pdf (3 pages, 106937 bytes).
 PDF statistics:
- 43 PDF objects out of 1000 (max. 8388607)
+ 52 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
