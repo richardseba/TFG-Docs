@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.1)  18 JUN 2018 13:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.1)  20 JUN 2018 11:26
 entering extended mode
 **./TFG-template.tex
 (TFG-template.tex
@@ -1497,7 +1497,7 @@ File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <12> not available
 (Font)              Font shape `OT1/phv/b/sc' tried instead on input line 113.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 123.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 124.
 
 
 ("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\omsptm.f
@@ -1505,20 +1505,46 @@ d"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 123.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 124.
  [1{C:/Users/rsegovia/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 ]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 160.
+<img/imagenproto3.jpg, id=14, 2885.78125pt x 1923.185pt>
+File: img/imagenproto3.jpg Graphic file (type jpg)
+<use img/imagenproto3.jpg>
+Package pdftex.def Info: img/imagenproto3.jpg  used on input line 130.
+(pdftex.def)             Requested size: 236.84843pt x 157.81956pt.
+<img/vergencia.png, id=15, 549.05125pt x 436.63126pt>
+File: img/vergencia.png Graphic file (type png)
+<use img/vergencia.png>
+Package pdftex.def Info: img/vergencia.png  used on input line 145.
+(pdftex.def)             Requested size: 236.84843pt x 188.3474pt.
 
-Underfull \hbox (badness 2050) in paragraph at lines 190--191
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+[]\OT1/ptm/m/n/10 Consequently, this project tries to solve the
+ []
+
+
+Underfull \hbox (badness 5245) in paragraph at lines 151--152
+\OT1/ptm/m/n/10 Accommodation-Vergence con-flict us-ing the en-vi-ron-
+ []
+
+
+Underfull \hbox (badness 1009) in paragraph at lines 151--152
+\OT1/ptm/m/n/10 ment changes in-for-ma-tion to set the dis-tance be-tween
+ []
+
+[2 <./img/imagenproto3.jpg> <./img/vergencia.png>]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 199.
+
+Underfull \hbox (badness 2050) in paragraph at lines 229--230
 \OT1/ptm/m/n/10 en este apartado mostraremos los dis-tin-tos re-sul-ta-dos
  []
 
 
-Underfull \hbox (badness 1442) in paragraph at lines 202--203
+Underfull \hbox (badness 1442) in paragraph at lines 241--242
 \OT1/ptm/m/n/10 and FEDER un-der grants TIN2014-56919-C3-2-R and
  []
 
@@ -1528,20 +1554,51 @@ LaTeX Font Info:    Try loading font information for OT1+pcr on input line 6.
 ("C:\Users\rsegovia\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.f
 d"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [2])
+)
+Underfull \hbox (badness 1303) in paragraph at lines 22--28
+[]\OT1/ptm/m/n/10 Andrew T Duchowski, Don-ald H House, Jor-dan
+ []
+
+[3]
+Underfull \hbox (badness 1953) in paragraph at lines 41--45
+[]\OT1/ptm/m/n/10 Facebook Inc.  Ocu-lus rift.  $\OT1/pcr/m/n/10 https : / / ww
+w .
+ []
+
+
+Underfull \hbox (badness 4792) in paragraph at lines 59--63
+\OT1/ptm/m/n/10 ner, Emily A Cooper, and Gor-don Wet-zstein.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--63
+\OT1/ptm/m/n/10 Accommodation-invariant com-pu-ta-tional near-eye
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--76
+[]\OT1/ptm/m/n/10 Steven Poulakos, Ger-hard Roeth-lin, Adrian
+ []
+
+
+Underfull \hbox (badness 6032) in paragraph at lines 71--76
+\OT1/ptm/m/n/10 Al-ter-nat-ing at-ten-tion in con-tin-u-ous stereo-scopic
+ []
+
+)
 
 Package caption Warning: Unused \captionsetup[table] on input line 19.
 See the caption package documentation for explanation.
 
-[3
+[4
 
 ] (TFG-template.aux) ) 
 Here is how much of TeX's memory you used:
- 33169 strings out of 493303
- 757537 string characters out of 3128480
- 803963 words of memory out of 3000000
- 36289 multiletter control sequences out of 15000+200000
- 553309 words of font info for 59 fonts, out of 3000000 for 9000
+ 33199 strings out of 493303
+ 757995 string characters out of 3128480
+ 804015 words of memory out of 3000000
+ 36311 multiletter control sequences out of 15000+200000
+ 556071 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,12n,69p,10382b,364s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/font
@@ -1554,10 +1611,11 @@ sers/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a
 .pfb><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times
 /utmb8a.pfb><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/ur
 w/times/utmr8a.pfb><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/urw/zapfding/uzdr.pfb>
-Output written on TFG-template.pdf (3 pages, 89093 bytes).
+ype1/urw/times/utmri8a.pfb><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on TFG-template.pdf (4 pages, 1454963 bytes).
 PDF statistics:
- 48 PDF objects out of 1000 (max. 8388607)
+ 59 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

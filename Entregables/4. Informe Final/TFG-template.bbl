@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{web:trello}
 Atlassian.
@@ -12,6 +12,37 @@ The~QT Company.
 \newblock \url{https://www.qt.io/}, 2018.
 \newblock Last access March 9th 2018.
 
+\bibitem{web:vive}
+HTC Corporation.
+\newblock Vive.
+\newblock \url{https://www.vive.com/us/}, 2018.
+\newblock Last access March 10th 2018.
+
+\bibitem{eyeTracking}
+Andrew~T Duchowski, Donald~H House, Jordan Gestring, Rui~I Wang, Krzysztof
+  Krejtz, Izabela Krejtz, Rados{\l}aw Mantiuk, and Bartosz Bazyluk.
+\newblock Reducing visual discomfort of 3d stereoscopic displays with
+  gaze-contingent depth-of-field.
+\newblock In {\em Proceedings of the acm symposium on applied perception},
+  pages 39--46. ACM, 2014.
+
+\bibitem{LIBELAS}
+Andreas Geiger, Martin Roser, and Raquel Urtasun.
+\newblock Efficient large-scale stereo matching.
+\newblock In {\em Asian Conference on Computer Vision (ACCV)}, 2010.
+
+\bibitem{vergenceDisconfort}
+David~M Hoffman, Ahna~R Girshick, Kurt Akeley, and Martin~S Banks.
+\newblock Vergence--accommodation conflicts hinder visual performance and cause
+  visual fatigue.
+\newblock {\em Journal of vision}, 8(3):33--33, 2008.
+
+\bibitem{web:oculus}
+Facebook Inc.
+\newblock Oculus rift.
+\newblock \url{https://www.oculus.com/}, 2018.
+\newblock Last access March 10th 2018.
+
 \bibitem{web:github}
 GitHub Inc.
 \newblock Github.
@@ -24,10 +55,28 @@ GitHub Inc.
 \newblock \url{https://desktop.github.com/}, 2018.
 \newblock Last access March 9th 2018.
 
-\bibitem{web:opencv}
-Opencv team.
-\newblock Opencv library.
-\newblock \url{https://opencv.org/}, 2018.
-\newblock Last access March 10th 2018.
+\bibitem{neareyeblur}
+Robert Konrad, Nitish Padmanaban, Keenan Molner, Emily~A Cooper, and Gordon
+  Wetzstein.
+\newblock Accommodation-invariant computational near-eye displays.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 36(4):88, 2017.
+
+\bibitem{web:hololens}
+Microsoft.
+\newblock Microsoft hololens.
+\newblock \url{https://www.microsoft.com/es-es/hololens}, 2018.
+\newblock Last access June 19th 2018.
+
+\bibitem{sceneComposition}
+Steven Poulakos, Gerhard Roethlin, Adrian Schwaninger, Aljoscha Smolic, and
+  Markus Gross.
+\newblock Alternating attention in continuous stereoscopic depth.
+\newblock In {\em Proceedings of the ACM Symposium on Applied Perception},
+  pages 59--66. ACM, 2014.
+
+\bibitem{disconfortReview}
+Kasim Terzic and Miles Hansard.
+\newblock Causes of discomfort in stereoscopic content: a review.
+\newblock {\em arXiv preprint arXiv:1703.04574}, 2017.
 
 \end{thebibliography}

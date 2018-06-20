@@ -116,14 +116,53 @@
 	%- explicar projecto en si, idea
 	%- explicar Accomodation vergence con un dibujo y de forma resumida
 	
+	The development of the technologies related with head mounted displays (HMD) has grown in the recent years mainly centered in the video-games field, some examples are the Oculus \cite{web:oculus} or the HTC Vive \cite{web:vive}. These devices are called virtual reality headsets because they are only capable of showing computer generated scenes.  
+	
+	Despite that the industry is mainly focused developing virtual reality systems, there are two kinds of HMD that allow the visualization of the environment surrounding the user.  
+
+	\begin{itemize}
+	\item The optical-see-through use image projectors that display the image over a see-thought mirror, hence allowing the user to see computer generated images over the environment. An example of this kind of devices is the Microsoft HoloLens \cite{web:hololens}.
+	\item The video-see-through devices use one or two cameras placed in the front of the headset and show the stream of images in two screens places in front of the eyes. This project uses these kind of devices, one of the prototypes can be seen in Fig.\ref{fig:proto}. 
+	\end{itemize}
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=1\linewidth]{img/imagenproto3.jpg}
+		\caption{Current version of the HMD video-see-through prototype.}
+		\label{fig:proto}
+	\end{figure}
+	
+	Both types of devices can show stereo images, this allow the user to sense depth in the displayed images. 
+	
+	This project originated from the need to establish and resolved the reasons why the users have a poor experience, dizziness and eye strain, when using video-see-through devices. As is explained in \cite{disconfortReview} and was experimentally tested in \cite{vergenceDisconfort}, the Accommodation-Vergence conflict is one of the issues that causes a poor user experience.
+	
+	The vergence is the process where the eyes set their angle of visualization trying to fuse the image of an object keeping it into sharp focus, whereas the accommodation is the process where the objects difficult to fuse are blurred. Both process are tightly coupled giving each other feedback in order to keep the images as sharp and fused as possible. 
+	
+	The issue arises as a result of using near eye screens to show stereo 3D. In these displays the image is shown always at the same distance of the eye, however, the distance between objects, disparity,  changes when the environment is changed. This conflict can be seen in Fig.\ref{fig:vergence}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=1\linewidth]{img/vergencia.png}
+		\caption{ FALTA EXPLICAR Image from \cite{vergenceDisconfort}.}
+		\label{fig:vergence}
+	\end{figure}
+	
+	
+	Consequently, this project tries to solve the Accommodation-Vergence conflict using the environment changes information to set the distance between images of the viewer. 
 	
 		
 	\section{State of the art}
 	%explicar de donde viene el vr, hacia donde va, tecnicas tipicas usadas para resolucion del problema de la vergencia (seguimiento de los ojos), hablar de tecnicas de depth map
 	%- hardware que se utiliza ahora, problema y incovenientes
-	%- depth map, Libelas, explicar que existe la middlebury datebase y porque hemos elegido libelas
+	%- depth map, Libelas, explicar que existe la middlebury datebase y porque hemos elegido libelas???????????????????
 	%- calibration (?) explicar en que consiste
+	The Accomodation-Vergence conflict is a topic of great interest in the research field, therefore, a wide variety of  solutions have been proposed to try to solve this problem. 
 	
+	One of the many solutions found to ease this problem is applying blur to zones where the image should not fuse, thus simulating the effect that the image would have had if the conflict would not have happened, see \cite{neareyeblur}. Related with this, a research \cite{sceneComposition} found that placing objects that connect different depth planes helps the users to better transition between objects in different planes and aids to maintain the coupling between accommodation and vergence. Other line of research is to use eye-tracking techniques \cite{eyeTracking}, these technologies allow the system to know where the eye is pointing over the image and then blur the out of focus areas. 
+	
+	After all of this, we can see that this project takes a different approach from the main lines of research.  This project uses depth data collected from a stereo camera placed in front of the headset to change the distance between images inside the headset. However, to get the depth information a reliable and fast stereo matcher was needed. That is why ELAS \footnote{Efficient large-scale stereo matcher} \cite{LIBELAS} and its implementation LIBELAS were used.  
+		
+	In the stereo matcher field, two main branches can be found, Local stereo matchers and global stereo matchers. Global stereo matchers are reliable but use much compute power. On the contrary, local stereo matchers are fast but less reliable than the global matchers. ELAS uses first a global stereo matcher on highly reliable points and after removing the more redundant, a Delaunay triangle mesh is created from that points. After that, the regions are then processed by a local stereo matcher. More information about ELAS implementation can be found on \cite{LIBELAS}. 
 
 	\section{Objectives}
 	After the previous analysis and explanation of the problem, the main objectives will be the following: 
