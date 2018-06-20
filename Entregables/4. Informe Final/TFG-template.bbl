@@ -74,6 +74,12 @@ Steven Poulakos, Gerhard Roethlin, Adrian Schwaninger, Aljoscha Smolic, and
 \newblock In {\em Proceedings of the ACM Symposium on Applied Perception},
   pages 59--66. ACM, 2014.
 
+\bibitem{web:opencv}
+Opencv team.
+\newblock Opencv library.
+\newblock \url{https://opencv.org/}, 2018.
+\newblock Last access March 10th 2018.
+
 \bibitem{disconfortReview}
 Kasim Terzic and Miles Hansard.
 \newblock Causes of discomfort in stereoscopic content: a review.

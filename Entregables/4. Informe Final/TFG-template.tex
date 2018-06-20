@@ -90,7 +90,7 @@
 	\textbf{Abstract--} Versió en anglès del resum . ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... .................. ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........ .......... ..  ... . ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ........... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... 
 	\\
 	\\
-	\textbf{Keywords-- } Versió en anglès de les paraules clau. .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .................. ..\\
+	\textbf{Keywords-- } Accomodation vergence conflict, video-see-through, head mounted display, depth map, stereo calibration. 
 	}
 	
 	\bigskip
@@ -143,7 +143,7 @@
 	\begin{figure}
 		\centering
 		\includegraphics[width=1\linewidth]{img/vergencia.png}
-		\caption{ FALTA EXPLICAR Image from \cite{vergenceDisconfort}.}
+		\caption{ FALTA EXPLICAR. Source \cite{vergenceDisconfort}.}
 		\label{fig:vergence}
 	\end{figure}
 	
@@ -163,6 +163,8 @@
 	After all of this, we can see that this project takes a different approach from the main lines of research.  This project uses depth data collected from a stereo camera placed in front of the headset to change the distance between images inside the headset. However, to get the depth information a reliable and fast stereo matcher was needed. That is why ELAS \footnote{Efficient large-scale stereo matcher} \cite{LIBELAS} and its implementation LIBELAS were used.  
 		
 	In the stereo matcher field, two main branches can be found, Local stereo matchers and global stereo matchers. Global stereo matchers are reliable but use much compute power. On the contrary, local stereo matchers are fast but less reliable than the global matchers. ELAS uses first a global stereo matcher on highly reliable points and after removing the more redundant, a Delaunay triangle mesh is created from that points. After that, the regions are then processed by a local stereo matcher. More information about ELAS implementation can be found on \cite{LIBELAS}. 
+	
+	%Using LIBELAS thought, introduces a new requirement, libelas requires that the input image pair has to be rectified before using it. this is because libelas uses the epipolar lines to to find the disparities between images, this is done because is faster. consequently a calibration module is needed to know the distortion intrinsics to be able later to rectify the images.
 
 	\section{Objectives}
 	After the previous analysis and explanation of the problem, the main objectives will be the following: 
@@ -187,17 +189,47 @@
 	
 	As there was only one developer, the daily meeting was replaced with a weekly meeting with the project supervisors, in this case the tutor and the boss of the laboratory department in the CVC. In these meetings we evaluated the development done, the issues faced that week and the problems solved. Related with the scrum methodology, Github \cite{web:github},\cite{web:githubDesktop} was used as version control system and trello\cite{web:trello} as the task manager system.
 	
-	Involving the tools used to develop this project, C++ and QT \cite{web:qt} were used mainly because the previous development of the visualization system was done using that environment. In addition to that, OpenCV was used as the library for image processing and calibration, see REF!!.
+	Involving the tools used to develop this project, C++ and QT \cite{web:qt} were used mainly because the previous development of the visualization system was done using that environment. In addition to that, OpenCV was used as the library for image processing and calibration, \cite{web:opencv}.
 	
+	%%%%%%%%
+	%The program have the following pipeline.
+	
+	%First, the images are captured by the cameras placed in the front of the headset. Two independent threads will be grabbing these images and storing them in a temporal variable. This variable will have always the latest image captured.
+	
+	%Second, a thread is set to continuously be getting the latest image from the grabbing threads and displaying the region of interest (ROI) set in the configuration on the screens of the HMD. In addition to that, the images grabbed will be passed to a processing thread. 
+	
+	%Third, the processing thread first uses the already calculated calibration of the stereo to 
+	
+	
+	%. After that, this thread will set these images on the processing thread
+	
+	%Parallel to this, the user settings will be loaded with the configuration of the last session. This configuration includes for each one of the distance settings the following parameters: distance between images and the region of interest over the images. The user can change and save these settings in any moment using the keyboard.
+	%%%%%%
 	
 	
 	
 	\section{Tools and Development}
 	
-	este apartado hablare del codigo desarrollado, los problemas encontrados y las soluciones realizadas
+	First the tools and modules used will be presented and after the pipeline and integration of the parts will be explained. 
 	
 	\subsection{Calibration}
-	en este apartado hablare sobre que tecnicas se han usado para realizar la calibracion y como se ha implementado y estructurado, explicar problemas encontrados para la calibracion (descalibracion constante parametros utilizados)
+	%en este apartado hablare sobre que tecnicas se han usado para realizar la calibracion y como se ha implementado y %estructurado, explicar problemas encontrados para la calibracion (descalibracion constante parametros utilizados)
+	
+	The calibration module is key inside the pipeline to be able to get the LIBELAS depth map. This module can be split in several parts:  
+	
+	First, a dataset of captures of a chess like pattern have to be taken to get references of the distortion and distance of the cameras. In these images the pattern has to be visible by both cameras and cannot be occluded neither be partially out of the image. In addition to that, the dataset must contain images of the pattern in various positions, the more locations covered by the images better will be the results of the calibration. 
+	
+	Second, once the dataset is taken, the next step is locating the chess pattern inside each image, to locate these points a OpenCV function is used first to find them and after to make these points more precise. In this step each camera dataset will be processed independently. 
+	
+	Once the points are calculated, these are passed to the monocular calibration function of OpenCV to obtain the intrinsic matrix and the distortion vector.  Although these parameters per se can be used in a rectification function to undistort the images, we need a stereo rectification that also rectifies the traslation and the rotation between cameras leaving the epipolar lines aligned. For that reason, a second phase of calibration is needed. 
+	
+	After the monocular calibration, these matrices along with the image points are passed to the stereo calibration function and the resulting matrices passed again to the rectification function. Once this function is finished we now have the projection and rotation matrices from both cameras, these can be passed to the undistortion function along with two images to rectify the distortion and align both images in the same epipolar lines, alternatively, these matrices can be passed to a undistort mapping function for a faster undistortion of the images.  
+	
+	
+	
+	Some problems were faced during the development of this module. The main was that some adjustment had to be done in the configuration parameters of the OpenCV function because excessive undistortion was done over the images leaving them completely unusable. The parameters adjusted were the number of coefficients from the distortion vector used by the calibration modules. 
+	
+	All of these matrices and configurations can be saved and loaded to avoid the need to calibrate each time the program is started.  
 	
 	\subsection{Libelas}
 	 como se utiliza y que necesita para obtener la profundidad (imagenes epipolares, texturas heterogeneas etc.), problemas de sensibilidad a la calibracion, 
@@ -235,7 +267,7 @@
 	\section{Future work}
 	%cosas que se han quedado en el cajon
 	(quizas esto es mas para la presentacion, nose si en el informe tambien se deberia de poner)
-	en este apartado explicaremos ideas que se plantearon y que no llegaron a realizarse y ideas con las que podria continuarse este proyecto, (DoF blur, third camera, Augmented reality, sistemas mas pequeños (voyo)  )
+	en este apartado explicaremos ideas que se plantearon y que no llegaron a realizarse y ideas con las que podria continuarse este proyecto, (DoF blur, third camera, Augmented reality )
 	
 	\section*{Acknowledgment}
 	This work is supported in part by a CVC transfer project with ProCare Light company, and partially funded by the Spanish Ministry of Economy and Competitiveness and FEDER under grants TIN2014-56919-C3-2-R and TIN2017-89723-P.
@@ -251,10 +283,8 @@
 	\section{Additional images}
 	%añadir imagenes de oftalmologia
 	En este apartado se incluiran imagenes extra de ejemplo(mas escenarios) i/o imagenes que no quepan en el documento en si
-	
-	\section{Gantt planning}
-	el diagrama de gantt final (quizas esto va en el dossier en vez de aqui?)
 
+	\section{User testing protocol}
 
 \end{document}
 
