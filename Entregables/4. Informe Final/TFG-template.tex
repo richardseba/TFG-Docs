@@ -232,7 +232,21 @@
 	All of these matrices and configurations can be saved and loaded to avoid the need to calibrate each time the program is started.  
 	
 	\subsection{Libelas}
-	 como se utiliza y que necesita para obtener la profundidad (imagenes epipolares, texturas heterogeneas etc.), problemas de sensibilidad a la calibracion, 
+	 This module starts with two images that have already been undistorted with the stereo calibration, these then are passed to the LIBELAS processing function, this function computes the disparity from two given images and returns two disparity maps, one for each given image. These maps indicate us the distance between one pixel from one image to the other.  
+	 
+	 One of the problems faced by this library, and in general by depth map stereo matchers, is the existence of low textured areas on the image, as will be seen in \ref, these regions usually end up without disparity values inducing issues in further processing. These regions along with occluded ones and calibration faulty areas are usually set to negative values by Libelas itself, therefore can be easily detected.  
+	 
+	 These maps can also be visualized in grayscale by changing the range of the image or to a colormap to better appreciate the depth gradient. 
+	 
+	 One issue faced during the development of this module was the extremely high calibration precision needed in order to get quality images. The cameras, not totally locked in position, usually moved slightly, reducing the quality of the depth map obtained. The issue was communicated to the hardware development team in order to change the HDM prototype to better secure the cameras.  
+	 
+	 Although LIBELAS is a fast library it was not quick enough to process the images in real time or near real time, to solve this issue, two possible solutions were found. 
+	 
+	 \begin{itemize}
+	 	\item The first idea is to apply a ROI in the center of the images after the distortion, that way the image requires less computing power to process, keeping all the detail of the center where usually the user will be looking at. 
+	 	\item Other idea is to make a down sampling of the images before using them on LIBELAS. This also decreases the computing power required to process the images but also decreases the detail of the image, potentially affecting the quality of the depth map.  
+ 	 \end{itemize}
+	 In \ref can be seen a comparison between both methods. 
 	
 	\subsection{Dataset}
 	%grabacion, y captura del dataset
