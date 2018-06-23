@@ -138,12 +138,12 @@
 	
 	The vergence is the process where the eyes set their angle of visualization trying to fuse the image of an object keeping it into sharp focus, whereas the accommodation is the process where the objects difficult to fuse are blurred. Both process are tightly coupled giving each other feedback in order to keep the images as sharp and fused as possible. 
 	
-	The issue arises as a result of using near eye screens to show stereo 3D. In these displays the image is shown always at the same distance of the eye, however, the distance between objects, disparity,  changes when the environment is changed. This conflict can be seen in Fig.\ref{fig:vergence}
+	The issue arises as a result of using near eye screens to show stereo 3D. In these displays the image is shown always at the same distance of the eye, however, the distance between objects, disparity,  changes when the environment is changed. This conflict can be seen in Fig.\ref{fig:vergence}.
 	
 	\begin{figure}
 		\centering
 		\includegraphics[width=1\linewidth]{img/vergencia.png}
-		\caption{ FALTA EXPLICAR. Source \cite{vergenceDisconfort}.}
+		\caption{ In A and C can be seen the usual effect that happens when the coupling of the accommodation vergence is correct. As the accomodation distance is the same as the vergence distance, a blur effect appears in the corners. In B and D can be seen the effect that happens when an stereo scene is showed through near eye screens. As the accomodation distance is different than the vergence distance, no blur effect is applied in the corners. Source \cite{vergenceDisconfort}.}
 		\label{fig:vergence}
 	\end{figure}
 	
@@ -189,7 +189,7 @@
 	
 	As there was only one developer, the daily meeting was replaced with a weekly meeting with the project supervisors, in this case the tutor and the boss of the laboratory department in the CVC. In these meetings we evaluated the development done, the issues faced that week and the problems solved. Related with the scrum methodology, Github \cite{web:github},\cite{web:githubDesktop} was used as version control system and trello\cite{web:trello} as the task manager system.
 	
-	Involving the tools used to develop this project, C++ and QT \cite{web:qt} were used mainly because the previous development of the visualization system was done using that environment. In addition to that, OpenCV was used as the library for image processing and calibration, \cite{web:opencv}.
+	Involving the tools used to develop this project, C++ and QT \cite{web:qt} were used mainly because the previous development of the visualization system was done using that environment. QT libraries were used to develop the interface and the visualization of the images on the screen. In addition to that, OpenCV was used as the library for image processing and calibration, \cite{web:opencv}. Some code snippets for testing and evaluation of the results were done using Matlab\cite{web:matlab}. 
 	
 	%%%%%%%%
 	%The program have the following pipeline.
@@ -225,8 +225,6 @@
 	
 	After the monocular calibration, these matrices along with the image points are passed to the stereo calibration function and the resulting matrices passed again to the rectification function. Once this function is finished we now have the projection and rotation matrices from both cameras, these can be passed to the undistortion function along with two images to rectify the distortion and align both images in the same epipolar lines, alternatively, these matrices can be passed to a undistort mapping function for a faster undistortion of the images.  
 	
-	
-	
 	Some problems were faced during the development of this module. The main was that some adjustment had to be done in the configuration parameters of the OpenCV function because excessive undistortion was done over the images leaving them completely unusable. The parameters adjusted were the number of coefficients from the distortion vector used by the calibration modules. 
 	
 	All of these matrices and configurations can be saved and loaded to avoid the need to calibrate each time the program is started.  
@@ -234,7 +232,7 @@
 	\subsection{Libelas}
 	 This module starts with two images that have already been undistorted with the stereo calibration, these then are passed to the LIBELAS processing function, this function computes the disparity from two given images and returns two disparity maps, one for each given image. These maps indicate us the distance between one pixel from one image to the other.  
 	 
-	 One of the problems faced by this library, and in general by depth map stereo matchers, is the existence of low textured areas on the image, as will be seen in \ref, these regions usually end up without disparity values inducing issues in further processing. These regions along with occluded ones and calibration faulty areas are usually set to negative values by Libelas itself, therefore can be easily detected.  
+	 One of the problems faced by this library, and in general by depth map stereo matchers, is the existence of low textured areas on the image, as will be seen in \ref, these regions usually end up without disparity values, therefore, potentially producing issues in further processing. These regions along with occluded ones and calibration faulty areas are usually set to negative values by Libelas itself, therefore can be easily detected.  
 	 
 	 These maps can also be visualized in grayscale by changing the range of the image or to a colormap to better appreciate the depth gradient. 
 	 
@@ -243,19 +241,64 @@
 	 Although LIBELAS is a fast library it was not quick enough to process the images in real time or near real time, to solve this issue, two possible solutions were found. 
 	 
 	 \begin{itemize}
-	 	\item The first idea is to apply a ROI in the center of the images after the distortion, that way the image requires less computing power to process, keeping all the detail of the center where usually the user will be looking at. 
-	 	\item Other idea is to make a down sampling of the images before using them on LIBELAS. This also decreases the computing power required to process the images but also decreases the detail of the image, potentially affecting the quality of the depth map.  
+	 	\item The first idea was to apply a ROI in the center of the images after the distortion, that way as the image is smaller, it requires less computing power to be processed. In addition to that, it will keep the center of the image with full detail, where usually the user will be looking at.  
+	 	 
+	 	\item Other idea was to make down sampling of the images before using them on LIBELAS. This also decreases the computing power required to process the images, however it also decreases the detail of the image, potentially affecting the quality of the depth map.  
  	 \end{itemize}
-	 In \ref can be seen a comparison between both methods. 
+	 In \ref a comparison between both methods can be seen. 
+	 
+	 To improve the quality of the depth map obtained in LIBELAS the default configuration called "Robotics" was taken as base and modified. First, we added the configuration that enables support points to be in the corners. We also removed the postprocessing features like median filtering or mean filtering. These last changes improve the speed without affecting the performance of the classification, as will be seen in \ref{pipeline} we already use mean operations to calculate the classification values.  
+	 
+	\subsection{Configuration}
+	As the users have vision systems physically distinct between them, different eye sizes, different distance between eyes; each user has to have their own customized configuration to better fit their needs. To be able to use these, two modules were developed. 
 	
-	\subsection{Dataset}
-	%grabacion, y captura del dataset
-	en este apartado se hablara del modulo de grabacion, y el pipeline paralelo (sin usar el viewer) que se montó para hacer funcionar el sistema en tiempo real y poder realizar los analisis.
+	First, a module able to modify the position of the images over the screens of the HMD was developed. This module is designed to show only a ROI of the full resolution image, letting the user decide and change every possible aspect of this ROI, from the size of the ROI to the anchor point. These parameters can also be saved to be used in other sessions or to be able to change between different settings set for different distances. Once the ROI is obtained graphic functions from QT are called to display them on the screen.
 	
-	\subsection{Integration with the viewer}
+	Second, a module capable of make transitions between settings was developed. This module calculates the distance between two settings and does the transition in a given number of steps. 
+	
+	\subsection{Pipeline and module integration}
+	\label{sec:pipeline}
 	%imagen del diseño del pipeline final, explicar clasificador 
 	%presets, movimiento de las pantallas , guardado de parametros, integracion de las partes, threads
-	en este apartado se explicaran mejoras secundarias en el visor, creacion de los presets, smooth presets transition, movimiento de la roi por encima de las imagenes etc, y de como se han integrado todos los modulos dentro de visor intentando preservar en todo momento el rendimiento (threads, explicacion del pipeline final)
+	%en este apartado se explicaran mejoras secundarias en el visor, creacion de los presets, smooth presets transition, movimiento de la roi por encima de las imagenes etc, y de como se han integrado todos los modulos dentro de visor intentando preservar en todo momento el rendimiento (threads, explicacion del pipeline final)
+	
+	Parallel to the development of said modules, a pipeline was built to be able to achieve the main goal of the project.
+	
+	A simple classifier has been develop to determine at which distance the user is currently viewing. It uses the output of LIBELAS and performs an operation (mean, max or min) after that, the value is used on a threshold classifier to select between 3 different distances, near, medium and far. To assure stability on the output of the classifier the output of the last classifications is preserved and a mean of these last values along with the current is done and used as the classification output.  
+	
+	As can be seen in Fig.\ref{fig:pipeline} the pipeline can be split in the following parts: 
+	
+	\begin{itemize}
+		\item Grabbing threads: these threads grab images from the cameras, that are set to be continuously grabbing. After that, the images are then stored on a variable overwriting the previous image. This thread is continuously looping to grab the latest image. 
+		
+		\item Processing thread: this threat is set to use an image set by the displaying thread, this image will be first undistorted and then passed to LIBELAS to obtain the depth map. After that the central region is crop and the image is passed to the classificator. Then, the output classified distance is stored on a variable which will be queried by the displaying thread on each iteration.  
+		
+		\item Displaying threads: the goal of this thread is to get the images from the grabbing threads and display them on the screen of the HMD. For this it uses the ROI module in combination with the setting system. This module also passes the images grabbed to the image processing thread, and uses its output, the classified distance, to dynamically select between user settings. Also, if set, it will use a transition to change between settings. 
+		
+	\end{itemize}
+	
+	It was decided to use a threaded architecture to allow to each thread to perform their tasks at their own pace without harming the performance of the displaying thread. This helps to reduce the reaction time improving the user experience.  
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=1\linewidth]{img/pipeline.png}
+		\caption{Diagram of the pipeline of the system. At top the grabbing threads that capture the images from the cameras. In the middle the thread that displays the images and changes between user settings. At the bottom the thread that process the images and classifies them.   }
+		\label{fig:pipeline}
+	\end{figure}
+	
+	
+	\subsection{Offline pipeline}
+	One of the issues had was that libelas was not able to produce real time processing, as is explained in \ref{sec:pipeline}. For that reason, a video recording module was also developed.  
+	
+	The module was developed using opencv and the videos were intended to be saved in raw format, but due to an unresolved bug in the opencv modules that prevented the reading of raw videos, the videos were saved instead using the Intel's IYUV lossless codec. 
+	
+	After the implementation of this module an offline pipeline was developed to allow the processing of these videos. The architecture is similar to the online pipeline seen in \ref. thought has some noteworthy differences.  
+	
+	First, the images are read from a video instead of a camera, as the frames from the video can be grab on demand, every frame can be processed. The input video can be already undistorted if that is not the case, the images are undistorted using the calibration module explained in \ref. 
+	
+	Second, after the frame is processed by LIBELAS, the output depth map can be converted to a grayscale or colormap image and be saved in another video for further processing. Otherwise the images can be evaluated in place using the threshold classificator already explained.  
+	
+	%explicar analisis de los resultados usando matlab
 
 	
 	\section{Results}
@@ -266,7 +309,16 @@
 	
 	\subsection{Libelas}
 	%rendimiento fps y resultados en cuanto a profundidad. imagenes!!
-	en este apartado de evaluaran los resultados con distintas resoluciones (subsampling) tanto en rendimiento puro (fps) como en resultados visuales de la profundidad (calidad de la dispariedad obtenida). tambien se vera una comparativa entre superficies/objetos con textura variada y sin textura
+	\subsubsection{ROI vs resize}
+	
+	\subsubsection{resize time performance}
+	
+	\subsection{Classsification}
+	%diferencias entre usar mean, max, min etc
+	
+	\subsection{performance stability}
+
+	
 	
 	\subsection{First user testing}
 	aqui expondremos los resultados de la primera prueba de user testing que se hizo, explicaremos nuestras conclusiones previas sobre los resultados de la prueba y nuestras propuestas para tratar de mejorar los resultados
