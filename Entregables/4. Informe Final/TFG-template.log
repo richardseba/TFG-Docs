@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.7)  23 JUN 2018 19:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.7)  25 JUN 2018 01:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -558,6 +558,39 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \@lastruleclass=\count109
 \@thisrulewidth=\dimen156
 )
+(c:/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+(c:/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(c:/texlive/2016/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+(c:/texlive/2016/texmf-dist/tex/latex/tools/array.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen157
+\extrarowheight=\dimen158
+\NC@list=\toks18
+\extratabsurround=\skip58
+\backup@length=\skip59
+)
+\everycr=\toks19
+\minrowclearance=\skip60
+)
+\rownum=\count110
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+)
 (c:/texlive/2016/texmf-dist/tex/latex/forest/forest.sty
 Package: forest 2017/02/02 v2.1.4 Drawing (linguistic) trees
 
@@ -565,9 +598,9 @@ Package: forest 2017/02/02 v2.1.4 Drawing (linguistic) trees
 (c:/texlive/2016/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (c:/texlive/2016/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks18
-\pgfutil@tempdima=\dimen157
-\pgfutil@tempdimb=\dimen158
+\pgfutil@everybye=\toks20
+\pgfutil@tempdima=\dimen159
+\pgfutil@tempdimb=\dimen160
 
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)
 ) (c:/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
@@ -587,29 +620,29 @@ Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
 Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks19
-\pgfkeys@temptoks=\toks20
+\pgfkeys@pathtoks=\toks21
+\pgfkeys@temptoks=\toks22
 
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
-\pgfkeys@tmptoks=\toks21
+\pgfkeys@tmptoks=\toks23
 ))
-\pgf@x=\dimen159
-\pgf@y=\dimen160
-\pgf@xa=\dimen161
-\pgf@ya=\dimen162
-\pgf@xb=\dimen163
-\pgf@yb=\dimen164
-\pgf@xc=\dimen165
-\pgf@yc=\dimen166
+\pgf@x=\dimen161
+\pgf@y=\dimen162
+\pgf@xa=\dimen163
+\pgf@ya=\dimen164
+\pgf@xb=\dimen165
+\pgf@yb=\dimen166
+\pgf@xc=\dimen167
+\pgf@yc=\dimen168
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count110
-\c@pgf@countb=\count111
-\c@pgf@countc=\count112
-\c@pgf@countd=\count113
-\t@pgf@toka=\toks22
-\t@pgf@tokb=\toks23
-\t@pgf@tokc=\toks24
+\c@pgf@counta=\count111
+\c@pgf@countb=\count112
+\c@pgf@countc=\count113
+\c@pgf@countd=\count114
+\t@pgf@toka=\toks24
+\t@pgf@tokb=\toks25
+\t@pgf@tokc=\toks26
  (c:/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
@@ -623,41 +656,24 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )))
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count114
-\pgfsyssoftpath@bigbuffer@items=\count115
+\pgfsyssoftpath@smallbuffer@items=\count115
+\pgfsyssoftpath@bigbuffer@items=\count116
 )
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
-)) (c:/texlive/2016/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
-
-(c:/texlive/2016/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 225.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
-)
-(c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+)) (c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen167
-\pgfmath@count=\count116
+\pgfmath@dimen=\dimen169
+\pgfmath@count=\count117
 \pgfmath@box=\box56
-\pgfmath@toks=\toks25
-\pgfmath@stack@operand=\toks26
-\pgfmath@stack@operation=\toks27
+\pgfmath@toks=\toks27
+\pgfmath@stack@operand=\toks28
+\pgfmath@stack@operation=\toks29
 )
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.te
@@ -677,55 +693,55 @@ x)
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithm
 etics.code.tex)))
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count117
+\c@pgfmathroundto@lastzeros=\count118
 ))
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen168
-\pgf@picmaxx=\dimen169
-\pgf@picminy=\dimen170
-\pgf@picmaxy=\dimen171
-\pgf@pathminx=\dimen172
-\pgf@pathmaxx=\dimen173
-\pgf@pathminy=\dimen174
-\pgf@pathmaxy=\dimen175
-\pgf@xx=\dimen176
-\pgf@xy=\dimen177
-\pgf@yx=\dimen178
-\pgf@yy=\dimen179
-\pgf@zx=\dimen180
-\pgf@zy=\dimen181
+\pgf@picminx=\dimen170
+\pgf@picmaxx=\dimen171
+\pgf@picminy=\dimen172
+\pgf@picmaxy=\dimen173
+\pgf@pathminx=\dimen174
+\pgf@pathmaxx=\dimen175
+\pgf@pathminy=\dimen176
+\pgf@pathmaxy=\dimen177
+\pgf@xx=\dimen178
+\pgf@xy=\dimen179
+\pgf@yx=\dimen180
+\pgf@yy=\dimen181
+\pgf@zx=\dimen182
+\pgf@zy=\dimen183
 )
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.cod
 e.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen182
-\pgf@path@lasty=\dimen183
+\pgf@path@lastx=\dimen184
+\pgf@path@lasty=\dimen185
 )
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.te
 x
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen184
-\pgf@shorten@start@additional=\dimen185
+\pgf@shorten@end@additional=\dimen186
+\pgf@shorten@start@additional=\dimen187
 )
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box57
 \pgf@hbox=\box58
 \pgf@layerbox@main=\box59
-\pgf@picture@serial@count=\count118
+\pgf@picture@serial@count=\count119
 )
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code
 .tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen186
+\pgflinewidth=\dimen188
 )
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.c
 ode.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen187
-\pgf@pt@y=\dimen188
-\pgf@pt@temp=\dimen189
+\pgf@pt@x=\dimen189
+\pgf@pt@y=\dimen190
+\pgf@pt@temp=\dimen191
 )
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -739,12 +755,12 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 )
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen190
+\pgfarrowsep=\dimen192
 )
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen191
-\pgf@sys@shading@range@num=\count119
+\pgf@max=\dimen193
+\pgf@sys@shading@range@num=\count120
 )
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -773,8 +789,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 (c:/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.st
 y
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen192
-\pgf@nodesepend=\dimen193
+\pgf@nodesepstart=\dimen194
+\pgf@nodesepend=\dimen195
 )
 (c:/texlive/2016/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.st
 y
@@ -788,10 +804,10 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen194
-\pgffor@skip=\dimen195
-\pgffor@stack=\toks28
-\pgffor@toks=\toks29
+\pgffor@iter=\dimen196
+\pgffor@skip=\dimen197
+\pgffor@stack=\toks30
+\pgffor@toks=\toks31
 ))
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
@@ -799,31 +815,31 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.co
 de.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count120
-\pgfplotmarksize=\dimen196
+\pgf@plot@mark@count=\count121
+\pgfplotmarksize=\dimen198
 )
-\tikz@lastx=\dimen197
-\tikz@lasty=\dimen198
-\tikz@lastxsaved=\dimen199
-\tikz@lastysaved=\dimen256
-\tikzleveldistance=\dimen257
-\tikzsiblingdistance=\dimen258
+\tikz@lastx=\dimen199
+\tikz@lasty=\dimen256
+\tikz@lastxsaved=\dimen257
+\tikz@lastysaved=\dimen258
+\tikzleveldistance=\dimen259
+\tikzsiblingdistance=\dimen260
 \tikz@figbox=\box62
 \tikz@figbox@bg=\box63
 \tikz@tempbox=\box64
 \tikz@tempbox@bg=\box65
-\tikztreelevel=\count121
-\tikznumberofchildren=\count122
-\tikznumberofcurrentchild=\count123
-\tikz@fig@count=\count124
+\tikztreelevel=\count122
+\tikznumberofchildren=\count123
+\tikznumberofcurrentchild=\count124
+\tikz@fig@count=\count125
 
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count125
-\pgfmatrixcurrentcolumn=\count126
-\pgf@matrix@numberofcolumns=\count127
+\pgfmatrixcurrentrow=\count126
+\pgfmatrixcurrentcolumn=\count127
+\pgf@matrix@numberofcolumns=\count128
 )
-\tikz@expandcount=\count128
+\tikz@expandcount=\count129
 
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzli
 brarytopaths.code.tex
@@ -912,16 +928,16 @@ File: tikzlibrarycalc.code.tex 2013/07/15 v3.0.1a (rcs-revision 1.9)
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.c
 ode.tex
 (c:/texlive/2016/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
-\pgf@intersect@solutions=\count129
+\pgf@intersect@solutions=\count130
 )
 (c:/texlive/2016/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
-\pgfopts@list@add@a@toks=\toks30
-\pgfopts@list@add@b@toks=\toks31
+\pgfopts@list@add@a@toks=\toks32
+\pgfopts@list@add@b@toks=\toks33
 )
 (c:/texlive/2016/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count130
+\etb@tempcnta=\count131
 )
 (c:/texlive/2016/texmf-dist/tex/latex/elocalloc/elocalloc.sty
 Package: elocalloc 2016/12/15 v0.03 local allocation for LaTeX 2015+ (DPC)
@@ -932,7 +948,7 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (c:/texlive/2016/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
-\@envbody=\toks32
+\@envbody=\toks34
 )
 (c:/texlive/2016/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 (c:/texlive/2016/texmf-dist/tex/latex/l3kernel/expl3.sty
@@ -948,37 +964,37 @@ L3 Module: l3tl 2017/02/06 v6842 L3 Token lists
 L3 Module: l3str 2017/01/01 v6809 L3 Strings
 L3 Module: l3seq 2017/02/06 v6842 L3 Sequences and stacks
 L3 Module: l3int 2016/12/28 v6805 L3 Integers
-\c_max_int=\count131
-\l_tmpa_int=\count132
-\l_tmpb_int=\count133
-\g_tmpa_int=\count134
-\g_tmpb_int=\count135
+\c_max_int=\count132
+\l_tmpa_int=\count133
+\l_tmpb_int=\count134
+\g_tmpa_int=\count135
+\g_tmpb_int=\count136
 L3 Module: l3quark 2016/12/28 v6805 L3 Quarks
 L3 Module: l3prg 2017/01/01 v6811 L3 Control structures
-\g__prg_map_int=\count136
+\g__prg_map_int=\count137
 L3 Module: l3clist 2017/02/06 v6842 L3 Comma separated lists
 L3 Module: l3token 2016/12/28 v6805 L3 Experimental token manipulation
 L3 Module: l3prop 2016/12/28 v6805 L3 Property lists
 L3 Module: l3msg 2016/12/28 v6805 L3 Messages
 L3 Module: l3file 2016/12/28 v6805 L3 File and I/O operations
-\l_iow_line_count_int=\count137
-\l__iow_target_count_int=\count138
-\l__iow_current_line_int=\count139
-\l__iow_current_word_int=\count140
-\l__iow_current_indentation_int=\count141
+\l_iow_line_count_int=\count138
+\l__iow_target_count_int=\count139
+\l__iow_current_line_int=\count140
+\l__iow_current_word_int=\count141
+\l__iow_current_indentation_int=\count142
 L3 Module: l3skip 2017/01/01 v6809 L3 Dimensions and skips
-\c_zero_dim=\dimen259
-\c_max_dim=\dimen260
-\l_tmpa_dim=\dimen261
-\l_tmpb_dim=\dimen262
-\g_tmpa_dim=\dimen263
-\g_tmpb_dim=\dimen264
-\c_zero_skip=\skip58
-\c_max_skip=\skip59
-\l_tmpa_skip=\skip60
-\l_tmpb_skip=\skip61
-\g_tmpa_skip=\skip62
-\g_tmpb_skip=\skip63
+\c_zero_dim=\dimen261
+\c_max_dim=\dimen262
+\l_tmpa_dim=\dimen263
+\l_tmpb_dim=\dimen264
+\g_tmpa_dim=\dimen265
+\g_tmpb_dim=\dimen266
+\c_zero_skip=\skip61
+\c_max_skip=\skip62
+\l_tmpa_skip=\skip63
+\l_tmpb_skip=\skip64
+\g_tmpa_skip=\skip65
+\g_tmpb_skip=\skip66
 \c_zero_muskip=\muskip10
 \c_max_muskip=\muskip11
 \l_tmpa_muskip=\muskip12
@@ -986,32 +1002,32 @@ L3 Module: l3skip 2017/01/01 v6809 L3 Dimensions and skips
 \g_tmpa_muskip=\muskip14
 \g_tmpb_muskip=\muskip15
 L3 Module: l3keys 2017/01/01 v6811 L3 Key-value interfaces
-\l_keys_choice_int=\count142
+\l_keys_choice_int=\count143
 L3 Module: l3fp 2016/12/28 v6805 L3 Floating points
-\c__fp_leading_shift_int=\count143
-\c__fp_middle_shift_int=\count144
-\c__fp_trailing_shift_int=\count145
-\c__fp_big_leading_shift_int=\count146
-\c__fp_big_middle_shift_int=\count147
-\c__fp_big_trailing_shift_int=\count148
-\c__fp_Bigg_leading_shift_int=\count149
-\c__fp_Bigg_middle_shift_int=\count150
-\c__fp_Bigg_trailing_shift_int=\count151
-\c__fp_rand_size_int=\count152
-\c__fp_rand_four_int=\count153
-\c__fp_rand_eight_int=\count154
+\c__fp_leading_shift_int=\count144
+\c__fp_middle_shift_int=\count145
+\c__fp_trailing_shift_int=\count146
+\c__fp_big_leading_shift_int=\count147
+\c__fp_big_middle_shift_int=\count148
+\c__fp_big_trailing_shift_int=\count149
+\c__fp_Bigg_leading_shift_int=\count150
+\c__fp_Bigg_middle_shift_int=\count151
+\c__fp_Bigg_trailing_shift_int=\count152
+\c__fp_rand_size_int=\count153
+\c__fp_rand_four_int=\count154
+\c__fp_rand_eight_int=\count155
 L3 Module: l3sort 2017/02/07 v6847 L3 Sorting functions
-\l__sort_length_int=\count155
-\l__sort_min_int=\count156
-\l__sort_top_int=\count157
-\l__sort_max_int=\count158
-\l__sort_true_max_int=\count159
-\l__sort_block_int=\count160
-\l__sort_begin_int=\count161
-\l__sort_end_int=\count162
-\l__sort_A_int=\count163
-\l__sort_B_int=\count164
-\l__sort_C_int=\count165
+\l__sort_length_int=\count156
+\l__sort_min_int=\count157
+\l__sort_top_int=\count158
+\l__sort_max_int=\count159
+\l__sort_true_max_int=\count160
+\l__sort_block_int=\count161
+\l__sort_begin_int=\count162
+\l__sort_end_int=\count163
+\l__sort_A_int=\count164
+\l__sort_B_int=\count165
+\l__sort_C_int=\count166
 L3 Module: l3box 2016/12/28 v6805 L3 Experimental boxes
 \c_empty_box=\box86
 \l_tmpa_box=\box87
@@ -1020,13 +1036,13 @@ L3 Module: l3box 2016/12/28 v6805 L3 Experimental boxes
 \g_tmpb_box=\box90
 L3 Module: l3coffins 2016/12/28 v6805 L3 Coffin code layer
 \l__coffin_internal_box=\box91
-\l__coffin_internal_dim=\dimen265
-\l__coffin_offset_x_dim=\dimen266
-\l__coffin_offset_y_dim=\dimen267
-\l__coffin_x_dim=\dimen268
-\l__coffin_y_dim=\dimen269
-\l__coffin_x_prime_dim=\dimen270
-\l__coffin_y_prime_dim=\dimen271
+\l__coffin_internal_dim=\dimen267
+\l__coffin_offset_x_dim=\dimen268
+\l__coffin_offset_y_dim=\dimen269
+\l__coffin_x_dim=\dimen270
+\l__coffin_y_dim=\dimen271
+\l__coffin_x_prime_dim=\dimen272
+\l__coffin_y_prime_dim=\dimen273
 \c_empty_coffin=\box92
 \l__coffin_aligned_coffin=\box93
 \l__coffin_aligned_internal_coffin=\box94
@@ -1035,48 +1051,48 @@ L3 Module: l3coffins 2016/12/28 v6805 L3 Coffin code layer
 \l__coffin_display_coffin=\box97
 \l__coffin_display_coord_coffin=\box98
 \l__coffin_display_pole_coffin=\box99
-\l__coffin_display_offset_dim=\dimen272
-\l__coffin_display_x_dim=\dimen273
-\l__coffin_display_y_dim=\dimen274
+\l__coffin_display_offset_dim=\dimen274
+\l__coffin_display_x_dim=\dimen275
+\l__coffin_display_y_dim=\dimen276
 L3 Module: l3color 2016/12/28 v6805 L3 Experimental color support
 L3 Module: l3sys 2017/01/01 v6811 L3 Experimental system/runtime functions
 L3 Module: l3candidates 2017/01/30 v6835 L3 Experimental additions to l3kernel
-\l__box_top_dim=\dimen275
-\l__box_bottom_dim=\dimen276
-\l__box_left_dim=\dimen277
-\l__box_right_dim=\dimen278
-\l__box_top_new_dim=\dimen279
-\l__box_bottom_new_dim=\dimen280
-\l__box_left_new_dim=\dimen281
-\l__box_right_new_dim=\dimen282
+\l__box_top_dim=\dimen277
+\l__box_bottom_dim=\dimen278
+\l__box_left_dim=\dimen279
+\l__box_right_dim=\dimen280
+\l__box_top_new_dim=\dimen281
+\l__box_bottom_new_dim=\dimen282
+\l__box_left_new_dim=\dimen283
+\l__box_right_new_dim=\dimen284
 \l__box_internal_box=\box100
-\l__coffin_bounding_shift_dim=\dimen283
-\l__coffin_left_corner_dim=\dimen284
-\l__coffin_right_corner_dim=\dimen285
-\l__coffin_bottom_corner_dim=\dimen286
-\l__coffin_top_corner_dim=\dimen287
-\l__coffin_scaled_total_height_dim=\dimen288
-\l__coffin_scaled_width_dim=\dimen289
+\l__coffin_bounding_shift_dim=\dimen285
+\l__coffin_left_corner_dim=\dimen286
+\l__coffin_right_corner_dim=\dimen287
+\l__coffin_bottom_corner_dim=\dimen288
+\l__coffin_top_corner_dim=\dimen289
+\l__coffin_scaled_total_height_dim=\dimen290
+\l__coffin_scaled_width_dim=\dimen291
 L3 Module: l3luatex 2016/12/28 v6805 L3 Experimental LuaTeX-specific functions
 )
 (c:/texlive/2016/texmf-dist/tex/latex/l3kernel/l3pdfmode.def
 File: l3pdfmode.def 2016/12/28 v6805 L3 Experimental driver: PDF mode
-\l__driver_color_stack_int=\count166
+\l__driver_color_stack_int=\count167
 \l__driver_tmp_box=\box101
 ))
 Package: xparse 2017/02/10 v6878 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count167
-\g__xparse_grabber_int=\count168
-\l__xparse_m_args_int=\count169
-\l__xparse_mandatory_args_int=\count170
-\l__xparse_v_nesting_int=\count171
+\l__xparse_current_arg_int=\count168
+\g__xparse_grabber_int=\count169
+\l__xparse_m_args_int=\count170
+\l__xparse_mandatory_args_int=\count171
+\l__xparse_v_nesting_int=\count172
 )
 (c:/texlive/2016/texmf-dist/tex/latex/inlinedef/inlinedef.sty
 Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
-\ID@toks=\toks33
-\ID@count=\count172
+\ID@toks=\toks35
+\ID@count=\count173
 )
-\ID@usercommands=\toks34
+\ID@usercommands=\toks36
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -1087,26 +1103,26 @@ Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 . 
 . Defining command \ProvidesForestLibrary with sig. 'm O{}' on line 176.
 .................................................
-\safeloop@depth=\count173
-\safeRKloop@depth=\count174
-\forest@temp@dimen=\dimen290
-\forest@temp@count=\count175
-\forest@n=\count176
-\forest@temp@global@count=\count177
-\forest@temp@toks=\toks35
-\forest@temparray@M=\count178
-\forest@temparray@N=\count179
-\forest@global@temparray@M=\count180
-\forest@global@temparray@N=\count181
-\forest@isnum@count=\count182
-\forest@isdim@nonintpart=\count183
-\forest@isdim@dimen=\dimen291
-\forest@sort@m=\count184
-\forest@sort@k=\count185
-\forest@sort@p=\count186
-\bracket@content=\toks36
-\bracket@afterthought=\toks37
-\forest@node@maxid=\count187
+\safeloop@depth=\count174
+\safeRKloop@depth=\count175
+\forest@temp@dimen=\dimen292
+\forest@temp@count=\count176
+\forest@n=\count177
+\forest@temp@global@count=\count178
+\forest@temp@toks=\toks37
+\forest@temparray@M=\count179
+\forest@temparray@N=\count180
+\forest@global@temparray@M=\count181
+\forest@global@temparray@N=\count182
+\forest@isnum@count=\count183
+\forest@isdim@nonintpart=\count184
+\forest@isdim@dimen=\dimen293
+\forest@sort@m=\count185
+\forest@sort@k=\count186
+\forest@sort@p=\count187
+\bracket@content=\toks38
+\bracket@afterthought=\toks39
+\forest@node@maxid=\count188
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
@@ -1118,27 +1134,27 @@ Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 . Defining command \forestdebugtypeouttree with sig. 'd() O{\forest@cn }' on
 . line 2348.
 .................................................
-\forest@process@left@M=\count188
-\forest@process@left@N=\count189
-\forest@process@right@M=\count190
-\forest@process@right@N=\count191
-\forest@process@saved@M=\count192
-\forest@process@saved@N=\count193
-\forest@process@result@M=\count194
-\forest@process@result@N=\count195
-\forest@process@n=\count196
-\forest@nodewalk@branch@toks=\toks38
-\forest@nodewalk@shortsteps@resolution=\toks39
-\forest@do@dynamics=\toks40
+\forest@process@left@M=\count189
+\forest@process@left@N=\count190
+\forest@process@right@M=\count191
+\forest@process@right@N=\count192
+\forest@process@saved@M=\count193
+\forest@process@saved@N=\count194
+\forest@process@result@M=\count195
+\forest@process@result@N=\count196
+\forest@process@n=\count197
+\forest@nodewalk@branch@toks=\toks40
+\forest@nodewalk@shortsteps@resolution=\toks41
+\forest@do@dynamics=\toks42
 \forest@box=\box102
-\forest@xg=\dimen292
-\forest@yg=\dimen293
-\forest@xs=\dimen294
-\forest@ys=\dimen295
-\forest@pi@toks=\toks41
-\forest@segment@toks=\toks42
-\forest@PIi@toks=\toks43
-\forest@PIii@toks=\toks44
+\forest@xg=\dimen294
+\forest@yg=\dimen295
+\forest@xs=\dimen296
+\forest@ys=\dimen297
+\forest@pi@toks=\toks43
+\forest@segment@toks=\toks44
+\forest@PIi@toks=\toks45
+\forest@PIii@toks=\toks46
 \forest@copy@in=\read2
 \forest@copy@out=\write4
 .................................................
@@ -1151,8 +1167,8 @@ Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 . 
 . Defining command \Forest with sig. 's D(){} m' on line 8508.
 .................................................
-\forest@externalize@max@outer@n=\count197
-\forest@externalize@inner@n=\count198
+\forest@externalize@max@outer@n=\count198
+\forest@externalize@inner@n=\count199
 )
 (c:/texlive/2016/texmf-dist/tex/latex/forest/forest-lib-edges.sty
 Package: forest-lib-edges 2016/12/05 v0.1.1
@@ -1168,20 +1184,20 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-\Gm@cnth=\count199
-\Gm@cntv=\count266
-\c@Gm@tempcnt=\count267
-\Gm@bindingoffset=\dimen296
-\Gm@wd@mp=\dimen297
-\Gm@odd@mp=\dimen298
-\Gm@even@mp=\dimen299
-\Gm@layoutwidth=\dimen300
-\Gm@layoutheight=\dimen301
-\Gm@layouthoffset=\dimen302
-\Gm@layoutvoffset=\dimen303
-\Gm@dimlist=\toks45
+\Gm@cnth=\count266
+\Gm@cntv=\count267
+\c@Gm@tempcnt=\count268
+\Gm@bindingoffset=\dimen298
+\Gm@wd@mp=\dimen299
+\Gm@odd@mp=\dimen300
+\Gm@even@mp=\dimen301
+\Gm@layoutwidth=\dimen302
+\Gm@layoutheight=\dimen303
+\Gm@layouthoffset=\dimen304
+\Gm@layoutvoffset=\dimen305
+\Gm@dimlist=\toks47
 )
-Package caption Info: We need package `newfloat' on input line 19.
+Package caption Info: We need package `newfloat' on input line 20.
 
 (c:/texlive/2016/texmf-dist/tex/latex/caption/newfloat.sty
 Package: newfloat 2015/09/17 v1.1-109 Defining new floating environments (AR)
@@ -1206,17 +1222,17 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (c:/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count268
-\scratchdimen=\dimen304
+\scratchcounter=\count269
+\scratchdimen=\dimen306
 \scratchbox=\box103
-\nofMPsegments=\count269
-\nofMParguments=\count270
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count271
-\MPscratchDim=\dimen305
-\MPnumerator=\count272
-\makeMPintoPDFobject=\count273
-\everyMPtoPDFconversion=\toks47
+\nofMPsegments=\count270
+\nofMParguments=\count271
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count272
+\MPscratchDim=\dimen307
+\MPnumerator=\count273
+\makeMPintoPDFobject=\count274
+\everyMPtoPDFconversion=\toks49
 ) (c:/texlive/2016/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -1361,49 +1377,43 @@ Package pdftex.def Info: img/imagenproto3.jpg used on input line 130.
 File: img/vergencia.png Graphic file (type png)
 
 <use img/vergencia.png>
-Package pdftex.def Info: img/vergencia.png used on input line 145.
+Package pdftex.def Info: img/vergencia.png used on input line 146.
 (pdftex.def)             Requested size: 236.84843pt x 188.3474pt.
  [2 <./img/imagenproto3.jpg> <./img/vergencia.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 220.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 240.
-
-
-LaTeX Warning: Reference `,' on page 3 undefined on input line 240.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 221.
 
 [3]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 257.
 
-LaTeX Warning: Reference `a' on page 4 undefined on input line 253.
+
+LaTeX Warning: Reference `pipeline' on page 4 undefined on input line 257.
 
 
-LaTeX Warning: Reference `pipeline' on page 4 undefined on input line 255.
+Underfull \hbox (badness 1194) in paragraph at lines 261--262
+\OT1/ptm/m/n/10 Users have phys-i-cally dis-tinct vi-sion sys-tems be-tween
+ []
 
 <img/pipeline.png, id=26, 1626.075pt x 1626.075pt>
 File: img/pipeline.png Graphic file (type png)
  <use img/pipeline.png>
-Package pdftex.def Info: img/pipeline.png used on input line 289.
+Package pdftex.def Info: img/pipeline.png used on input line 291.
 (pdftex.def)             Requested size: 236.84843pt x 236.82935pt.
 
-[4 <./img/pipeline.png>]
 
-LaTeX Warning: Reference `.' on page 5 undefined on input line 300.
+LaTeX Warning: Reference `' on page 4 undefined on input line 298.
 
-
-Underfull \hbox (badness 1371) in paragraph at lines 300--301
+[4]
+Underfull \hbox (badness 1371) in paragraph at lines 303--304
 []\OT1/ptm/m/n/10 After the im-ple-men-ta-tion of this mod-ule an of-fline
  []
 
 
-LaTeX Warning: Reference `.' on page 5 undefined on input line 302.
+Underfull \vbox (badness 1515) has occurred while \output is active []
 
-
-Underfull \hbox (badness 2050) in paragraph at lines 332--333
-\OT1/ptm/m/n/10 en este apartado mostraremos los dis-tin-tos re-sul-ta-dos
- []
-
-
-Underfull \hbox (badness 1442) in paragraph at lines 344--345
+ [5 <./img/pipeline.png>]
+Underfull \hbox (badness 1442) in paragraph at lines 425--426
 \OT1/ptm/m/n/10 and FEDER un-der grants TIN2014-56919-C3-2-R and
  []
 
@@ -1447,12 +1457,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--93
 \OT1/pcr/m/n/10 mathworks . com / products / matlab . html$\OT1/ptm/m/n/10 ,
  []
 
-[5])
-
-Package caption Warning: Unused \captionsetup[table] on input line 19.
-See the caption package documentation for explanation.
-
-[6
+) [6] [7
 
 ] (./TFG-template.aux)
 
@@ -1460,26 +1465,27 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 32025 strings out of 493013
- 721383 string characters out of 6136994
- 772228 words of memory out of 5000000
- 35136 multiletter control sequences out of 15000+600000
+ 32119 strings out of 493013
+ 722567 string characters out of 6136994
+ 781557 words of memory out of 5000000
+ 35224 multiletter control sequences out of 15000+600000
  31065 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,13n,69p,10382b,332s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,16n,69p,10382b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2016/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2016/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/
-urw/courier/ucrr8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhv
-b8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/tex
-live/2016/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2016/texmf-di
-st/fonts/type1/urw/times/utmr8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw
-/times/utmri8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/zapfding/uzdr.pf
-b>
-Output written on TFG-template.pdf (6 pages, 1557789 bytes).
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2016/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.
+pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive
+/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2016/texmf-dis
+t/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/
+times/utmr8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+<c:/texlive/2016/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on TFG-template.pdf (7 pages, 1578062 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 81 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  28 words of extra memory for PDF output out of 10000 (max. 10000000)
 
