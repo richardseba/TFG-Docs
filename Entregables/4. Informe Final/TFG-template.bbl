@@ -26,6 +26,12 @@ Andrew~T Duchowski, Donald~H House, Jordan Gestring, Rui~I Wang, Krzysztof
 \newblock In {\em Proceedings of the acm symposium on applied perception},
   pages 39--46. ACM, 2014.
 
+\bibitem{web:snellen}
+Pro~Visu Foundation.
+\newblock Panel snellen.
+\newblock \url{https://www.provisu.ch/images/PDF/Snellenchart_es.pdf}, 2018.
+\newblock Last access May 24th 2018.
+
 \bibitem{LIBELAS}
 Andreas Geiger, Martin Roser, and Raquel Urtasun.
 \newblock Efficient large-scale stereo matching.
