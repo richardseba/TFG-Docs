@@ -148,7 +148,7 @@
 		\label{fig:vergence}
 	\end{figure}
 	
-	Parallel to the accommodation vergence conflict, other issue that happens when using video-see-thought is that objects seem to have sizes different than real. This is an issue when the user is trying to grab or manipulate objects and generally when the user is estimating distances.
+	Parallel to the accommodation vergence conflict, other issue that happens when using video-see-thought is that objects seem to have sizes different than real. This is an issue when the user is trying to grab or manipulate objects and generally when the user is estimating distances. This issue happens because the camera is not in the same position as the eyes producing an error in the size perception.
 	
 	Consequently, this project tries to solve Accommodation-Vergence conflict and the size issue using environment information to set the distance between images of the viewer and change size settings.
 	
@@ -262,7 +262,7 @@
 	
 	First, a module able to modify the position of the images over the screens of the HMD was developed. This module is designed to show only a ROI of the full resolution output of the camera, letting the user decide and change every possible aspect of this ROI, from the size of the ROI to the anchor point. These parameters can also be saved to be used in other sessions or to be able to change between different settings for different distances. Once the ROI is obtained graphic functions from QT are called to display them on the screen.
 	
-	Second, a module capable of make transitions between settings was developed. This module calculates the distance between two settings and does the transition in a given number of steps. 
+	Second, a module capable of make transitions between settings was developed. This module calculates the distance between two settings and does the transition in a given number of steps. It transitions the movement in two phases, first adjusting the zooming and then changing the position of ROI.
 	
 	\subsection{Pipeline and module integration}
 	\label{sec:pipeline}
@@ -340,7 +340,7 @@
 	
 	In this first user testing session, which results can be seen in table \ref{tab:firstUserTestResults}, one main thing can be noticed, two of the six users that participated in the user testing sessions did only change slightly the parameters of the configuration. Meanwhile, the four other users changed the configuration. This is important because the users that did not change much the distance between image did not feel dizzy when using a setting in different distance than the original. On the contrary, the users that did change the distance between images mostly felt dizzy when using a setting set for a different distance than they were seeing.
 	
-	At the same time, it was notice that in most cases, both types of users felt that the objects were further away when using the close setting in large distances, and vice versa in case of far settings in closer distances. This confirms the hypothesis that a dynamic change on the settings is needed in order to solve the object size issue.
+	At the same time, it was noticed that in most cases, both types of users felt that the objects were further away when using the close setting in large distances, and vice versa in case of far settings in closer distances. This confirms the hypothesis that a dynamic change on the settings is needed in order to solve the object size issue.
 	
 	After this user testing session, it was agreed that a new user testing session have to take place to evaluate and resolve some of the problems faced in this one. 
 
@@ -359,7 +359,7 @@
 		\begin{center}
 			\begin{tabular}{cccccccc}
 				\toprule
-				& & \multicolumn{2}{c}{Close} & \multicolumn{2}{c}{Medium} & \multicolumn{2}{c}{Far} \\ 
+				& & \multicolumn{2}{c}{Near} & \multicolumn{2}{c}{Medium} & \multicolumn{2}{c}{Far} \\ 
 				Subject &Feelings & $\Delta X$ & $\Delta Y$ & $\Delta X$ & $\Delta Y$ & $\Delta X$ & $\Delta X$ \\ 
 				\midrule
 				S1&Confortable & 0 & 6 & 3 & 0 & -9 & 0 \\ 
@@ -399,20 +399,20 @@
 		\label{tab:ut:2:feelings}
 	\end{table*}
 
-%	\begin{table}
-%		\centering
-%		\begin{tabular}{@{}ccc@{}}
-%			\toprule
-%			& Dynamic & \begin{tabular}[c]{@{}c@{}}Dynamic +\\ Transition\end{tabular} \\ \midrule
-%			\% & 58.3    & 41.7                                                           \\ \bottomrule
-%		\end{tabular}
-%		\caption{Opinion of the users about }
-%		\label{tab:ut:2:dynamic}
-%	\end{table}
+	\begin{table}
+		\centering
+		\begin{tabular}{@{}ccc@{}}
+			\toprule
+			& Dynamic & \begin{tabular}[c]{@{}c@{}}Dynamic +\\ Transition\end{tabular} \\ \midrule
+			Preferences in \% & 58.3    & 41.7                                                           \\ \bottomrule
+		\end{tabular}
+		\caption{Preferences of the user when using the dynamic setting changer.}
+		\label{tab:ut:2:dynamic}
+	\end{table}
 
 	\begin{figure}
 		\centering
-		\includegraphics[width=1\linewidth]{img/deltaxmax.png}
+		\includegraphics[width=1\linewidth]{img/fancydelta.png}
 		\caption{Mean distance between center points of the images on each configuration. Note that $\Delta X$ means separation between the center of the image pair in the X axis.}
 		\label{fig:ut:2:deltax}
 	\end{figure}
