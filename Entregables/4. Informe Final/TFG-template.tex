@@ -375,7 +375,7 @@
 				S6&Disconfort & -24 & 0 & -39 & 5 & -45 & -6 \\ 
 				\bottomrule
 			\end{tabular} 
-			\caption{Results of the configuration of the ROIs in the first user testing session. The second column represents the general feelings of the users when changing the settings. Note that $\Delta X$ means separation between the two images in the X axis and $\Delta Y$ means separation in the Y axis. These are calculated from the difference in the position of the center}
+			\caption{Results of the configuration of the ROIs in the first user testing session. The second column represents the general feelings of the users when changing the settings. Note that $\Delta X$ means separation between the center of the image pair in the X axis and $\Delta Y$ means separation between centers in the Y axis.}
 			\label{tab:firstUserTestResults}
 		\end{center}
 	\end{table*}
@@ -390,12 +390,12 @@
 		\begin{tabular}{@{}lccccccc@{}}
 			\toprule
 			\multicolumn{2}{l}{\multirow{2}{*}{\% positive feelings}} & \multicolumn{2}{c}{Near distance} & \multicolumn{2}{c}{Medium distance} & \multicolumn{2}{c}{Far distance} \\
-			\multicolumn{2}{l}{} & Overlapping & Distance & Overlapping & Distance & Overlapping & Distance \\ \midrule
+			\multicolumn{2}{l}{} & Fused & Size & Fused & Size & Fused & Size \\ \midrule
 			\multirow{3}{*}{Setting} & Near & 91.7 & 83.3 & 33.3 & 50.0 & 0.0 & 8.3 \\
 			& Medium & 91.7 & 50.0 & 83.3 & 58.3 & 45.5 & 33.3 \\
 			& Far & 66.7 & 0.0 & 58.3 & 33.3 & 91.7 & 58.3 \\ \bottomrule
 		\end{tabular}
-		\caption{Results in the second user testing session of the feelings of the users in percentage of positive responses. At top the distance where the testing was done and at the left the configuration used when that response was given.}
+		\caption{Results in the second user testing session of the feelings of the users in percentage of positive responses. At top the distance where the testing was done and at the left the configuration used when that response was given. Fused means if the user are seeing the images correctly fused, and Size if the users are seeing the object's size similar to the reality.}
 		\label{tab:ut:2:feelings}
 	\end{table*}
 
@@ -409,6 +409,20 @@
 %		\caption{Opinion of the users about }
 %		\label{tab:ut:2:dynamic}
 %	\end{table}
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=1\linewidth]{img/deltaxmax.png}
+		\caption{Mean distance between center points of the images on each configuration. Note that $\Delta X$ means separation between the center of the image pair in the X axis.}
+		\label{fig:ut:2:deltax}
+	\end{figure}
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=1\linewidth]{img/userTestingSizechart.png}
+		\caption{Mean size of the images in each configuration for each distance. Note that a bigger size means a bigger ROI and therefore smaller objects.}
+		\label{fig:ut:2:size}
+	\end{figure}
 
 
 	
