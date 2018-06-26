@@ -154,6 +154,7 @@
 	
 		
 	\section{State of the art}
+	\label{sec:art}
 	%explicar de donde viene el vr, hacia donde va, tecnicas tipicas usadas para resolucion del problema de la vergencia (seguimiento de los ojos), hablar de tecnicas de depth map
 	%- hardware que se utiliza ahora, problema y incovenientes
 	%- depth map, Libelas, explicar que existe la middlebury datebase y porque hemos elegido libelas???????????????????
@@ -470,12 +471,26 @@
 	
 	
 	\section{Future work}
-	%cosas que se han quedado en el cajon
-	(quizas esto es mas para la presentacion, nose si en el informe tambien se deberia de poner)
-	en este apartado explicaremos ideas que se plantearon y que no llegaron a realizarse y ideas con las que podria continuarse este proyecto, (DoF blur, third camera, Augmented reality )
+	This projct is can be used as the foundation for many further research in the video-see-through HMD topic: 
+	
+	\begin{itemize}
+		\item The depth map of this project can be to generate augmented reality objects over the real-world.
+		
+		\item As was seen in \ref{sec:art}, many researchers apply blur on the out of focus area of the image, to ease the Accomodation-Vergence conflict. Using the developed tools, we could go one step further using the depth map to apply this blur in objects on out of focus planes or applying it with more or less intensity depending on the depth. 
+		
+		\item This project can also be used to include more information on the environment by including a third camera with a different image spectrum.  
+		
+		\item Optimization of the software can be done and would allow to use it on smaller and less powerful devices. 
+		
+		\item Related with the depth map, it would be interesting to compare between the latest depth map generators and see their time performance. 
+	\end{itemize}
+
+	It is certain that this project has had some constrains that can be used as starting point for some research. These are mainly centered on the performance side. Improving the framerate and the image quality of the cameras is a thing that will happened over the years and will benefit hugely the video-see-through headsets improving the user experience. At the same time this would also improve the quality of the depth maps, with less errors and more detail. Also, an improvement in the general performance thanks to the increased computing power will benefit this system, allowing for faster generation of the depth map.  
 	
 	\section*{Acknowledgment}
-	This work is supported in part by a CVC transfer project with ProCare Light company, and partially funded by the Spanish Ministry of Economy and Competitiveness and FEDER under grants TIN2014-56919-C3-2-R and TIN2017-89723-P.
+	I want to thank, first of all, my tutor Felipe Lumbreras and the boss of the laboratory department Coen Atens, for their support and for sharing their knowledge. I also thank the users that participated in the user testing sessions. Thanks to the CVC and all their employees and researchers for providing the tools, the support and for letting me work in such inspiring place. And finally, I want to thank my friends and my family for their ideas and support this latest months. 
+	
+	This work was supported in part by a CVC transfer project with ProCare Light company, and partially funded by the Spanish Ministry of Economy and Competitiveness and FEDER under grants TIN2014-56919-C3-2-R and TIN2017-89723-P.
 	
 	\bibliography{biblio}
 	\bibliographystyle{plain}
