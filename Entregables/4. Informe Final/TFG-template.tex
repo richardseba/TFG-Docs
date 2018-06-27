@@ -389,7 +389,7 @@
 	
 	For this second user testing session the goal was to evaluate if the Accommodation-Vergence conflict and the issue of the size of the objects affect the all users and whether the dynamic setting changer solves this problem. After the evaluation of the latest user testing some considerations were concluded. These have been taken into account in this second user testing with the goal of improving the consistency of the results. 
 	
-	Following the considerations of the last user testing, the right image was totally shifted with a starting difference between center points in the x axis of +158 pixels, $\Delta X$. This should force the users to adjust the setting and not be comfortable with the default configuration. Also a small cardboard box was used instead of the opthalmologic pattern to aid the configuration of the near settings. More detail of the protocol can be found in the annex \ref{sec:annex:user2}.
+	Following the considerations of the last user testing, the right image was totally shifted with a starting difference between center points in the x axis of +158 pixels, $\Delta X$\footnote{For simplicity  $\Delta X$ and $\Delta Y$ would be used as an abbreviation for the difference between the position of the centers of the ROIs on the X and Y axis. }. This should force the users to adjust the setting and not be comfortable with the default configuration. Also a small cardboard box was used instead of the opthalmologic pattern to aid the configuration of the near settings. More detail of the protocol can be found in the annex \ref{sec:annex:user2}.
 	
 	Note that in this user testing subjects S1 and S3 from the first user testing session also participated in this session. This would allow us to evaluate if they still feel comfortable without changing the parameters or if all was a misunderstanding and they also need to change the configuration to feel comfortable. 
 	
@@ -399,6 +399,8 @@
 	It is possible though that with more further away objects, the increase of the distance between images will reduce, arriving to cap where the separation is no further increased.
 	
 	This is because the disparity between the images received by the eyes decreases when the objects are moved further away. Further investigation can be done in this topic.
+	
+	Also is noticeable that the variation on the $\Delta X$ is bigger on the closer settings, this can be caused by the fact that slightly movements or variations are more significant when the distance between the user and the object is lower. 
 	
 	Related with this, as was expected this difference is not seen in the Y, this is because the Accomodation-Vergence issue is related with the disparity in the X axis. 
 	
@@ -468,12 +470,11 @@
 	After the tests and the subsequent analysis were done, it was concluded that users experience dizziness when using HMD, this is related first, with the Accomodation-Vergence conflict and second by the issue with the size of the objects.
 	Users have shown preference over the distance configuration that corresponded in each case to the distance they were seeing. This fits with the difference seen on the parameters of the configuration, where the users set the distance between images bigger when seeing distant objects and lower when looking at closer objects. 
 	
-	Also, was noticed that users set the zooming level depending on the distance they are seeing. For closer environments, the image is zoom out, meaning that objects are seen with smaller sizes. The contrary happens on objects seen in larger distances. User opinions during the testing also pointed that setting was needed to better fit each distance. All of this reinforced the idea that a system capable of changing between settings was necessary. Despite some issues with the calibration and the performance of the depth map generation, the dynamic changer was successfully developed using the LIBELAS library. All the users that participated in the user testing sessions agreed that the experience was better when using the dynamic setting changer. 
+	Also, was noticed that users set the zooming level depending on the distance they are seeing. For closer environments, the image is zoom out, meaning that objects are seen with smaller sizes. The contrary happens on objects seen in larger distances. User opinions during the testing also pointed that a different setting was needed to better fit each distance. All of this reinforced the idea that a system capable of changing between settings was necessary. 
 	
-	Related with the general performance, as the modules were build using a threaded architecture, the high computing tasks like generating the depth map or making the rectification of the images did not compromise the experience of the viewer.
+	Despite some issues with the calibration and the performance of the depth map generation, the dynamic changer was successfully developed using the LIBELAS library. And the goal of improving the user experience was achieved as users that participated in the user testing sessions agreed that the experience was better when using the dynamic setting changer. 
 	
-	
-	
+	Related with the general performance, as the modules were build using a threaded architecture, the high computing tasks like generating the depth map or rectifying the images did not compromise the experience of the visualization. 
 	
 	
 	\section{Future work}
