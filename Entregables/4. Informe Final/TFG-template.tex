@@ -175,7 +175,7 @@
 	\begin{itemize}
 		\item Evaluate the user experience when using the HMD and determine whether the accommodation-vergence effect causes dizziness and general discomfort on the users. 
 		
-		\item Evaluate whether the user perceives incorrectly the distances and sizes of the objects when using a video-see-through HMD and if this issue supposes a problem for the users.
+		\item Evaluate in one hand if the user perceives incorrectly the distances and sizes of the objects when using a video-see-through HMD and in the other hand whether this issue supposes a problem for the users.
 		
 		\item If the Accomodation-Vergence is one of the causes of the discomfort on the users, the problem will be solved using the deph information that can be obtained using stereo vision. 
 		
@@ -192,7 +192,9 @@
 	%dudas sobre este apartado
 	%hablar de tecnicas de desarrollo agil y sobretodo de las librerias utilizadas y de las limitaciones y ventajas que estas nos han aportado.
 	
-	Scrum and its variants are one of the most spread work methodologies nowadays. Therefore we believe convenient to use it as one of the foundation of this project, however, as this project was only done by one person, some changes were made. 
+	%Scrum and its variants are one of the most spread work methodologies nowadays. Therefore we believe convenient to use it as one of the foundation of this project, however, as this project was only done by one person, some changes were made. 
+	
+	The scrum methodology was selected as one of the foundations of this project, but as this project was only done by one person, some changes were made. 
 	
 	As there was only one developer, the daily meeting was replaced with a weekly meeting with the project supervisors, in this case the tutor and the boss of the laboratory department in the CVC. In these meetings we evaluated the development done, the issues faced that week and the problems solved. Related with the scrum methodology, Github \cite{web:github},\cite{web:githubDesktop} was used as version control system and trello\cite{web:trello} as the task manager system.
 	
@@ -213,7 +215,7 @@
 	
 	Second, once the dataset is obtained, the next step is locating the chessboard pattern inside each image, to locate these points an OpenCV function is used first to find them and after to make these points more precise. In this step each camera dataset will be processed independently. 
 	
-	Once the points are calculated, they are passed to the monocular calibration function of OpenCV to obtain the intrinsic matrix and the distortion vector.  Although these parameters per se can be used in a rectification function to undistort the images, we need a stereo rectification that also rectifies the traslation and the rotation between cameras leaving the epipolar lines aligned. For that reason, a second phase of calibration is needed. 
+	Once the points are calculated, they are passed to the monocular calibration function of OpenCV to obtain the intrinsic matrix and the distortion vector.  Although these parameters per se can be used in a undistortion function to remove the image distortion, we need a stereo rectification because monocular calibration does not take into account the traslation and the rotation between cameras. For that reason, a phase of stereo calibration is needed. 
 	
 	After the monocular calibration, these matrices along with the image points are passed to the stereo calibration function and the resulting matrices passed again to the rectification function. Once this function is finished we now have the projection and rotation matrices from both cameras, these can be passed to the undistortion function along with two images to rectify the distortion and align both images in the same epipolar lines, alternatively, these matrices can be passed to a undistort mapping function for a faster undistortion of the images.  
 	
@@ -237,7 +239,7 @@
 	 	 
 	 	\item Other idea was to make down sampling of the images before using them on LIBELAS. This also decreases the computing power required to process the images, however it also decreases the detail of the image, potentially affecting the quality of the depth map.  
  	 \end{itemize}
-	 In \ref{sec:roiresize} a comparison between both methods can be seen. 
+	 %In \ref{sec:roiresize} a comparison between both methods can be seen. 
 	 
 	 To improve the quality of the depth map obtained in LIBELAS the default configuration called "Robotics" was taken as base and modified. First, we added the configuration that enables support points to be in the corners. We also removed the postprocessing features like median filtering or mean filtering. These last changes improve the speed without affecting the performance of the classification, as will be seen in \ref{sec:pipeline} we already make operations over the image to calculate the classification values.  
 	 
@@ -314,13 +316,37 @@
 	\label{sec:resizeperformance}
 	rendimiento tanto en tiempo como en classificacion segun el tamaño de la imagen escogida
 	
+	\begin{table}
+		\centering
+		\begin{tabular}{@{}cccc@{}}
+			\toprule
+			Time (ms) & Original & ROI & Down sampling \\ \midrule
+			LIBELAS   & 581      & 128 & 135           \\
+			Total     & 624      & 156 & 165           \\ \bottomrule
+		\end{tabular}
+		\caption{Computing time of LIBELAS and all the processing module in milliseconds.}
+		\label{my-label}
+	\end{table}
+
+	\begin{figure}
+		\centering
+		\includegraphics[width=1\linewidth]{img/ComputingLibelas.PNG}
+		\caption{Computing time of LIBELAS in percentage over the total processing time in 3 different videos at different distances.}
+		\label{fig:libelaspercentatge}
+	\end{figure}
+	
 	\subsection{Classsification}
-	diferencias entre usar mean, max, min etc
+	explicar mean mola y min va, max no, porque no va el max etc
 	
 	\subsection{performance stability}
 	asdads
 
-	
+	\begin{figure}
+		\centering
+		\includegraphics[width=1\linewidth]{img/stability.png}
+		\caption{Output of the mean operation over the center of the depth map in 3 different videos at different distances.}
+		\label{fig:stability}
+	\end{figure}
 	
 	\subsection{First user testing}
 	
@@ -412,7 +438,7 @@
 	
 	\begin{table*}
 		\centering
-		\begin{tabular}{@{}lccccccc@{}}
+		\begin{tabular}{@{}cccccccc@{}}
 			\toprule
 			\multicolumn{2}{l}{\multirow{2}{*}{\% positive feelings}} & \multicolumn{2}{c}{Near distance} & \multicolumn{2}{c}{Medium distance} & \multicolumn{2}{c}{Far distance} \\
 			\multicolumn{2}{l}{} & Fused & Size & Fused & Size & Fused & Size \\ \midrule
@@ -555,11 +581,11 @@
 	\vspace{1cm}
 		\begin{subfigure}[t]{0.5\textwidth}
 			\centering
-			\includegraphics[width=\linewidth]{img/rectifyed.png}
+			\includegraphics[width=\linewidth]{img/rectified.png}
 			\caption{Ractification of the images in \ref{fig:rec:regular}.}
 			\label{fig:rec:ractified}
 		\end{subfigure}
-		\caption{Figure \ref{fig:rec:regular} is an example one image pair as it is captured from the cameras, the distortion produced by the optic of the cameras can be seen. In these images the objects cannot be found on the same Y axis. In Figure \ref{fig:rec:ractified} the same images from \ref{fig:rec:regular} have been rectified using the calibration module. The distortion produced by the lenses of the camera is gone and the objects can be found in the same Y axis. }
+		\caption{Figure \ref{fig:rec:regular} is an example one image pair as it is captured from the cameras, the distortion produced by the optic of the cameras can be noticed. In these images the objects cannot be found on the same Y axis, for example the pattern in the middle of the image. In Figure \ref{fig:rec:ractified} the same images from \ref{fig:rec:regular} have been rectified using the calibration module. The distortion produced by the lenses of the camera is gone and the objects can be found in the same Y axis. }
 		\label{fig:rec}
 	\end{figure}
 	
