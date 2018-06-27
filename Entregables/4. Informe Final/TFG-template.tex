@@ -80,7 +80,7 @@
 	Resum del projecte, màxim 10 línies. ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... .................. ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........ .......... ..  ... . ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ........... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... 
 	\\
 	\\
-	\textbf{Paraules clau-- } Paraules clau del treball, màxim 2 línies . .... ........ ........... .......... ..  ... ..... .... ........ ........... .......... ..  ... ..... .... ........ ........... ................\\
+	\textbf{Paraules clau-- } Acomodació i vergència , mapes de profunditat, calibratge estèreo.\\
 	\\
 	%\end{abstract}
 	%\bigskip
@@ -465,7 +465,13 @@
 
 	
 	\section{Conclusions}
-	After analyzing the results of the user testing, we can conclude that users have shown a need for having different distance between eyes for each distance. 
+	After the tests and the subsequent analysis were done, it was concluded that users experience dizziness when using HMD, this is related first, with the Accomodation-Vergence conflict and second by the issue with the size of the objects.
+	Users have shown preference over the distance configuration that corresponded in each case to the distance they were seeing. This fits with the difference seen on the parameters of the configuration, where the users set the distance between images bigger when seeing distant objects and lower when looking at closer objects. 
+	
+	Also, was noticed that users set the zooming level depending on the distance they are seeing. For closer environments, the image is zoom out, meaning that objects are seen with smaller sizes. The contrary happens on objects seen in larger distances. User opinions during the testing also pointed that setting was needed to better fit each distance. All of this reinforced the idea that a system capable of changing between settings was necessary. Despite some issues with the calibration and the performance of the depth map generation, the dynamic changer was successfully developed using the LIBELAS library. All the users that participated in the user testing sessions agreed that the experience was better when using the dynamic setting changer. 
+	
+	Related with the general performance, as the modules were build using a threaded architecture, the high computing tasks like generating the depth map or making the rectification of the images did not compromise the experience of the viewer.
+	
 	
 	
 	
