@@ -116,13 +116,13 @@
 	%- explicar projecto en si, idea
 	%- explicar Accomodation vergence con un dibujo y de forma resumida
 	
-	The development of the technologies related with head mounted displays (HMD) has grown in the recent years mainly centered in the video-games field, some examples are the Oculus \cite{web:oculus} or the HTC Vive \cite{web:vive}. These devices are called virtual reality headsets because they are only capable of showing computer generated scenes.  
+	The development of the technologies related with head mounted displays (HMD) has grown in the recent years and is mainly centered in the video-games field. Some examples are the Oculus \cite{web:oculus} or the HTC Vive \cite{web:vive}. These devices are called virtual reality headsets because they are only capable of showing computer generated scenes.  
 	
-	Despite that the industry is mainly focused on developing virtual reality systems, there are two kinds of HMD that allow the visualization of the environment surrounding the user.  
+	Despite that the industry is mainly focused on developing virtual reality systems, there are two kinds of HMD that allow the visualization of the environment surrounding the user:  
 
 	\begin{itemize}
 	\item The optical-see-through devices use image projectors that display the image over a see-through mirror, hence allowing the user to see computer generated images over the environment. An example of this kind of devices is the Microsoft HoloLens \cite{web:hololens}.
-	\item The video-see-through devices use one or two cameras placed in the front of the headset and show the stream of images in two screens placed in front of the eyes. This project uses these kind of devices, in Fig.\ref{fig:proto} one of the prototypes can be seen. 
+	\item The video-see-through devices use one or two cameras placed in the front of the headset and show the stream of images in two screens placed in front of the eyes. This project uses this kind of devices, in Fig.\ref{fig:proto} one of the prototypes is shown. 
 	\end{itemize}
 
 	\begin{figure}
@@ -132,10 +132,10 @@
 		\label{fig:proto}
 	\end{figure}
 	
-	Both types of devices can show stereo images, this allow the user to sense depth in the displayed images. 
+	Both types of devices can show stereo images, which allows the user to sense depth in the displayed images. 
 	As both types of devices are able to show different images for each eye, these systems are able to give the user stereo experiences. 
 	
-	This project originated from the need to establish and resolved the reasons why the users have a poor experience, dizziness and eye strain, when using video-see-through devices. As is explained in \cite{disconfortReview} and was experimentally tested in \cite{vergenceDisconfort}, the Accommodation-Vergence conflict is one of the issues that causes this poor user experience.
+	This project originated from the need to establish and resolve the reasons why the users have a poor experience, dizziness and eye strain, when using video-see-through devices. As is explained in \cite{disconfortReview} and was experimentally tested in \cite{vergenceDisconfort}, the Accommodation-Vergence conflict is one of the issues that causes this poor user experience.
 	
 	The vergence is the process where the eyes set their angle of visualization trying to fuse the image of an object keeping it into sharp focus, whereas the accommodation is the process where the objects difficult to fuse are blurred. Both process are tightly coupled giving each other feedback in order to keep the images as sharp and fused as possible. 
 	
@@ -148,9 +148,9 @@
 		\label{fig:vergence}
 	\end{figure}
 	
-	Parallel to the accommodation vergence conflict, other issue that happens when using video-see-thought is that objects seem to have sizes different than real. This is an issue when the user is trying to grab or manipulate objects and generally when the user is estimating distances. This issue happens because the camera is not in the same position as the eyes producing an error in the size perception.
+	Parallel to the accommodation vergence conflict, another issue that happens when using video-see-thought is that objects seem to have different sizes than in the real world. This is an important issue when the user is trying to grab or manipulate objects and generally when the user is estimating distances. This issue happens because the camera is not in the same position as the eyes producing an error in the size perception.
 	
-	Consequently, this project tries to solve Accommodation-Vergence conflict and the size issue using environment information to set the distance between images of the viewer and change size settings.
+	Consequently, this project tries to solve the Accommodation-Vergence conflict and the size issue using environment information to set the distance between images of the viewer and change size settings.
 	
 		
 	\section{State of the art}
@@ -161,13 +161,13 @@
 	%- calibration (?) explicar en que consiste
 	The Accomodation-Vergence conflict is a topic of great interest in the research field, therefore, a wide variety of  solutions have been proposed to try to solve this problem. 
 	
-	One of the many solutions found to ease this problem is applying blur to zones where the image not fuse correctly, this simulates the effect that the user would experience if the conflict would not have happened, see \cite{neareyeblur}. Related with this, a research \cite{sceneComposition} found that placing objects connecting different depth planes help the users to better transition between objects aiding to maintain the coupling between accommodation and vergence. Other line of research is to use eye-tracking techniques \cite{eyeTracking}, these technologies allow the system to know where the eye is pointing over the image and then blur the out of focus areas. 
+	One of the many solutions found to ease this problem is applying blur to zones where the image not fuse correctly, this simulates the effect that the user would experience if the conflict would not have happened, see \cite{neareyeblur}. Related with this, a research \cite{sceneComposition} found that placing objects connecting different depth planes help the users to better transition between objects aiding to maintain the coupling between accommodation and vergence. Other line of research is to use eye-tracking techniques \cite{eyeTracking}, these technologies allow the system to know where the eye is looking on the image and then blur the out of focus areas. 
 	
-	After all of this, we can see that this project takes a different approach from the main lines of research.  This project uses depth data collected from a stereo camera placed in front of the headset to change the distance between images inside the headset. However, to get the depth information a reliable and fast stereo matcher was needed. That is why ELAS \footnote{Acronym from Efficient large-scale stereo matcher.}\cite{LIBELAS} and its implementation LIBELAS were used.
+	After all of this, we can see that this project takes a different approach compared with the main lines of research.  This project uses depth data collected from a stereo camera placed in front of the headset to change the distance between images inside the headset. However, to get the depth information a reliable and fast stereo matcher was needed. That is why ELAS\footnote{Acronym from Efficient large-scale stereo matcher.} \cite{LIBELAS} and its implementation LIBELAS were used.
 		
 	In the stereo matcher field, two main branches can be found, local stereo matchers and global stereo matchers. Global stereo matchers are reliable but use many compute power. On the contrary, local stereo matchers are fast but less reliable than the global matchers. ELAS uses first a global stereo matcher on highly reliable points and after removing the more redundant, a Delaunay triangle mesh is created from that points. After that, the regions are then processed by a local stereo matcher. More information about ELAS implementation can be found on \cite{LIBELAS}. 
 	
-	Using LIBELAS thought, introduces a new requirement, libelas requires that the input image pair must be rectified before using it. this is because libelas uses the epipolar lines\footnote{In stereo systems, a geometry relation between points from one image to the other. }, to find the disparities between images, this is done because is faster than searching over the hole image. LIBELAS assumes that these lines are in the same Y axis in both images, for that reason, a calibration module to correct the image distortion, rotation and translation is needed. To solve this issue, OpenCV calibration functions were selected.
+	Using LIBELAS though, introduces a new requirement, libelas requires that the input image pair must be rectified before it can be used. This is because libelas uses the epipolar lines\footnote{In stereo systems, a geometry relation between points from one image to the other. }, to find the disparities between images, this is done because is faster than searching over the hole image. For that reason, a calibration module to correct the image distortion, rotation and translation is needed. To solve this issue, OpenCV calibration functions were selected, their implementation is based on \cite{bouguetcalibration} and \cite{calibrationopencv2}. An example of this can be found on the appendix \ref{fig:rec}.
 
 	\section{Objectives}
 	After the previous analysis and explanation of the problem, the main objectives of this project are the following: 
@@ -181,7 +181,7 @@
 		
 		\item If the user perception of size and distance when using a HMD is an issue, solve it by adapting the visualization of the scene to the distance of the objects in it.
 		
-		\item Evaluate the user experience after the development and conclude if our approach for solving these problems have reduced the discomfort of the users. 
+		\item Evaluate the user experience after the development and conclude whether our approach for solving these problems have reduced the discomfort of the users. 
 		
 		\item Add the required modules keeping in mind the usefulness of these for future developments.
 		
@@ -196,23 +196,7 @@
 	
 	As there was only one developer, the daily meeting was replaced with a weekly meeting with the project supervisors, in this case the tutor and the boss of the laboratory department in the CVC. In these meetings we evaluated the development done, the issues faced that week and the problems solved. Related with the scrum methodology, Github \cite{web:github},\cite{web:githubDesktop} was used as version control system and trello\cite{web:trello} as the task manager system.
 	
-	Involving the tools used to develop this project, C++ and QT \cite{web:qt} were used mainly because the previous development of the visualization system was done using that environment. QT libraries were used to develop the interface and the visualization of the images on the screen. In addition to that, OpenCV was used as the library for image processing and calibration, \cite{web:opencv}. Some code snippets for testing and evaluation of the results were done using Matlab\cite{web:matlab}. 
-	
-	%%%%%%%%
-	%The program have the following pipeline.
-	
-	%First, the images are captured by the cameras placed in the front of the headset. Two independent threads will be grabbing these images and storing them in a temporal variable. This variable will have always the latest image captured.
-	
-	%Second, a thread is set to continuously be getting the latest image from the grabbing threads and displaying the region of interest (ROI) set in the configuration on the screens of the HMD. In addition to that, the images grabbed will be passed to a processing thread. 
-	
-	%Third, the processing thread first uses the already calculated calibration of the stereo to 
-	
-	
-	%. After that, this thread will set these images on the processing thread
-	
-	%Parallel to this, the user settings will be loaded with the configuration of the last session. This configuration includes for each one of the distance settings the following parameters: distance between images and the region of interest over the images. The user can change and save these settings in any moment using the keyboard.
-	%%%%%%
-	
+	Involving the tools used to develop this project, C++ and QT \cite{web:qt} were used mainly because the previous development of the visualization system was done using that environment. QT libraries were used to develop the interface and the visualization of the images on the screen. In addition, OpenCV was used as the library for image processing and calibration, \cite{web:opencv}. Some code snippets for testing and evaluation of the results were done using Matlab\cite{web:matlab}. 
 	
 	
 	\section{Tools and Development}
@@ -223,11 +207,11 @@
 	\label{sec:calib}
 	%en este apartado hablare sobre que tecnicas se han usado para realizar la calibracion y como se ha implementado y %estructurado, explicar problemas encontrados para la calibracion (descalibracion constante parametros utilizados)
 	
-	The calibration module is key inside the pipeline to be able to get the LIBELAS depth map. This module can be split in several parts:  
+	The calibration module is a key item inside the pipeline to be able to get the LIBELAS depth map. This module can be split in several parts:  
 	
-	First, a dataset of captures of a chess like pattern have to be taken to get references of the distortion, rotation and distance of the cameras. In these images the pattern has to be visible by both cameras and cannot be occluded neither be partially out of the image. In addition to that, the dataset must contain images of the pattern in various positions, the more locations covered by the images the better the results of the calibration will be. 
+	First, a dataset of captures of a chessboard pattern have to be taken to get references of the distortion, rotation and distance of the cameras. In these images the pattern has to be visible by both cameras and cannot be occluded neither be partially out of the image. In addition, the dataset must contain images of the pattern in various positions, the more locations covered by the images the better the results of the calibration will be. 
 	
-	Second, once the dataset is taken, the next step is locating the chess pattern inside each image, to locate these points a OpenCV function is used first to find them and after to make these points more precise. In this step each camera dataset will be processed independently. 
+	Second, once the dataset is obtained, the next step is locating the chessboard pattern inside each image, to locate these points an OpenCV function is used first to find them and after to make these points more precise. In this step each camera dataset will be processed independently. 
 	
 	Once the points are calculated, they are passed to the monocular calibration function of OpenCV to obtain the intrinsic matrix and the distortion vector.  Although these parameters per se can be used in a rectification function to undistort the images, we need a stereo rectification that also rectifies the traslation and the rotation between cameras leaving the epipolar lines aligned. For that reason, a second phase of calibration is needed. 
 	
@@ -244,7 +228,7 @@
 	 
 	 These maps can also be visualized in grayscale by changing the range of the image or with a colormap to better appreciate the depth gradient. 
 	 
-	 One issue faced during the development of this module was the extremely high calibration precision needed in order to get quality images. The cameras, not totally locked in position, usually moved slightly, reducing the quality of the depth map obtained. The issue was communicated to the hardware development team in order to change the HDM prototype to better secure the cameras position.  
+	 One issue faced during the development of this module was the extremely high calibration precision needed in order to get quality images. The cameras, not totally fixed in position, usually moved slightly, reducing the quality of the depth map obtained. The issue was communicated to the hardware development team in order to change the HDM prototype to better secure the cameras position.  
 	 
 	 Although LIBELAS is a fast library it was not quick enough to process the images in real time or near real time, to solve this issue, two possible solutions were found. 
 	 
@@ -255,13 +239,13 @@
  	 \end{itemize}
 	 In \ref{sec:roiresize} a comparison between both methods can be seen. 
 	 
-	 To improve the quality of the depth map obtained in LIBELAS the default configuration called "Robotics" was taken as base and modified. First, we added the configuration that enables support points to be in the corners. We also removed the postprocessing features like median filtering or mean filtering. These last changes improve the speed without affecting the performance of the classification, as will be seen in \ref{pipeline} we already make operations over the image to calculate the classification values.  
+	 To improve the quality of the depth map obtained in LIBELAS the default configuration called "Robotics" was taken as base and modified. First, we added the configuration that enables support points to be in the corners. We also removed the postprocessing features like median filtering or mean filtering. These last changes improve the speed without affecting the performance of the classification, as will be seen in \ref{sec:pipeline} we already make operations over the image to calculate the classification values.  
 	 
 	\subsection{Configuration}
 	
-	Users have physically distinct vision systems between them, for example different eye sizes, different distance between eyes, etc. All of this influence the configuration that must be done to have a pleasant user experience. Also users should be able to adjust each configuration to the distance of the viewed objects.  For these reasons the following modules were developed.
+	Users have physically distinct vision systems between them, for example different eye sizes, different distance between eyes, etc. All of this must be taken into account as it influences the user experience. Also users should be able to adjust each configuration to the distance of the viewed objects.  For these reasons the following modules were developed.
 	
-	First, a module able to modify the position of the images over the screens of the HMD was developed. This module is designed to show only a ROI of the full resolution output of the camera, letting the user decide and change every possible aspect of this ROI, from the size of the ROI to the anchor point. These parameters can also be saved to be used in other sessions or to be able to change between different settings for different distances. Once the ROI is obtained graphic functions from QT are called to display them on the screen.
+	First, a module able to modify the position of the images over the screens of the HMD was implemented. This module is designed to show only a ROI of the full resolution output of the camera, letting the user decide and change every possible aspect of this ROI, from the size of the ROI to the anchor point. These parameters can also be saved to be used in other sessions or to be able to change between different settings for different distances. Once the ROI is obtained graphic functions from QT are called to display them on the screen.
 	
 	Second, a module capable of make transitions between settings was developed. This module calculates the distance between two settings and does the transition in a given number of steps. It transitions the movement in two phases, first adjusting the zooming and then changing the position of ROI.
 	
@@ -279,11 +263,11 @@
 	As can be seen in Fig.\ref{fig:pipeline} the pipeline can be split in the following parts: 
 	
 	\begin{itemize}
-		\item Grabbing threads: these threads grab images from the cameras that are set to be continuously capturing frames. After that, the images are then stored on a variable overwriting the previous image. This thread is continuously looping to grab the latest image. 
+		\item Grabbing threads: these threads grab images from the cameras that are set to be continuously capturing frames. After that, the images are then stored on a variable overwriting the previous image. This thread is continuously looping to grab the most recent image.
 		
-		\item Processing threads: this threat uses a image pair placed by the displaying thread to classify the image distance. This images will be first undistorted and then passed to LIBELAS to obtain the depth map. After that the central region is crop and the image is passed to the classifier. Then, the output classified distance is stored on a variable which will be queried each iteration by the displaying thread.  
+		\item Processing threads: this threat uses a image pair placed by the displaying thread to classify the image distance. This images will be first undistorted and then passed to LIBELAS to obtain the depth map. After that the central region is cropped and the image is passed to the classifier. Then, the output classified distance is stored on a variable which will be queried each iteration by the displaying thread.  
 		
-		\item Displaying thread: the goal of this thread is to get the images from the grabbing threads and display them on the screen of the HMD. For this it uses the ROI module in combination with the setting system. After the ROI is done, the image is set on the QT graphic scene. QT then rescales the image to fit it on the screen of the device. This is used as a zoom since if a smaller region of the image is cropped it will be rescaled and the objects would look bigger. This thread also passes the images grabbed to the image processing thread, and uses its output, the classified distance, to dynamically select between user settings. Also, if set, it will use the transition module to smooth the change between settings. 
+		\item Displaying thread: the goal of this thread is to get the images from the grabbing threads and display them on the screen of the HMD. For this it uses the ROI module to set selected configuration. After the ROI is done, the image is set on the QT graphic scene. QT then rescales the image to fit it on the screen of the device. This is used as a zoom since if a smaller region of the image is cropped it will be rescaled and the objects would look bigger. This thread also passes the images grabbed to the image processing thread, and uses its output, the classified distance, to dynamically select between user settings. Also, if set, it will use the transition module to smooth the change between settings. 
 		
 	\end{itemize}
 	
@@ -296,7 +280,7 @@
 	
 	
 	\subsection{Offline pipeline}
-	One of the issues had was that libelas was not able to produce real time processing, as is explained in \ref{}. For that reason, a video recording and processing modules were also developed.  
+	One of the issues had was that LIBELAS was not able to produce real time processing, as is explained in \ref{sec:resizeperformance}. For that reason, a video recording and processing modules were also implemented.  
 	
 	The module was developed using OpenCV functions. This videos were intended to be saved in raw format, but due to an unresolved bug in the OpenCV modules that prevented the reading of raw videos, the videos were saved instead using the Intel's IYUV codec. %As it is lossless, the images are effectively the same as the images on the online pipeline.
 	Other problem related with the recording module was that the videos have to be saved in memory, because storing them directly on disc is not possible because of the slow writing speeds of the drive will not be able to keep up with frame generation of the cameras, therefore not storing all the frames. Despite that, another issue was faced because the size of the in-memory stored images would rapidly increase overpassing the size limit imposed to 32 bits software. For this reason the whole project was modified to be compatible with 64 bits architectures.
@@ -327,6 +311,7 @@
 	
 	
 	\subsubsection{resize time performance}
+	\label{sec:resizeperformance}
 	rendimiento tanto en tiempo como en classificacion segun el tamaño de la imagen escogida
 	
 	\subsection{Classsification}

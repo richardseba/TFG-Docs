@@ -6,6 +6,11 @@ Atlassian.
 \newblock \url{https://trello.com}, 2018.
 \newblock Last access March 9th 2018.
 
+\bibitem{bouguetcalibration}
+Jean-Yves Bouguet.
+\newblock Camera calibration tool-box for matlab.
+\newblock {\em http://www. vision. caltech. edu/bouguetj/calib\_doc/}, 2002.
+
 \bibitem{web:qt}
 The~QT Company.
 \newblock Qt.
@@ -61,6 +66,12 @@ GitHub Inc.
 \newblock \url{https://desktop.github.com/}, 2018.
 \newblock Last access March 9th 2018.
 
+\bibitem{web:matlab}
+The~MathWorks Inc.
+\newblock Matlab.
+\newblock \url{https://es.mathworks.com/products/matlab.html}, 2018.
+\newblock Last access June 22th 2018.
+
 \bibitem{neareyeblur}
 Robert Konrad, Nitish Padmanaban, Keenan Molner, Emily~A Cooper, and Gordon
   Wetzstein.
@@ -91,10 +102,10 @@ Kasim Terzic and Miles Hansard.
 \newblock Causes of discomfort in stereoscopic content: a review.
 \newblock {\em arXiv preprint arXiv:1703.04574}, 2017.
 
-\bibitem{web:matlab}
-Inc. The~MathWorks.
-\newblock Matlab.
-\newblock \url{https://es.mathworks.com/products/matlab.html}, 2018.
-\newblock Last access June 22th 2018.
+\bibitem{calibrationopencv2}
+Zhengyou Zhang.
+\newblock A flexible new technique for camera calibration.
+\newblock {\em IEEE Transactions on pattern analysis and machine intelligence},
+  22(11):1330--1334, 2000.
 
 \end{thebibliography}
