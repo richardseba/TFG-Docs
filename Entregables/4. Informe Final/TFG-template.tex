@@ -487,9 +487,11 @@
 		
 		\item This project can also be used to include more information on the environment by including a third camera with a different image spectrum.  
 		
-		\item Optimization of the software can be done and would allow to use it on smaller and less powerful devices. 
+		\item Optimization of the software can be done to allow to use it with a better experience on smaller and less powerful devices. 
 		
 		\item Related with the depth map, it would be interesting to compare between the latest depth map generators and see their time performance. 
+		
+		\item Despite these comments, the transition module did not give as good feedback as the other, users said that it was slow and uncomfortable to see. Therefore an improvement on this matter can be done, and further user testing can be done to verify if a transition is needed or is better to change the setting without any.
 	\end{itemize}
 
 	It is certain that this project has had some constrains that can be used as starting point for some research. These are mainly centered on the performance side. Improving the framerate and the image quality of the cameras is a thing that will happened over the years and will benefit hugely the video-see-through headsets improving the user experience. At the same time this would also improve the quality of the depth maps, with less errors and more detail. Also, an improvement in the general performance thanks to the increased computing power will benefit this system, allowing for faster generation of the depth map.  
@@ -504,8 +506,8 @@
 	
 	\appendix
 	
-	\section{Objective and tasks list}
-	lista de tareas y objetivos (similar a lo que tenia en las otras entregas)
+	%\section{Objective and tasks list}
+	%lista de tareas y objetivos (similar a lo que tenia en las otras entregas)
 	
 	\section{User testing protocol}
 	\subsection{First user testing protocol}
@@ -555,10 +557,28 @@
 	\begin{figure}
 		\centering
 		\includegraphics[width=1\linewidth]{img/Snellenchart_es-1.png}
-		\caption{Ophthalmological pattern used in the user testing sessions. The pattern was downloaded from \cite{web:snellen}.}
+		\caption{Ophthalmological pattern used in the user testing sessions. Source \cite{web:snellen}.}
 		\label{fig:add:pattern}
 	\end{figure}
-	
+
+	\begin{figure}
+		\centering
+		\begin{subfigure}[t]{0.5\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{img/regular.png}
+			\caption{Raw images without rectification.}
+			\label{fig:rec:regular}
+		\end{subfigure}%
+	\vspace{1cm}
+		\begin{subfigure}[t]{0.5\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{img/rectifyed.png}
+			\caption{Ractification of the images in \ref{fig:rec:regular}.}
+			\label{fig:rec:ractified}
+		\end{subfigure}
+		\caption{Figure \ref{fig:rec:regular} is an example one image pair as it is captured from the cameras, the distortion produced by the optic of the cameras can be seen. In these images the objects cannot be found on the same Y axis. In Figure \ref{fig:rec:ractified} the same images from \ref{fig:rec:regular} have been rectified using the calibration module. The distortion produced by the lenses of the camera is gone and the objects can be found in the same Y axis. }
+		\label{fig:rec}
+	\end{figure}
 	
 
 \end{document}

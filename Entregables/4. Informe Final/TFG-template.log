@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.1)  27 JUN 2018 10:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.1)  27 JUN 2018 12:09
 entering extended mode
 **./TFG-template.tex
 (TFG-template.tex
@@ -1615,7 +1615,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--69
 \OT1/ptm/m/n/10 Accommodation-invariant com-pu-ta-tional near-eye
  []
 
-
+[8]
 Underfull \hbox (badness 10000) in paragraph at lines 77--82
 []\OT1/ptm/m/n/10 Steven Poulakos, Ger-hard Roeth-lin, Adrian
  []
@@ -1625,7 +1625,7 @@ Underfull \hbox (badness 6032) in paragraph at lines 77--82
 \OT1/ptm/m/n/10 Al-ter-nat-ing at-ten-tion in con-tin-u-ous stereo-scopic
  []
 
-[8]
+
 Underfull \hbox (badness 10000) in paragraph at lines 95--99
 \OT1/pcr/m/n/10 mathworks . com / products / matlab . html$\OT1/ptm/m/n/10 ,
  []
@@ -1634,21 +1634,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--99
 <img/Snellenchart_es-1.png, id=50, 1660.2025pt x 2346.7675pt>
 File: img/Snellenchart_es-1.png Graphic file (type png)
 <use img/Snellenchart_es-1.png>
-Package pdftex.def Info: img/Snellenchart_es-1.png  used on input line 557.
+Package pdftex.def Info: img/Snellenchart_es-1.png  used on input line 559.
 (pdftex.def)             Requested size: 236.84843pt x 334.77594pt.
- [9 <./img/Snellenchart_es-1.png>] (TFG-template.aux)
+<img/regular.png, id=51, 1129.21875pt x 566.115pt>
+File: img/regular.png Graphic file (type png)
+<use img/regular.png>
+Package pdftex.def Info: img/regular.png  used on input line 568.
+(pdftex.def)             Requested size: 241.84843pt x 121.24588pt.
+<img/rectifyed.png, id=52, 1158.57843pt x 581.17125pt>
+File: img/rectifyed.png Graphic file (type png)
+<use img/rectifyed.png>
+Package pdftex.def Info: img/rectifyed.png  used on input line 575.
+(pdftex.def)             Requested size: 241.84843pt x 121.31352pt.
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 566--579
+ [][] 
+ []
+
+
+Overfull \hbox (5.0pt too wide) in paragraph at lines 566--579
+ [] 
+ []
+
+[9] [10 <./img/Snellenchart_es-1.png> <./img/regular.png> <./img/rectifyed.png>
+] (TFG-template.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 33339 strings out of 493303
- 760149 string characters out of 3128480
- 812407 words of memory out of 3000000
- 36440 multiletter control sequences out of 15000+200000
- 557697 words of font info for 64 fonts, out of 3000000 for 9000
+ 33362 strings out of 493303
+ 760568 string characters out of 3128480
+ 812455 words of memory out of 3000000
+ 36460 multiletter control sequences out of 15000+200000
+ 559282 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,16n,69p,10382b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,16n,69p,10382b,458s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.
 enc}<C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb><C:/Users/rsegovia/AppData/Local/Programs/MiKTeX 2.9/fonts/
@@ -1665,9 +1686,9 @@ rograms/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/rsegovia/AppData/
 Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/rsegovia/A
 ppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb><C:/Users/rs
 egovia/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on TFG-template.pdf (9 pages, 1734160 bytes).
+Output written on TFG-template.pdf (10 pages, 6304506 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
+ 102 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
