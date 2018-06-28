@@ -87,7 +87,7 @@
 	%\begin{abstract}
 	\bigskip
 	\\
-	\textbf{Abstract--} In the recent years head mounted displays have been a great focus of research development and consumer oriented products. Despite this, users still experience dizziness when using them. We discovered, in a user testing session, that in video-see-through devices the user experience improves when using different settings for each viewed distance. By using a depth map generator, we implemented a dynamic system that changes the setting depending on the viewed distance, and in another user testing session, users agreed that this system improves their user experience and reduces dizziness. 
+	\textbf{Abstract--} In the recent years head mounted displays have been a great focus of research development and consumer oriented products. Despite this, users still experience dizziness when using them. We observed, in a user testing session, that in video-see-through devices the user experience improves when using different settings for each viewed distance. By using a depth map generator, we implemented a dynamic system that changes the setting depending on the viewed distance, and in another user testing session, users agreed that this system improves their user experience and reduces dizziness. 
 	\\
 	\\
 	\textbf{Keywords-- } Accomodation vergence conflict, video-see-through, head mounted display, depth map, stereo calibration,  computer vision. 
@@ -242,7 +242,7 @@
  	 \end{itemize}
 	 %In \ref{sec:roiresize} a comparison between both methods can be seen. 
 	 
-	 To improve the quality of the depth map obtained in LIBELAS the default configuration called "Robotics" was taken as base and modified. First, we added the configuration that enables support points to be in the corners. We also removed the postprocessing features like median filtering or mean filtering. These last changes improve the speed without affecting the performance of the classification, as will be seen in \ref{sec:pipeline} we already make operations over the image to calculate the classification values.  
+	 To improve the quality of the depth map obtained in LIBELAS the default configuration called "Robotics" was taken as base and modified. First, we added the configuration that enables support points to be in the corners. We also removed the postprocessing features like median filtering or mean filtering. These last changes improve the speed and fit better with the environment where the testing was developed.
 	 
 	\subsection{Configuration}
 	
@@ -285,16 +285,16 @@
 	\subsection{Offline pipeline}
 	One of the issues had was that LIBELAS was not able to produce real time processing. For that reason, a video recording and processing modules were also implemented.  
 	
-	The module was developed using OpenCV functions. This videos were intended to be saved in raw format, but due to an unresolved bug in the OpenCV modules that prevented the reading of raw videos, the videos were saved instead using the Intel's IYUV codec. %As it is lossless, the images are effectively the same as the images on the online pipeline.
-	Other problem related with the recording module was that the videos have to be saved in memory, because storing them directly on disc is not possible because of the slow writing speeds of the drive will not be able to keep up with frame generation of the cameras, therefore not storing all the frames. Despite that, another issue was faced because the size of the in-memory stored images would rapidly increase overpassing the size limit imposed to 32 bits software. For this reason the whole project was modified to be compatible with 64 bits architectures.
+	The module was developed using OpenCV functions for video reading and recording. This videos were intended to be saved in raw format, but due to an unresolved bug in the OpenCV modules that prevented the reading of raw videos, the videos were saved instead using the Intel's IYUV codec. %As it is lossless, the images are effectively the same as the images on the online pipeline.
+	Other problem related with the recording module was that the videos have to be saved in memory, because storing them directly on disc is not possible. That is because of the slow writing speeds of the drive that will not be able to keep up with frame generation of the cameras, therefore not storing all the captured frames. Despite that, another issue was faced because the size of the in-memory stored images would rapidly increase overpassing the size limit imposed to 32 bits software. For this reason the whole project was modified to be compatible with 64 bits architectures.
 	
-	After the implementation of this module an offline pipeline was developed to allow the processing of these videos. The architecture is similar to the online pipeline seen in \ref{sec:pipeline}. thought has some noteworthy differences.  
+	After the implementation of this module an offline pipeline was developed to allow the processing of these videos. The architecture is similar to the online pipeline seen in \ref{sec:pipeline}. Thought has some noteworthy differences.  
 	
 	First, as it is not necessary this pipeline does not use a threaded architecture.
 	
 	Second, the images are read from a video instead of a camera, as the frames from the video can be grab on demand, every frame can be processed. The input video can be already undistorted or if that is not the case, the images are undistorted using the calibration module explained in \ref{sec:calib}. 
 	
-	Third, after the frame is processed by LIBELAS, the output depth map can be converted to a grayscale or colormap image and be saved in another video for further processing. Alternatively the images can be evaluated in place using the threshold classifier already explained.  
+	Third, after the frame is processed by LIBELAS, the output depth map can be converted to a grayscale or colormap image and be saved in another video for further processing or viewing. Alternatively the images can be evaluated in place using the threshold classifier already explained.  
 	
 	%explicar analisis de los resultados usando matlab
 
@@ -305,24 +305,11 @@
 	%comparaciones entre imagenes no calibradas y imagenes calibradas
 	%en este apartado compararemos las imagenes originales con calibracion obtenida via opencv y la obtenida via %matlab (quizas es un poco innceseraio este apartado ?)
 	
-	\subsection{LIBELAS output}
-	As is explained in \ref, before applying the classification, the output of libelas is cropped and an operation is performed mean, maximum or minimum. This value is then used as input for the threshold classifier.  
-	
-	It is important that the input values for the classifier are stable to keep the settings changes as minimum as necessary. This is because these changes disturb the user perception and if they happen repeatedly in a short amount of time, they could induce motion sickness to the users.  
-	
-	Fortunately, as can be seen in \ref{} \ref{} \ref{} the output values from the three operations are stable. It is also noticeable that values are clearly separable between them thus a threshold classification is enough to separate the different classes. From these results can also be extracted that there is no need to use the full-sized resolution on the images as it is slower to process, see \ref, and it does not yield better results for the classification. 
-	
-	\subsubsection{ROI vs resize}
-	\label{sec:roiresize}
-	asdasd
-
-	
-	
 	\subsection{LIBELAS performance}
 	\label{sec:resizeperformance}
 	In \ref{sec:libelas}, we explained that the processing module was not fast enough when using full-sized images due to LIBELAS high computing time. To solve that, two solutions were developed. Cropping the center of the image and reducing the size of the images using down sampling. In the table \ref{tab:timeprocess} can be seen that as expected a ROI with half the resolution is 4 times faster. Also, as down sampling is more compute intensive it is slightly slower than using the ROI.  
 	
-	Is also relevant that as the image resolution is reduced, LIBELAS stops being the main bottleneck of the processing module going from 90 \% of the computing time to 50 \% when the image is 4 times smaller and to a 10 \% when the image is 12 times smaller, see Fig.\ref{fig:libelaspercentatge}. 
+	Is also relevant that as the image resolution is reduced, LIBELAS stops being the main bottleneck of the processing module going from 90 \% of the computing time to 50 \% when the image is 4 times smaller and to a 10 \% when the image is 12 times smaller, see Fig.\ref{fig:libelaspercentatge}. This bottleneck has been transfered to other time consuming tasks like the rectification.
 	
 	With these results, we can conclude that the time difference between cropping the images and resizing is minimal and that from one point is irrelevant further reduction of the image as the framerate will not benefit from it.  
 	
@@ -338,37 +325,62 @@
 		\caption{Computing time of LIBELAS, the rectification and all the processing module in milliseconds in 175 frames from a near distance video.}
 		\label{tab:timeprocess}
 	\end{table}
-
+	
 	\begin{figure}
 		\centering
 		\includegraphics[width=1\linewidth]{img/ComputingLibelas.PNG}
-		\caption{Computing time of LIBELAS in percentage over the total processing time in 3 different videos at different distances.}
+		\caption{Computing time of LIBELAS in percentage over the total processing time in 3 different videos with different distances.}
 		\label{fig:libelaspercentatge}
 	\end{figure}
+
+	\subsubsection{ROI vs resize}
+	\label{sec:roiresize}
+	falta solo esta parte, hablar de los problemas con las esquinas y ver si eso afecta en el output para clasificar
 	
-	\subsection{performance stability}
-	asdads
+	\subsection{LIBELAS output}
+	As is explained in \ref{sec:pipeline}, before applying the classification, the output of libelas is cropped and an operation is performed, mean, maximum or minimum. This value is then used as input for the threshold classifier.  
+	
+	It is important that the input values for the classifier are stable to keep the settings changes as minimum as necessary. This is because these changes disturb the user perception and if this happen repeatedly in a short amount of time, they could induce motion sickness to the users.  
+	
+	Fortunately, as can be seen in \ref{fig:output} the output from the mean operation is stable. It is also noticeable that values are clearly separable between them thus a threshold classification is enough to separate the different classes. From these results can also be extracted that there is no need to use the full-sized resolution on the images as it is slower to process, see \ref, and it does not yield better results for the classification. 
+	
+	On one hand in Fig.\ref{fig:output} can be seen that the output value of the mean operation is stable, being the only with a clear separation of the values in all the tested sizes. From these results can also be extracted that there is no need to use the full-sized resolution on the images as it is slower to process, see \ref{sec:resizeperformance}, and it does not yield better results for the classification. 
+	
+	On the other hand can be found the minimum operation which output cannot be distinguished in medium and far distances. Using the max operation throws an interesting effect, with the original size the output is not stable enough and the medium and near classes cannot be distinguish but in reduced sizes this output stabilizes and the 3 classes can be detected again.
 
 	\begin{figure}
 		\centering
-		\includegraphics[width=1\linewidth]{img/stability.png}
-		\caption{Output of the mean operation over the center of the depth map in 3 different videos at different distances.}
-		\label{fig:stability}
+		\begin{subfigure}[t]{0.5\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{img/mean2.png}
+		\end{subfigure}%
+		\vspace{0.1cm}
+		\begin{subfigure}[t]{0.5\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{img/min2.png}
+		\end{subfigure}
+		\vspace{0.1cm}
+		\begin{subfigure}[t]{0.5\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{img/max2.png}
+		\end{subfigure}
+		\caption{ Charts of the output of the operation over the center of the depth map in with different operations on different sizes and distances. On top the mean operation. On the middle minimum operation. On the bottom the maximum operation. }
+		\label{fig:output}
 	\end{figure}
 	
 	\subsection{First user testing}
 	
-	In this user testing session, the goal was to take a preliminary evaluation on the Accommodation-Vergence conflict  and in the issue of the size of the objects. The protocol followed in this user testing session can be found in the appendix \ref{sec:annex:user1}.
+	In this first user testing session, the goal was to take a preliminary evaluation on the Accommodation-Vergence conflict and in the issue of the size of the objects. The protocol followed in this user testing session can be found in the appendix \ref{sec:annex:user1}.
 	
-	The results of this first user testing session can be seen in table \ref{tab:firstUserTestResults}, one main thing can be noticed, two of the six users that participated in the user testing sessions did only change slightly the parameters of the configuration. Meanwhile, the four other users changed the configuration. This is important because the users that did not change much the distance between image did not feel dizzy when using a setting in different distance than the original. On the contrary, the users that did change the distance between images mostly felt dizzy when using a setting set for a different distance than they were seeing.
+	The results of this first user testing session can be seen in table \ref{tab:firstUserTestResults}, one main thing can be noticed, two of the six users that participated in the user testing sessions did only change slightly the parameters of the configuration. Meanwhile, the four other users changed the configuration. This is important because the users that did not change much the distance between image said they did not felt dizzy when using a setting in different distance than the original. On the contrary, the users that did change the distance between images mostly felt dizzy when using a setting set for a different distance than they were seeing.
 	
-	At the same time, it was noticed that in most cases, both types of users felt that the objects were further away when using the close setting in large distances, and vice versa in case of far settings in closer distances. This confirms a solution is needed to reduce this issue. 
+	At the same time, it was noticed that in most cases, both types of users felt that the objects were further away when using the close setting in large distances, and vice versa in case of far settings in closer distances. This confirms that a solution is needed to reduce this issue. 
 	
 	After this user testing session, it was agreed that a new user testing session have to take place to evaluate and resolve some of the problems faced in this one. 
 
-	First we need to ensure that the users like S1 and S3 are correctly seeing the stereoscopic 3D and if this results repeat in different testing conditions. It is possible that the default setting was similar to they comfortable setting and therefore they did not think relevant to change it. For that reason in further user testing sessions a the default setting will be set to have a huge displacement on the X axis, forcing the users to always move their setting to the better fitting for them.
+	First we need to ensure that the users like S1 and S3 are correctly seeing the stereoscopic 3D and if this results repeat in different testing conditions. It is possible that the default setting was similar to their comfortable setting and therefore they did not think relevant to change it. For that reason in further user testing sessions a the default setting will be set to have a huge displacement on the X axis, forcing the users to always move their setting to the better fitting for them.
 	
-	Second, some users found difficult to set the vergence in the close distance for lack of a relevant 3D object or form, for this reason in further user testing an object could be introduced into the test to ease the setting up. 
+	Second, some users found difficult to set the vergence in the closer distances for lack of a relevant 3D object or form, for this reason in further user testing an object could be introduced into the test to ease the setting up. 
 	
 	Third, during the testing of the settings in other distances, testing also the think that  also in the distance where the setting was set up may be necessary to ensure that the user have set correctly that distance.
 	
@@ -413,18 +425,15 @@
 	Note that in this user testing subjects S1 and S3 from the first user testing session also participated in this session. This would allow us to evaluate if they still feel comfortable without changing the parameters or if all was a misunderstanding and they also need to change the configuration to feel comfortable. 
 	
 	\subsubsection{Accomodation-Vergence settings}
-	The first thing that can be noticed from Fig.\ref{fig:ut:2:deltax} is that every user more or less have changed the distance between eyes to feel more comfortable with the distance currently viewed. Even the subjects S1 and S3 did change the distances. From these results can be deduced that the larger the distance is, the greater the separation between the images will be, since negative values mean greater distance between images. 
+	The first thing that can be noticed from Fig.\ref{fig:ut:2:deltax} is that every user more or less have changed the gap between images to feel more comfortable with the distance currently viewed. Even the subjects S1 and S3 did change the gap. From these results can be deduced that the larger the distance is, the greater the separation between the images will be, since negative values mean greater distance between images. 
 	
-	It is possible though that with more further away objects, the increase of the distance between images will reduce, arriving to cap where the separation is no further increased.
-	
-	This is because the disparity between the images received by the eyes decreases when the objects are moved further away. Further investigation can be done in this topic.
+	It is possible though that with more further away objects, the increase of the distance between images will reduce, arriving to cap where more separation is no further needed. This is because the disparity between the images received by the eyes decreases when the objects are moved further away.
 	
 	Also is noticeable that the variation on the $\Delta X$ is bigger on the closer settings, this can be caused by the fact that slightly movements or variations are more significant when the distance between the user and the object is lower. 
-	
-	Related with this, as was expected this difference is not seen in the Y, this is because the Accomodation-Vergence issue is related with the disparity in the X axis. 
+	Finally, as was expected this difference is not seen in the Y, this is because the Accomodation-Vergence issue is related with the disparity in the X axis. 
 	
 	\subsubsection{User opinion of the settings }
-	Looking now at the user experience when using a setting in a different distances, see \ref{fig:ut:2:deltax}. Can be notice that users feel more comfortable using a setting at the original distance which it was set in. Also is noticeable that only 58.3\% of the users felt comfortable with the distance when using the distant setting in a distant environment, this also happens with the medium setting. On the contrary 83\% of the users said that they felt comfortable then using near configuration in near environments. This difference can be related with the fact that users in the near set up can interact with the objects therefore better fitting that configuration. 
+	Looking now at the user experience when using a setting in a different distance, see \ref{fig:ut:2:deltax}, can be notice that users feel more comfortable using a setting at the original distance which it was set in. Also is noticeable that only 58.3\% of the users felt comfortable with the distance when using the distant setting in a distant environment, this also happens with the medium setting. On the contrary 83\% of the users said that they felt comfortable when using near configuration in near environments. This difference can be related with the fact that users in the near set up can interact with the objects therefore better fitting that configuration. 
 	
 	As the medium setting has the more intermediate values, is almost usable on every distance, thought this does not mean that would be comfortable to use it. More than half the users do not feel comfortable when using this medium setting on far distances. As expected, far and near configurations perform worse when used in the other's distance.
 	
@@ -435,12 +444,12 @@
 	In Fig.\ref{fig:ut:2:size} a can be seen a comparison between the mean size of the ROI in every configuration. With these results it is clear that each distance needs a different size setting.  The users set smaller ROIs, bigger zooms over the image, to distant objects, seeing that objects bigger. On the contrary the users set bigger ROIs, smaller zooms, to closer objects, seeing them smaller. This results follow the expected pattern. A system capable of automatically changing the between settings would solve this problem. 
 	
 	\subsubsection{User opinion on the dynamic settings}
-	As the pipeline was already finished, this user testing session also included a test of the system with the full pipeline working, capable of changing between presets. This module was used after the user had already set every configuration for each distance.  
+	As the pipeline was already finished, this user testing session also included a test of the system with the full pipeline working, capable of changing between configurations. This module was used after the user had already set every configuration for each distance.  
 	For the user testing, the mean of the central region of the 10 last images were saved to preserve stability in the output of the classification. None of the users complained about undesired changes of the settings when using this system.  
 	
 	First of all, all the users agreed that changing the parameters dynamically is better than having one setting for every distance and it is more convenient than having to change the setting manually. Also all agreed that after changing from one setting to the other no adaptation period is needed or it is short and not annoying.  
 	
-	In table \ref{tab:ut:2:dynamic}, can be seen that a tight majority of the users prefer not having a transition period when changing dynamically from one setting to the other. This can be related with the users also saying that this transition was slow and that the two differentiable phases of transition is not comfortable. In the other hand some users said that not using transitions was too abrupt even though it does not induced dizziness. 
+	In table \ref{tab:ut:2:dynamic}, can be seen that a tight majority of the users prefer not having a transition period when changing dynamically from one setting to the other. This can be related with the users also saying that this transition was slow and that having two differentiable phases of transition was not comfortable. In the other hand some users said that not using transitions was too abrupt even though it does not induced dizziness. 
 	
 	Can be concluded that the usage of the dynamic setting changer improves the user experience by giving the user the most suitable configuration for each distance. But it is also clear that the transition has improvement margin as most of the users agreed that it was slow and not comfortable to see.
 	
@@ -500,7 +509,7 @@
 	This projct is can be used as the foundation for many further research in the video-see-through HMD topic: 
 	
 	\begin{itemize}
-		\item The depth map of this project can be to generate augmented reality objects over the real-world.
+		\item The depth map of this project can be used to generate augmented reality objects over the real-world.
 		
 		\item As was seen in \ref{sec:art}, many researchers apply blur on the out of focus area of the image, to ease the Accomodation-Vergence conflict. Using the developed tools, we could go one step further using the depth map to apply this blur in objects on out of focus planes or applying it with more or less intensity depending on the depth. 
 		
@@ -513,7 +522,7 @@
 		\item The transition module did not give as good feedback as was expected, users said that it was slow and uncomfortable to see. Therefore an improvement on this matter can be done and further user testing can be done to verify if a transition is needed or if is better to change the setting without any.
 	\end{itemize}
 
-	It is certain that this project has had some constrains that can be used as starting point for some research. These are mainly centered on the performance side. Improving the framerate and the image quality of the cameras is a thing that will happened over the years and will benefit hugely the video-see-through headsets improving the user experience. T
+	It is certain that this project has had some constrains that can be used as starting point for some research. These are mainly centered on the performance side. Improving the framerate and the image quality of the cameras is a thing that will happened over the years and will benefit hugely the video-see-through headsets improving the user experience.
 	his would also improve the quality of the depth maps, with less errors and more detail. Also, an improvement in the general performance thanks to the increased computing power will benefit this system, allowing for faster generation of the depth map.  
 	
 	\section*{Acknowledgment}
