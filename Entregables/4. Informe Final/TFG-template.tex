@@ -332,39 +332,50 @@
 		\caption{Computing time of LIBELAS in percentage over the total processing time in 3 different videos with different distances.}
 		\label{fig:libelaspercentatge}
 	\end{figure}
-
-	\subsubsection{ROI vs resize}
-	\label{sec:roiresize}
-	falta solo esta parte, hablar de los problemas con las esquinas y ver si eso afecta en el output para clasificar
 	
 	\subsection{LIBELAS output}
 	As is explained in \ref{sec:pipeline}, before applying the classification, the output of libelas is cropped and an operation is performed, mean, maximum or minimum. This value is then used as input for the threshold classifier.  
 	
 	It is important that the input values for the classifier are stable to keep the settings changes as minimum as necessary. This is because these changes disturb the user perception and if this happen repeatedly in a short amount of time, they could induce motion sickness to the users.  
 	
-	Fortunately, as can be seen in \ref{fig:output} the output from the mean operation is stable. It is also noticeable that values are clearly separable between them thus a threshold classification is enough to separate the different classes. From these results can also be extracted that there is no need to use the full-sized resolution on the images as it is slower to process, see \ref, and it does not yield better results for the classification. 
+	Fortunately, as can be seen in \ref{fig:output:mean} the output from the mean operation is stable. It is also noticeable that values are clearly separable between them thus a threshold classification is enough to separate the different classes. From these results can also be extracted that there is no need to use the full-sized resolution on the images as it is slower to process, see \ref{sec:resizeperformance}, and it does not yield better results for the classification. 
 	
 	On one hand in Fig.\ref{fig:output} can be seen that the output value of the mean operation is stable, being the only with a clear separation of the values in all the tested sizes. From these results can also be extracted that there is no need to use the full-sized resolution on the images as it is slower to process, see \ref{sec:resizeperformance}, and it does not yield better results for the classification. 
 	
-	On the other hand can be found the minimum operation which output cannot be distinguished in medium and far distances. Using the max operation throws an interesting effect, with the original size the output is not stable enough and the medium and near classes cannot be distinguish but in reduced sizes this output stabilizes and the 3 classes can be detected again.
+	On the other hand, the output of the minimum and the maximum operations, Fig.\ref{fig:output:min} and Fig.\ref{fig:output:max}, cannot be distinguished correctly. When the minimum operation is used the medium and the far distances cannot be split in different classes because their values overlap between them. A similar case happens also with the maximum operation, in this case though it only happens to the original size. %, this can be due to 
+	
+	Looking at the ROI chart, can be seen that with a ROI 4 times and 12 times smaller than the original size, yield atypical results. This can be notice in the 4 times roi, where the near distance obtains less disparity than the medium one and in the 12 times ROI where the disparity is totally inversed. This is not possible because disparity, is linked with the distance between objects, closer objects have bigger disparities. What is happening is that LIBELAS is not capable of extracting the depth information from these images because it is not able to find reliable support points, therefore, these outputs are not correct.
 
 	\begin{figure}
 		\centering
 		\begin{subfigure}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[width=\linewidth]{img/mean2.png}
-		\end{subfigure}%
-		\vspace{0.1cm}
+			\caption{Mean operation with down sampling.\newline}
+			\label{fig:output:mean}
+		\end{subfigure}
+	
 		\begin{subfigure}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[width=\linewidth]{img/min2.png}
+			\caption{Minimum operation with down sampling.\newline}
+			\label{fig:output:min}
 		\end{subfigure}
-		\vspace{0.1cm}
+
 		\begin{subfigure}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[width=\linewidth]{img/max2.png}
+			\caption{Maximum operation with down sampling.\newline}
+			\label{fig:output:max}
 		\end{subfigure}
-		\caption{ Charts of the output of the operation over the center of the depth map in with different operations on different sizes and distances. On top the mean operation. On the middle minimum operation. On the bottom the maximum operation. }
+
+		\begin{subfigure}[t]{0.5\textwidth}
+			\centering
+			\includegraphics[width=\linewidth]{img/roimean2.png}
+			\caption{Mean operation with ROI cropping.\newline}
+			\label{fig:output:roicrop}
+		\end{subfigure}
+		\caption{ Charts of the output of the operation over the center of the depth map with different operations on different sizes and distances.}
 		\label{fig:output}
 	\end{figure}
 	
@@ -592,14 +603,14 @@
 		\centering
 		\begin{subfigure}[t]{0.5\textwidth}
 			\centering
-			\includegraphics[width=\linewidth]{img/regular.png}
+			\includegraphics[width=\linewidth]{img/regular2z.png}
 			\caption{Raw images without rectification.}
 			\label{fig:rec:regular}
 		\end{subfigure}%
 	\vspace{1cm}
 		\begin{subfigure}[t]{0.5\textwidth}
 			\centering
-			\includegraphics[width=\linewidth]{img/rectified.png}
+			\includegraphics[width=\linewidth]{img/rectified2z.png}
 			\caption{Ractification of the images in \ref{fig:rec:regular}.}
 			\label{fig:rec:ractified}
 		\end{subfigure}
