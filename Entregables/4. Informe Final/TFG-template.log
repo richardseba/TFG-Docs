@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.7)  30 JUN 2018 19:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/W32TeX) (preloaded format=pdflatex 2017.3.7)  1 JUL 2018 19:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1377,105 +1377,111 @@ Package pdftex.def Info: img/imagenproto3.jpg used on input line 130.
 File: img/vergencia.png Graphic file (type png)
 
 <use img/vergencia.png>
-Package pdftex.def Info: img/vergencia.png used on input line 146.
+Package pdftex.def Info: img/vergencia.png used on input line 145.
 (pdftex.def)             Requested size: 236.84843pt x 188.3474pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+Underfull \hbox (badness 10000) in paragraph at lines 152--153
 []\OT1/ptm/m/n/10 Consequently, this project tries to solve the
  []
 
 
-Underfull \hbox (badness 3758) in paragraph at lines 153--154
+Underfull \hbox (badness 3758) in paragraph at lines 152--153
 \OT1/ptm/m/n/10 Accommodation-Vergence con-flict and the size is-sue
  []
 
 [2 <./img/imagenproto3.jpg> <./img/vergencia.png>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 208.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 230.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 207.
+ [3]
+<img/depthdistort.png, id=26, 1050.92625pt x 818.30719pt>
+File: img/depthdistort.png Graphic file (type png)
 
-
-LaTeX Warning: Reference `sec:roiresize' on page 3 undefined on input line 230.
-
-
-[3] <img/pipeline.png, id=26, 1626.075pt x 1626.075pt>
+<use img/depthdistort.png>
+Package pdftex.def Info: img/depthdistort.png used on input line 248.
+(pdftex.def)             Requested size: 236.84843pt x 184.41084pt.
+ [4 <./img/depthdistort.png>]
+<img/pipeline.png, id=30, 1626.075pt x 1626.075pt>
 File: img/pipeline.png Graphic file (type png)
  <use img/pipeline.png>
-Package pdftex.def Info: img/pipeline.png used on input line 279.
+Package pdftex.def Info: img/pipeline.png used on input line 284.
 (pdftex.def)             Requested size: 236.84843pt x 236.82935pt.
 
-[4]
-Underfull \hbox (badness 1371) in paragraph at lines 291--292
+Underfull \hbox (badness 1371) in paragraph at lines 296--297
 []\OT1/ptm/m/n/10 After the im-ple-men-ta-tion of this mod-ule an of-fline
  []
 
-<img/ComputingLibelas.PNG, id=30, 650.43pt x 533.74406pt>
+<img/ComputingLibelas.PNG, id=31, 582.67688pt x 485.56406pt>
 File: img/ComputingLibelas.PNG Graphic file (type png)
 
 <use img/ComputingLibelas.PNG>
-Package pdftex.def Info: img/ComputingLibelas.PNG used on input line 331.
-(pdftex.def)             Requested size: 236.84843pt x 194.35481pt.
- [5 <./img/pipeline.png> <./img/ComputingLibelas.PNG>] <img/mean2.png, id=35, 8
-22.82407pt x 472.01344pt>
+Package pdftex.def Info: img/ComputingLibelas.PNG used on input line 336.
+(pdftex.def)             Requested size: 236.84843pt x 197.37105pt.
+ [5 <./img/pipeline.png>]
+<img/mean2.png, id=35, 822.82407pt x 472.01344pt>
 File: img/mean2.png Graphic file (type png)
  <use img/mean2.png>
-Package pdftex.def Info: img/mean2.png used on input line 351.
+Package pdftex.def Info: img/mean2.png used on input line 357.
 (pdftex.def)             Requested size: 241.84843pt x 138.73138pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 349--355
+Overfull \hbox (5.0pt too wide) in paragraph at lines 355--361
  [][] 
  []
 
 <img/min2.png, id=36, 791.20593pt x 462.97969pt>
 File: img/min2.png Graphic file (type png)
  <use img/min2.png>
-Package pdftex.def Info: img/min2.png used on input line 358.
+Package pdftex.def Info: img/min2.png used on input line 364.
 (pdftex.def)             Requested size: 241.84843pt x 141.5159pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 356--362
+Overfull \hbox (5.0pt too wide) in paragraph at lines 362--368
  [][] 
  []
 
 <img/max2.png, id=37, 792.71156pt x 503.63156pt>
 File: img/max2.png Graphic file (type png)
  <use img/max2.png>
-Package pdftex.def Info: img/max2.png used on input line 365.
+Package pdftex.def Info: img/max2.png used on input line 371.
 (pdftex.def)             Requested size: 241.84843pt x 153.64966pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 363--369
+Overfull \hbox (5.0pt too wide) in paragraph at lines 369--375
  [][] 
  []
 
 <img/roimean2.png, id=38, 829.59938pt x 478.78876pt>
 File: img/roimean2.png Graphic file (type png)
  <use img/roimean2.png>
-Package pdftex.def Info: img/roimean2.png used on input line 372.
+Package pdftex.def Info: img/roimean2.png used on input line 378.
 (pdftex.def)             Requested size: 241.84843pt x 139.57574pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 370--376
+Overfull \hbox (5.0pt too wide) in paragraph at lines 376--382
  [][] 
  []
 
-[6 <./img/mean2.png> <./img/min2.png> <./img/max2.png> <./img/roimean2.png>]
-[7] <img/fancydelta.png, id=51, 738.50906pt x 550.30594pt>
+[6 <./img/ComputingLibelas.PNG> <./img/mean2.png> <./img/min2.png> <./img/max2.
+png> <./img/roimean2.png>]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 443.
+
+Underfull \vbox (badness 2617) has occurred while \output is active []
+
+
+<img/fancydelta.png, id=44, 738.50906pt x 550.30594pt>
 File: img/fancydelta.png Graphic file (type png)
 
 <use img/fancydelta.png>
-Package pdftex.def Info: img/fancydelta.png used on input line 493.
+Package pdftex.def Info: img/fancydelta.png used on input line 453.
 (pdftex.def)             Requested size: 236.84843pt x 176.48775pt.
-
-<img/userTestingSizechart.png, id=52, 428.35031pt x 301.8778pt>
+ [7 <./img/fancydelta.png>]
+<img/userTestingSizechart.png, id=54, 428.35031pt x 301.8778pt>
 File: img/userTestingSizechart.png Graphic file (type png)
 
 <use img/userTestingSizechart.png>
-Package pdftex.def Info: img/userTestingSizechart.png used on input line 500.
+Package pdftex.def Info: img/userTestingSizechart.png used on input line 473.
 (pdftex.def)             Requested size: 236.84843pt x 166.91771pt.
- [8 <./img/fancydelta.png> <./img/userTestingSizechart.png>] (./TFG-template.bb
-l
+ [8 <./img/userTestingSizechart.png>]
+(./TFG-template.bbl
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 6.
-
-(c:/texlive/2016/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+ (c:/texlive/2016/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 Underfull \hbox (badness 4634) in paragraph at lines 10--13
@@ -1503,7 +1509,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--39
 \OT1/pcr/m/n/10 https : / / www . provisu . ch / images / PDF /
  []
 
-
+[9]
 Underfull \hbox (badness 1953) in paragraph at lines 52--56
 []\OT1/ptm/m/n/10 Facebook Inc.  Ocu-lus rift.  $\OT1/pcr/m/n/10 https : / / ww
 w .
@@ -1530,7 +1536,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--80
 \OT1/ptm/m/n/10 Accommodation-invariant com-pu-ta-tional near-eye
  []
 
-[9]
+
 Underfull \hbox (badness 10000) in paragraph at lines 88--93
 []\OT1/ptm/m/n/10 Steven Poulakos, Ger-hard Roeth-lin, Adrian
  []
@@ -1540,65 +1546,61 @@ Underfull \hbox (badness 6032) in paragraph at lines 88--93
 \OT1/ptm/m/n/10 Al-ter-nat-ing at-ten-tion in con-tin-u-ous stereo-scopic
  []
 
-) <img/Snellenchart_es-1.png, id=62, 1660.2025pt x 2346.7675pt>
+) <img/Snellenchart_es-1.png, id=63, 1660.2025pt x 2346.7675pt>
 File: img/Snellenchart_es-1.png Graphic file (type png)
 
 <use img/Snellenchart_es-1.png>
-Package pdftex.def Info: img/Snellenchart_es-1.png used on input line 596.
+Package pdftex.def Info: img/Snellenchart_es-1.png used on input line 606.
 (pdftex.def)             Requested size: 236.84843pt x 334.77594pt.
 
-<img/regular2z.png, id=63, 1008.76875pt x 504.38437pt>
+<img/regular2z.png, id=64, 1008.76875pt x 504.38437pt>
 File: img/regular2z.png Graphic file (type png)
  <use img/regular2z.png>
-Package pdftex.def Info: img/regular2z.png used on input line 605.
+Package pdftex.def Info: img/regular2z.png used on input line 615.
 (pdftex.def)             Requested size: 241.84843pt x 120.92387pt.
 
-<img/rectified2z.png, id=64, 1008.76875pt x 504.38437pt>
+<img/rectified2z.png, id=65, 1008.76875pt x 504.38437pt>
 File: img/rectified2z.png Graphic file (type png)
 
 <use img/rectified2z.png>
-Package pdftex.def Info: img/rectified2z.png used on input line 612.
+Package pdftex.def Info: img/rectified2z.png used on input line 621.
 (pdftex.def)             Requested size: 241.84843pt x 120.92387pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 603--616
+Overfull \hbox (5.0pt too wide) in paragraph at lines 613--624
  [][] 
  []
 
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 603--616
+Overfull \hbox (5.0pt too wide) in paragraph at lines 613--624
  [] 
  []
 
 [10] [11 <./img/Snellenchart_es-1.png> <./img/regular2z.png> <./img/rectified2z
-.png>] (./TFG-template.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+.png>] (./TFG-template.aux) ) 
 Here is how much of TeX's memory you used:
- 32211 strings out of 493013
- 724346 string characters out of 6136994
- 779775 words of memory out of 5000000
- 35302 multiletter control sequences out of 15000+600000
+ 32217 strings out of 493013
+ 724480 string characters out of 6136994
+ 779866 words of memory out of 5000000
+ 35307 multiletter control sequences out of 15000+600000
  35388 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  61i,16n,69p,10382b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
-{c:/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2016/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2016/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-c:/texlive/2016/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2016/
-texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2016/texmf-dist/font
-s/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/tim
-es/utmb8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/times/utmr8a.pfb><c:/
-texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8a.pfb><c:/texlive/2016/texm
-f-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on TFG-template.pdf (11 pages, 4059267 bytes).
+{c:/texlive/2016/texmf-dist/fonts/enc/dvips/base/8
+r.enc}<c:/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:
+/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2016/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2016/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2016/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy8.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/courier/u
+crr8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/t
+exlive/2016/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/texlive/2016/tex
+mf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2016/texmf-dist/fonts/type
+1/urw/times/utmr8a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/times/utmri8
+a.pfb><c:/texlive/2016/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on TFG-template.pdf (11 pages, 5343138 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
+ 116 PDF objects out of 1000 (max. 8388607)
  70 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

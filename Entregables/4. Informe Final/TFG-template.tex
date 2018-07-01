@@ -77,10 +77,10 @@
 	\parbox{0.915\textwidth}
 	{\sffamily
 	\textbf{Resum--}
-	Els darrers anys, els dispositius de realitat virtual i realitat augmentada són objecte de grans avenços. Tot i això, els usuaris encara pateixen molèsties quan les utilitzen. A les sessions de testeig amb usuaris, s'ha pogut observar que aquests es senten més còmodes quan s'utilitza una configuració de visualització especifica per a cada distància. Utilitzant un generador de mapes de profunditat s'ha implementat un sistema que modifica dinàmicament la configuració de l'usuari segons la distància dels objectes que s'està mirant. Utilitzant aquest sistema, els usuaris han dictaminat una millora en l'experiència i menys fatiga visual.
+	Els darrers anys, els dispositius de realitat virtual i realitat augmentada són objecte de grans avenços. Tot i això, els usuaris encara pateixen molèsties quan les utilitzen. A les sessions de testeig amb usuaris, s'ha pogut observar que aquests es senten més còmodes quan s'utilitza una configuració de visualització especifica per a cada distància. Utilitzant un generador de mapes de profunditat s'ha implementat un sistema que modifica dinàmicament la configuració de l'usuari segons la distància dels objectes que s'està mirant. Utilitzant aquest sistema, els usuaris han percebut una millora en l'experiència i menys fatiga visual.
 	\\
 	\\
-	\textbf{Paraules clau-- } Acomodació i vergència , mapes de profunditat, calibratge estèreo, visió per computador.\\
+	\textbf{Paraules clau-- } Acomodació i vergència, mapes de profunditat, calibratge estèreo, visió per computador.\\
 	\\
 	%\end{abstract}
 	%\bigskip
@@ -132,8 +132,7 @@
 		\label{fig:proto}
 	\end{figure}
 	
-	Both types of devices can show stereo images, which allows the user to sense depth in the displayed images. 
-	As both types of devices are able to show different images for each eye, these systems are able to give the user stereo experiences. 
+	As both types of devices are able to show different images for each eye, these systems are able to give the user stereo experiences, allowing the user to sense depth in the displayed images. 
 	
 	This project originated from the need to establish and resolve the reasons why the users have a poor experience, dizziness and eye strain, when using video-see-through devices. As is explained in \cite{disconfortReview} and was experimentally tested in \cite{vergenceDisconfort}, the Accommodation-Vergence conflict is one of the issues that causes this poor user experience.
 	
@@ -227,22 +226,31 @@
 	\label{sec:libelas}
 	 This module starts with two images that have already been undistorted with the stereo calibration, these then are passed to the LIBELAS processing function, this function computes the disparity from two given images and returns two disparity maps, one for each given image. These maps indicate us the distance between one pixel from one image to the other.  
 	 
-	 One of the problems faced by this library, and in general by depth map stereo matchers, is the existence of low textured areas on the image, as will be seen in \ref{sec:roiresize}, these regions usually end up without disparity values, therefore, potentially producing issues in further processing. These regions along with occluded ones and calibration faulty areas are usually set to negative values by Libelas itself, therefore can be easily detected.  
+	 One of the problems faced by this library, and in general by depth map stereo matchers, is the existence of low textured areas on the image, this can be observed in \ref{fig:disparity} on the white area of the opthalmologic pattern. These regions usually end up without disparity values, therefore, potentially producing issues in further processing. These regions along with occluded ones and calibration faulty areas are usually set to negative values by Libelas itself, therefore can be easily detected.  
 	 
-	 These maps can also be visualized in grayscale by changing the range of the image or with a colormap to better appreciate the depth gradient. 
+	 These maps can be visualized in grayscale by changing the range of the image or with a colormap to better appreciate the depth gradient. 
 	 
 	 One issue faced during the development of this module was the extremely high calibration precision needed in order to get quality images. The cameras, not totally fixed in position, usually moved slightly, reducing the quality of the depth map obtained. The issue was communicated to the hardware development team in order to change the HDM prototype to better secure the cameras position.  
 	 
 	 Although LIBELAS is a fast library it was not quick enough to process the images in real time or near real time, to solve this issue, two possible solutions were found. 
 	 
 	 \begin{itemize}
-	 	\item The first idea was to apply a ROI in the center of the images after the distortion, that way as the image is smaller, it requires less computing power to be processed. As the image is only cropped it will keep all the details of the center of the image, thats where usually the user will be looking at.  
+	 	\item The first idea was to apply a ROI in the center of the images after the distortion, that way as the image is smaller, requiring less computing power to be processed. As the image is only cropped, it will keep all the details of the center of the image, where the user will be usually looking at.  
 	 	 
 	 	\item Other idea was to make down sampling of the images before using them on LIBELAS. This also decreases the computing power required to process the images, however it also decreases the detail of the image, potentially affecting the quality of the depth map.  
  	 \end{itemize}
 	 %In \ref{sec:roiresize} a comparison between both methods can be seen. 
 	 
 	 To improve the quality of the depth map obtained in LIBELAS the default configuration called "Robotics" was taken as base and modified. First, we added the configuration that enables support points to be in the corners. We also removed the postprocessing features like median filtering or mean filtering. These last changes improve the speed and fit better with the environment where the testing was developed.
+	 
+ 	\begin{figure}
+ 		\centering
+ 		\includegraphics[width=\linewidth]{img/depthdistort.png}
+ 		\caption{At the left the original image, and at the right the depth map. Can be noticed the lack of disparity values in the area of the pattern.}
+ 		\label{fig:disparity}
+ \end{figure}
+	 
+	 
 	 
 	\subsection{Configuration}
 	
@@ -254,9 +262,6 @@
 	
 	\subsection{Pipeline and module integration}
 	\label{sec:pipeline}
-	%imagen del diseño del pipeline final, explicar clasificador 
-	%presets, movimiento de las pantallas , guardado de parametros, integracion de las partes, threads
-	%en este apartado se explicaran mejoras secundarias en el visor, creacion de los presets, smooth presets transition, movimiento de la roi por encima de las imagenes etc, y de como se han integrado todos los modulos dentro de visor intentando preservar en todo momento el rendimiento (threads, explicacion del pipeline final)
 	
 	Parallel to the development of said modules, a pipeline integrating them was built. This pipeline has the goal of combining the developed module to achieve a real time dynamic system that changes between already set configurations to adapt to the scene variations. This pipeline had to be fast and have quick response times, for that reason it was decided to use a threaded architecture to allow each thread to perform their tasks at their own pace without harming the performance of the thread in charge of updating the screen. This helps to reduce the reaction time improving the user experience. 
 	
@@ -334,6 +339,7 @@
 	\end{figure}
 	
 	\subsection{LIBELAS output}
+	\label{sec:libelasOutput}
 	As explained in \ref{sec:pipeline}, before applying the classification, the output of LIBELAS is cropped and an operation is performed, mean, maximum or minimum. This value is then used as input for the threshold classifier.  
 	
 	It is important that the input values for the classifier are stable to keep the settings changes as minimum as necessary. This is because these changes disturb the user perception and if this happen repeatedly in a short amount of time, they could induce motion sickness to the users.  
@@ -342,7 +348,7 @@
 	
 	On the other hand, the output of the minimum and the maximum operations, Fig.\ref{fig:output:min} and Fig.\ref{fig:output:max}, cannot be distinguished correctly. When the minimum operation is used the medium and the far distances cannot be split in different classes because their values overlap between them. A similar case happens also with the maximum operation, in this case though it only happens to the original size. %, this can be due to 
 	
-	Looking at the ROI chart, can be seen that with a ROI 4 times and 12 times smaller than the original size, yield atypical results. This can be notice in the 4 times roi, where the near distance obtains less disparity than the medium one and in the 12 times ROI where the disparity is totally inversed. This is not possible because disparity, is linked with the distance between objects, closer objects have bigger disparities. What is happening is that LIBELAS is not capable of extracting the depth information from these images because it is not able to find reliable support points, therefore, these outputs are not correct.
+	Looking at the ROI chart, can be seen that with a ROI 4 times and 12 times smaller than the original size, yield atypical results. This can be notice in the 4 times roi, where the near distance obtains less disparity than the medium one and in the 12 times ROI where the disparity is totally inversed. This is not possible because disparity, is linked with the distance between objects, closer objects have bigger disparities. What is happening is that LIBELAS is not capable of extracting the depth information from these images because it is not able to find reliable support points, therefore, returning inaccurate depth maps. 
 
 	\begin{figure}
 		\centering
@@ -442,16 +448,32 @@
 	Also is noticeable that the variation on the $\Delta X$ is bigger on the closer settings, this can be caused by the fact that slightly movements or variations are more significant when the distance between the user and the object is lower. 
 	Finally, as was expected this difference is not seen in the Y, this is because the Accomodation-Vergence issue is related with the disparity in the X axis. 
 	
+	\begin{figure}
+		\centering
+		\includegraphics[width=1\linewidth]{img/fancydelta.png}
+		\caption{Mean distance between center points of the images on each configuration. Note that $\Delta X$ means separation between the center of the image pair in the X axis.}
+		\label{fig:ut:2:deltax}
+	\end{figure}
+	
 	\subsubsection{User opinion of the settings }
-	Looking now at the user experience when using a setting in a different distance, see Fig.\ref{fig:ut:2:deltax}. Can be noticed that users feel more comfortable using a setting at the original distance which it was set in. One noticed also that only 58.3\% of the users felt comfortable with the distance when using the distant setting in a distant environment. This also happens with the medium setting. On the contrary 83\% of the users said that they felt comfortable when using near configuration in near environments. This difference can be related with the fact that users in the near set up can interact with the objects therefore better fitting that configuration. 
+	Looking now at the user experience when using a setting in a different distance, see Fig.\ref{fig:ut:2:deltax} and Table \ref{tab:ut:2:feelings}. Can be noticed that users feel more comfortable using a setting at the original distance which it was set in. One noticed also that only 58.3\% of the users felt comfortable with the distance when using the distant setting in a distant environment. This also happens with the medium setting. On the contrary 83\% of the users said that they felt comfortable when using near configuration in near environments. This difference can be related with the fact that users in the near set up can interact with the objects therefore better fitting that configuration. 
 	
 	As the medium setting has the more intermediate values, is almost usable on every distance, thought this does not mean that would be comfortable to use it. More than half the users do not feel comfortable when using this medium setting on far distances. As expected, far and near configurations perform worse when used in the other's distance.
 	
 	After these results can be concluded that a module capable of changing the setting will be convenient to improve the user experience. 
 	
+
+	
 	\subsubsection{Size issue}
 	
 	In Fig.\ref{fig:ut:2:size} a comparison is shown between the mean size of the ROI in every configuration. With these results it is clear that each distance needs a different size setting.  The users set smaller ROIs, bigger zooms over the image, to distant objects, seeing that objects bigger. On the contrary the users set bigger ROIs, smaller zooms, to closer objects, seeing them smaller. This results follow the expected pattern. A system capable of automatically changing the between settings would solve this problem. 
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=1\linewidth]{img/userTestingSizechart.png}
+		\caption{Mean size of the images in each configuration for each distance. Note that a bigger size means a bigger ROI and therefore smaller objects.}
+		\label{fig:ut:2:size}
+	\end{figure}
 	
 	\subsubsection{User opinion on the dynamic settings}
 	As the pipeline was already finished, this user testing session also included a test of the system with the full pipeline working, capable of changing between configurations. This module was used after the user had already set every configuration for each distance.  
@@ -488,19 +510,7 @@
 		\label{tab:ut:2:dynamic}
 	\end{table}
 
-	\begin{figure}
-		\centering
-		\includegraphics[width=1\linewidth]{img/fancydelta.png}
-		\caption{Mean distance between center points of the images on each configuration. Note that $\Delta X$ means separation between the center of the image pair in the X axis.}
-		\label{fig:ut:2:deltax}
-	\end{figure}
 
-	\begin{figure}
-		\centering
-		\includegraphics[width=1\linewidth]{img/userTestingSizechart.png}
-		\caption{Mean size of the images in each configuration for each distance. Note that a bigger size means a bigger ROI and therefore smaller objects.}
-		\label{fig:ut:2:size}
-	\end{figure}
 
 
 	
@@ -556,7 +566,7 @@
 	\begin{itemize}
 		\item All the default configuration should have the same parameters that and these will be reset for each user. This default configuration have both ROIs centered with a size that fills all the screen. 
 		
-		\item 3 patterns will be set at 3 different positions, reading distance (close distance), desktop pc screen distance (medium distance) and a wall a couple of meters away (far distance).
+		\item 3 patterns will be set at 3 different positions, reading distance (close distance), desktop PC screen distance (medium distance) and a wall a couple of meters away (far distance).
 		
 		\item Every user will start by adjusting a setting for each distance. 
 		
@@ -603,17 +613,15 @@
 		\begin{subfigure}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[width=\linewidth]{img/regular2z.png}
-			\caption{Raw images without rectification.}
 			\label{fig:rec:regular}
 		\end{subfigure}%
 	\vspace{1cm}
 		\begin{subfigure}[t]{0.5\textwidth}
 			\centering
 			\includegraphics[width=\linewidth]{img/rectified2z.png}
-			\caption{Ractification of the images in \ref{fig:rec:regular}.}
 			\label{fig:rec:ractified}
 		\end{subfigure}
-		\caption{Figure \ref{fig:rec:regular} is an example one image pair as it is captured from the cameras, the distortion produced by the optic of the cameras can be noticed. In these images the objects cannot be found on the same Y axis, for example the pattern in the middle of the image. In Figure \ref{fig:rec:ractified} the same images from \ref{fig:rec:regular} have been rectified using the calibration module. The distortion produced by the lenses of the camera is gone and the objects can be found in the same Y axis. }
+		\caption{In top there is an example one image pair as it is captured from the cameras, the distortion produced by the optic of the cameras can be noticed. In these images the objects cannot be found on the same Y axis, for example the pattern in the middle of the image. In bottom the same images from the top have been rectified using the calibration module. The distortion, the rotation and the traslation produced by the camera is gone and the objects can be found in the same Y axis. }
 		\label{fig:rec}
 	\end{figure}
 	
