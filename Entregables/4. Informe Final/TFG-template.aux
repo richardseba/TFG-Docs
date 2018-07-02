@@ -5,16 +5,14 @@
 \citation{disconfortReview}
 \citation{vergenceDisconfort}
 \citation{shiomiaccomodation}
-\select@language{english}
-\@writefile{toc}{\select@language{english}}
-\@writefile{lof}{\select@language{english}}
-\@writefile{lot}{\select@language{english}}
+\babel@aux{english}{}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
 \citation{vergenceDisconfort}
 \citation{vergenceDisconfort}
 \citation{neareyeblur}
 \citation{sceneComposition}
 \citation{eyeTracking}
+\citation{patentgoogle}
 \citation{LIBELAS}
 \citation{LIBELAS}
 \citation{bouguetcalibration}
@@ -37,14 +35,14 @@
 \@writefile{toc}{\contentsline {section}{\numberline {5}Tools and Development}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Calibration}{3}}
 \newlabel{sec:calib}{{5.1}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Libelas}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}LIBELAS}{3}}
 \newlabel{sec:libelas}{{5.2}{3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces At the left the original image, and at the right the depth map. Can be noticed the lack of disparity values in the area of the pattern.\relax }}{4}}
 \newlabel{fig:disparity}{{3}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Configuration}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Pipeline and module integration}{4}}
 \newlabel{sec:pipeline}{{5.4}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Diagram of the pipeline of the system. At top the grabbing threads that capture the images from the cameras. In the middle the thread that displays the images and changes between user settings. At the bottom the thread that process the images and classifies them. \relax }}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Diagram of the pipeline of the system. At top the grabbing threads that capture the images from the cameras. In the middle the thread that displays the images and changes between user settings. At the bottom the thread that processes the images and classifies them. \relax }}{5}}
 \newlabel{fig:pipeline}{{4}{5}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Offline pipeline}{5}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Computing time of LIBELAS, the rectification and all the processing module in milliseconds in 175 frames from a near distance video.\relax }}{5}}
@@ -70,12 +68,12 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces  Charts of the output of the operation over the center of the depth map with different operations on different sizes and distances.\relax }}{7}}
 \newlabel{fig:output}{{7}{7}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Second user testing}{7}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Results of the configuration of the ROIs in the first user testing session. The second column represents the general feelings of the users when changing the settings. Note that $\Delta X$ means separation between the center of the image pair in the X axis and $\Delta Y$ means separation between centers in the Y axis.\relax }}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Results of the configuration of the ROIs in the first user testing session in pixels, the camera resolution is 1600x1200. The second column represents the general feelings of the users when changing the settings. Note that $\Delta X$ means separation between the center of the image pair in the $X$ axis and $\Delta Y$ means separation between centers in the Y axis.\relax }}{8}}
 \newlabel{tab:firstUserTestResults}{{2}{8}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Mean distance between center points of the images on each configuration. Note that $\Delta X$ means separation between the center of the image pair in the X axis.\relax }}{8}}
-\newlabel{fig:ut:2:deltax}{{8}{8}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.1}Accomodation-Vergence settings}{8}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.2}User opinion of the settings }{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Mean distance between center points of the images on each configuration. Note that $\Delta X$ means separation between the center of the image pair in the $X$ axis.\relax }}{8}}
+\newlabel{fig:ut:2:deltax}{{8}{8}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.3}Size issue}{8}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {6.4.4}User opinion on the dynamic settings}{8}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Mean size of the images in each configuration for each distance. Note that a bigger size means a bigger ROI and therefore smaller objects.\relax }}{9}}
@@ -90,23 +88,24 @@
 \bibcite{eyeTracking}{5}
 \bibcite{web:snellen}{6}
 \bibcite{LIBELAS}{7}
-\bibcite{vergenceDisconfort}{8}
-\bibcite{web:oculus}{9}
-\bibcite{web:github}{10}
-\bibcite{web:githubDesktop}{11}
-\bibcite{web:matlab}{12}
-\bibcite{neareyeblur}{13}
-\bibcite{web:hololens}{14}
-\bibcite{sceneComposition}{15}
-\bibcite{shiomiaccomodation}{16}
-\bibcite{web:opencv}{17}
-\bibcite{disconfortReview}{18}
-\bibcite{calibrationopencv2}{19}
-\bibstyle{plain}
+\bibcite{patentgoogle}{8}
+\bibcite{vergenceDisconfort}{9}
+\bibcite{web:oculus}{10}
+\bibcite{web:github}{11}
+\bibcite{web:githubDesktop}{12}
+\bibcite{web:matlab}{13}
+\bibcite{neareyeblur}{14}
+\bibcite{web:hololens}{15}
+\bibcite{sceneComposition}{16}
+\bibcite{shiomiaccomodation}{17}
+\bibcite{web:opencv}{18}
+\bibcite{disconfortReview}{19}
+\bibcite{calibrationopencv2}{20}
 \@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Results in the second user testing session of the feelings of the users in percentage of positive responses. At top the distance where the testing was done and at the left the configuration used when that response was given. Fused means if the user are seeing the images correctly fused, and Size if the users are seeing the object's size similar to the reality.\relax }}{10}}
 \newlabel{tab:ut:2:feelings}{{3}{10}}
 \@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Preferences of the user when using the dynamic setting changer.\relax }}{10}}
 \newlabel{tab:ut:2:dynamic}{{4}{10}}
+\bibstyle{plain}
 \citation{web:snellen}
 \citation{web:snellen}
 \@writefile{toc}{\contentsline {section}{\numberline {A}User testing protocol}{11}}
@@ -117,11 +116,11 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Ophthalmological pattern used in the user testing sessions. Source \cite  {web:snellen}.\relax }}{11}}
 \newlabel{fig:add:pattern}{{10}{11}}
 \@writefile{toc}{\contentsline {section}{\numberline {B}Additional images}{11}}
-\newlabel{fig:rec:regular}{{\caption@xref {fig:rec:regular}{ on input line 622}}{12}}
+\newlabel{fig:rec:regular}{{\caption@xref {fig:rec:regular}{ on input line 623}}{12}}
 \newlabel{sub@fig:rec:regular}{{}{12}}
-\newlabel{fig:rec:ractified}{{\caption@xref {fig:rec:ractified}{ on input line 628}}{12}}
+\newlabel{fig:rec:ractified}{{\caption@xref {fig:rec:ractified}{ on input line 629}}{12}}
 \newlabel{sub@fig:rec:ractified}{{}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces In top there is an example one image pair as it is captured from the cameras. In these images the objects cannot be found on the same Y axis this can be noticed on the pattern in the middle of the image. In bottom the same images from the top have been rectified using the calibration module. The distortion, the rotation and the traslation produced by the camera are gone and the objects can be found in the same Y axis. \relax }}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces In top there is an example one image pair as it is captured from the cameras. In these images the objects cannot be found on the same $Y$ axis this can be noticed on the pattern in the middle of the image. In bottom the same images from the top have been rectified using the calibration module. The distortion, the rotation and the traslation produced by the camera are gone and the objects can be found in the same $Y$ axis. \relax }}{12}}
 \newlabel{fig:rec}{{11}{12}}
 \@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Example of the transformations applied to a medium distance image to get the distance class.\relax }}{13}}
 \newlabel{fig:add:pattern}{{12}{13}}
