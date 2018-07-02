@@ -134,7 +134,7 @@
 	
 	As both types of devices are able to show different images for each eye, these systems are able to give the user stereo experiences, allowing the user to sense depth in the displayed images. 
 	
-	This project originated from the need to establish and resolve the reasons why the users have a poor experience, dizziness and eye strain, when using video-see-through devices. As is explained in \cite{disconfortReview} and was experimentally tested in \cite{vergenceDisconfort}, the Accommodation-Vergence conflict is one of the issues that causes this poor user experience.
+	This project originated from the need to establish and resolve the reasons why the users have a poor experience, dizziness and eye strain, when using video-see-through devices. As is explained in \cite{disconfortReview} and was experimentally tested in \cite{vergenceDisconfort} and \cite{shiomiaccomodation}, the Accommodation-Vergence conflict is one of the issues that causes this poor user experience.
 	
 	The vergence is the process where the eyes set their angle of visualization trying to fuse the image of an object keeping it into sharp focus, whereas the accommodation is the process where the objects difficult to fuse are blurred. Both process are tightly coupled giving each other feedback in order to keep the images as sharp and fused as possible. 
 	
@@ -286,6 +286,12 @@
 		\label{fig:pipeline}
 	\end{figure}
 	
+	\begin{figure*}
+		\centering
+		\includegraphics[width=1\linewidth]{img/outputFar.png}
+		\caption{Example of the transformations applied to a far distance image to get the distance class.}
+		\label{fig:pipelinephotos}
+	\end{figure*}
 	
 	\subsection{Offline pipeline}
 	One of the issues, was that LIBELAS was not able to produce real time processing. For that reason, a video recording and processing modules were also implemented.  
@@ -621,9 +627,23 @@
 			\includegraphics[width=\linewidth]{img/rectified2z.png}
 			\label{fig:rec:ractified}
 		\end{subfigure}
-		\caption{In top there is an example one image pair as it is captured from the cameras, the distortion produced by the optic of the cameras can be noticed. In these images the objects cannot be found on the same Y axis, for example the pattern in the middle of the image. In bottom the same images from the top have been rectified using the calibration module. The distortion, the rotation and the traslation produced by the camera is gone and the objects can be found in the same Y axis. }
+		\caption{In top there is an example one image pair as it is captured from the cameras. In these images the objects cannot be found on the same Y axis this can be noticed on the pattern in the middle of the image. In bottom the same images from the top have been rectified using the calibration module. The distortion, the rotation and the traslation produced by the camera are gone and the objects can be found in the same Y axis. }
 		\label{fig:rec}
 	\end{figure}
+
+	\begin{figure*}
+		\centering
+		\includegraphics[width=1\linewidth]{img/outputMedium.png}
+		\caption{Example of the transformations applied to a medium distance image to get the distance class.}
+		\label{fig:add:pattern}
+	\end{figure*}
+
+	\begin{figure*}
+		\centering
+		\includegraphics[width=1\linewidth]{img/outputNear.png}
+		\caption{Example of the transformations applied to a near distance image to get the distance class.}
+		\label{fig:add:pattern}
+	\end{figure*}
 	
 
 \end{document}

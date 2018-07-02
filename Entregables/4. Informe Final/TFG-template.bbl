@@ -4,7 +4,7 @@
 Atlassian.
 \newblock Trello.
 \newblock \url{https://trello.com}, 2018.
-\newblock Last access March 9th 2018.
+\newblock Last access July 2nd 2018.
 
 \bibitem{bouguetcalibration}
 Jean-Yves Bouguet.
@@ -15,7 +15,7 @@ Jean-Yves Bouguet.
 The~QT Company.
 \newblock Qt.
 \newblock \url{https://www.qt.io/}, 2018.
-\newblock Last access March 9th 2018.
+\newblock Last access July 1st 2018.
 
 \bibitem{web:vive}
 HTC Corporation.
@@ -58,13 +58,13 @@ Facebook Inc.
 GitHub Inc.
 \newblock Github.
 \newblock \url{https://github.com/}, 2018.
-\newblock Last access March 9th 2018.
+\newblock Last access July 1st 2018.
 
 \bibitem{web:githubDesktop}
 GitHub Inc.
 \newblock Github desktop.
 \newblock \url{https://desktop.github.com/}, 2018.
-\newblock Last access March 9th 2018.
+\newblock Last access July 2nd 2018.
 
 \bibitem{web:matlab}
 The~MathWorks Inc.
@@ -90,6 +90,14 @@ Steven Poulakos, Gerhard Roethlin, Adrian Schwaninger, Aljoscha Smolic, and
 \newblock Alternating attention in continuous stereoscopic depth.
 \newblock In {\em Proceedings of the ACM Symposium on Applied Perception},
   pages 59--66. ACM, 2014.
+
+\bibitem{shiomiaccomodation}
+Tomoki Shiomi, Keita Uemoto, Takehito Kojima, Shunta Sano, Hiromu Ishio, Hiroki
+  Takada, Masako Omori, Tomoyuki Watanabe, and Masaru Miyao.
+\newblock Simultaneous measurement of lens accommodation and convergence in
+  natural and artificial 3d vision.
+\newblock {\em Journal of the Society for Information Display}, 21(3):120--128,
+  2013.
 
 \bibitem{web:opencv}
 Opencv team.
