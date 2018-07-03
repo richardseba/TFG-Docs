@@ -191,10 +191,7 @@
 	\end{itemize}
 
 	\section{Methodology}
-	%dudas sobre este apartado
-	%hablar de tecnicas de desarrollo agil y sobretodo de las librerias utilizadas y de las limitaciones y ventajas que estas nos han aportado.
-	
-	%Scrum and its variants are one of the most spread work methodologies nowadays. Therefore we believe convenient to use it as one of the foundation of this project, however, as this project was only done by one person, some changes were made. 
+
 	
 	The Scrum methodology was selected as one of the foundations of this project. However, as this project was only done by one person, some changes were made. 
 	
@@ -289,7 +286,7 @@
 	
 	\begin{figure*}
 		\centering
-		\includegraphics[width=1\linewidth]{img/outputFar.png}
+		\includegraphics[width=1\linewidth]{img/pipelineFarSimple.png}
 		\caption{Example of the transformations applied to a far distance image to get the distance class.}
 		\label{fig:pipelinephotos}
 	\end{figure*}
@@ -458,7 +455,7 @@
 	Also is noticeable that the deviation on the $\Delta X$ is bigger on the closer settings, this can be caused by the fact that slightly movements or variations are more significant when the distance between the user and the object is lower. 
 	Finally, as was expected this difference is not seen in $\Delta Y$, this is because the Accomodation-Vergence issue is related with the disparity in the $X$ axis. 
 	
-	\begin{figure}
+	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1\linewidth]{img/fancydelta.png}
 		\caption{Mean distance between center points of the images on each configuration. Note that $\Delta X$ means separation between the center of the image pair in the $X$ axis.}
@@ -478,7 +475,7 @@
 	
 	In Fig.\ref{fig:ut:2:size} a comparison is shown between the mean size of the ROI in every configuration. With these results it is clear that each distance needs a different size setting.  The users set smaller ROIs, bigger zooms over the image, to distant objects, seeing that objects bigger. On the contrary the users set bigger ROIs, smaller zooms, to closer objects, seeing them smaller. This results follow the expected pattern. A system capable of automatically changing the between settings would solve this problem. 
 	
-	\begin{figure}
+	\begin{figure}[h]
 		\centering
 		\includegraphics[width=1\linewidth]{img/userTestingSizechart.png}
 		\caption{Mean size of the images in each configuration for each distance. Note that a bigger size means a bigger ROI and therefore smaller objects.}
@@ -608,7 +605,7 @@
 	\section{Additional images}
 	%En este apartado se incluiran imagenes extra de ejemplo(mas escenarios) i/o imagenes que no quepan en el documento en si
 	
-	\begin{figure}
+	\begin{figure}[b]
 		\centering
 		\includegraphics[width=1\linewidth]{img/Snellenchart_es-1.jpg}
 		\caption{Ophthalmological pattern used in the user testing sessions. Source \cite{web:snellen}.}
@@ -634,14 +631,14 @@
 
 	\begin{figure*}
 		\centering
-		\includegraphics[width=1\linewidth]{img/outputMedium.png}
+		\includegraphics[width=1\linewidth]{img/pipelineMediumSimple.png}
 		\caption{Example of the transformations applied to a medium distance image to get the distance class.}
 		\label{fig:add:pattern}
 	\end{figure*}
 
 	\begin{figure*}
 		\centering
-		\includegraphics[width=1\linewidth]{img/outputNear.png}
+		\includegraphics[width=1\linewidth]{img/pipelineNearSimple.png}
 		\caption{Example of the transformations applied to a near distance image to get the distance class.}
 		\label{fig:add:pattern}
 	\end{figure*}
